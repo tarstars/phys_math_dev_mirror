@@ -1,0 +1,140 @@
+---
+import '@/styles/global.css';
+import LanguageSwitch from '@/components/LanguageSwitch.astro';
+import ThemeToggle from '@/components/ThemeToggle.astro';
+import { UI, oppositeLocale } from '@/lib/i18n';
+import type { Locale } from '@/lib/types';
+
+interface Props {
+  title: string;
+  description: string;
+  locale: Locale;
+  canonicalPath: string;
+  enPath: string;
+  ruPath: string;
+  noIndex?: boolean;
+}
+
+const {
+  title,
+  description,
+  locale,
+  canonicalPath,
+  enPath,
+  ruPath,
+  noIndex = false
+} = Astro.props;
+
+const site = import.meta.env.PUBLIC_SITE_URL || 'https://phys-math.dev';
+const canonicalUrl = new URL(canonicalPath, site).toString();
+const enUrl = new URL(enPath, site).toString();
+const ruUrl = new URL(ruPath, site).toString();
+const token = import.meta.env.PUBLIC_CF_ANALYTICS_TOKEN;
+
+const thisLocaleHome = `/${locale}/`;
+const thisLocaleArchive = `/${locale}/archive/1/`;
+const opposite = oppositeLocale(locale);
+---
+
+<!doctype html>
+<html lang={locale}>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <link rel="canonical" href={canonicalUrl} />
+
+    <link rel="alternate" hreflang="en" href={enUrl} />
+    <link rel="alternate" hreflang="ru" href={ruUrl} />
+    <link rel="alternate" hreflang="x-default" href={enUrl} />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonicalUrl} />
+    <meta property="og:site_name" content="PhysMath Hub" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+
+    {noIndex && <meta name="robots" content="noindex,nofollow" />}
+
+    <script is:inline>
+      (() => {
+        const key = 'theme-preference';
+        const value = localStorage.getItem(key) || 'system';
+        if (value === 'light' || value === 'dark') {
+          document.documentElement.setAttribute('data-theme', value);
+        }
+      })();
+    </script>
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="site-header-inner">
+        <a class="brand" href={thisLocaleHome}>PhysMath Hub</a>
+
+        <nav class="site-nav" aria-label="Primary">
+          <a href={thisLocaleHome}>{UI[locale].home}</a>
+          <a href={thisLocaleArchive}>{UI[locale].archive}</a>
+        </nav>
+
+        <div class="site-tools">
+          <LanguageSwitch currentLocale={locale} enPath={enPath} ruPath={ruPath} />
+          <ThemeToggle locale={locale} />
+        </div>
+      </div>
+      <p class="locale-chip" data-locale={locale}>{locale.toUpperCase()} / {opposite.toUpperCase()}</p>
+    </header>
+
+    <main>
+      <slot />
+    </main>
+
+    <footer class="site-footer">
+      <p>PhysMath Hub · Physics · Mathematics · Programming</p>
+    </footer>
+
+    <script is:inline>
+      (() => {
+        const key = 'theme-preference';
+        const cycle = ['system', 'light', 'dark'];
+        const button = document.getElementById('theme-toggle');
+
+        const apply = (mode) => {
+          if (mode === 'light' || mode === 'dark') {
+            document.documentElement.setAttribute('data-theme', mode);
+          } else {
+            document.documentElement.removeAttribute('data-theme');
+          }
+          if (button) {
+            button.textContent = mode === 'light' ? '☀' : mode === 'dark' ? '☾' : '◐';
+          }
+        };
+
+        let current = localStorage.getItem(key) || 'system';
+        if (!cycle.includes(current)) {
+          current = 'system';
+        }
+        apply(current);
+
+        button?.addEventListener('click', () => {
+          const idx = cycle.indexOf(current);
+          current = cycle[(idx + 1) % cycle.length];
+          localStorage.setItem(key, current);
+          apply(current);
+        });
+      })();
+    </script>
+
+    {token && (
+      <script
+        defer
+        src="https://static.cloudflareinsights.com/beacon.min.js"
+        data-cf-beacon={`{"token":"${token}"}`}
+      ></script>
+    )}
+  </body>
+</html>

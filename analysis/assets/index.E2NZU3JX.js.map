@@ -1,0 +1,94 @@
+<!DOCTYPE html><html lang="ru"> <head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Ряды Фурье</title><!-- SEO --><meta name="description" content="Ряды Фурье — элитарный научпоп для айтишников и учёных. Свежие исследования от биологии до квантовой физики."><link rel="canonical" href="https://jfourier.com/"><!-- Open Graph --><meta property="og:title" content="Ряды Фурье"><meta property="og:description" content="Ряды Фурье — элитарный научпоп для айтишников и учёных. Свежие исследования от биологии до квантовой физики."><meta property="og:image" content="https://jfourier.com/og-default.jpg"><meta property="og:url" content="https://jfourier.com/"><meta property="og:type" content="website"><meta property="og:site_name" content="Ряды Фурье"><meta property="og:locale" content="ru_RU"><!-- Twitter Card --><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="Ряды Фурье"><meta name="twitter:description" content="Ряды Фурье — элитарный научпоп для айтишников и учёных. Свежие исследования от биологии до квантовой физики."><meta name="twitter:image" content="https://jfourier.com/og-default.jpg"><!-- RSS --><link rel="alternate" type="application/rss+xml" title="Ряды Фурье" href="/rss.xml"><!-- View Transitions --><meta name="astro-view-transitions-enabled" content="true"><meta name="astro-view-transitions-fallback" content="animate"><script type="module" src="/_astro/ClientRouter.astro_astro_type_script_index_0_lang.DAJUkfHi.js"></script><script>
+    // Применяем тему до рендеринга (предотвращает мигание)
+    (function(){
+      try {
+        var v = localStorage.getItem('theme-preference') || 'system';
+        if (v === 'light' || v === 'dark') {
+          document.documentElement.setAttribute('data-theme', v);
+        }
+      } catch(e) {}
+    })();
+  </script><style>.lead[data-astro-cid-j7pv25f6]{color:var(--muted);margin:.75rem 0;line-height:1.6}.lead[data-astro-cid-j7pv25f6] a[data-astro-cid-j7pv25f6]{color:var(--link)}.authors[data-astro-cid-j7pv25f6]{color:var(--fg);font-weight:500}.channel-gallery[data-astro-cid-j7pv25f6]{display:flex;gap:8px;margin:1.5rem 0;overflow-x:auto;padding-bottom:8px}.gallery-item[data-astro-cid-j7pv25f6]{flex-shrink:0}.gallery-item[data-astro-cid-j7pv25f6] img[data-astro-cid-j7pv25f6]{width:100px;height:100px;object-fit:cover;border-radius:8px;cursor:pointer;transition:transform .2s}.gallery-item[data-astro-cid-j7pv25f6] img[data-astro-cid-j7pv25f6]:hover{transform:scale(1.05)}.actions[data-astro-cid-j7pv25f6]{display:flex;gap:1rem;flex-wrap:wrap;margin:1.5rem 0}.actions[data-astro-cid-j7pv25f6] a[data-astro-cid-j7pv25f6]{color:var(--link)}.latest[data-astro-cid-j7pv25f6]{margin-top:2rem;padding-top:1.5rem;border-top:1px solid var(--border)}.latest[data-astro-cid-j7pv25f6] h2[data-astro-cid-j7pv25f6]{font-size:1rem;margin:0 0 1rem}.latest-list[data-astro-cid-j7pv25f6]{list-style:none;padding:0;margin:0}.latest-list[data-astro-cid-j7pv25f6] li[data-astro-cid-j7pv25f6]{padding:.5rem 0;border-bottom:1px solid var(--border)}.latest-list[data-astro-cid-j7pv25f6] li[data-astro-cid-j7pv25f6]:last-child{border-bottom:none}.latest-list[data-astro-cid-j7pv25f6] a[data-astro-cid-j7pv25f6]{text-decoration:none;color:var(--fg);display:flex;justify-content:space-between;gap:1rem}.latest-list[data-astro-cid-j7pv25f6] a[data-astro-cid-j7pv25f6]:hover{color:var(--link)}.latest-list[data-astro-cid-j7pv25f6] .date[data-astro-cid-j7pv25f6]{color:var(--muted);font-size:.85rem;flex-shrink:0}.archive-link[data-astro-cid-j7pv25f6]{margin-top:1rem}.modal[data-astro-cid-j7pv25f6]{display:none;position:fixed;z-index:1000;left:0;top:0;width:100%;height:100%;background:#000000e6;justify-content:center;align-items:center}.modal[data-astro-cid-j7pv25f6].active{display:flex}.modal-close[data-astro-cid-j7pv25f6]{position:absolute;top:1rem;right:1.5rem;color:#fff;font-size:2rem;cursor:pointer}.modal-content[data-astro-cid-j7pv25f6]{max-width:90%;max-height:90%;border-radius:8px}
+.astro-route-announcer{position:absolute;left:0;top:0;clip:rect(0 0 0 0);clip-path:inset(50%);overflow:hidden;white-space:nowrap;width:1px;height:1px}:root{--bg: #ffffff;--fg: #111111;--link: #0066cc;--border: #e6e6e6;--muted: #666666;--bg-secondary: #f8f9fa}@media(prefers-color-scheme:dark){:root{--bg: #0d0d0d;--fg: #e6e6e6;--link: #5aa7ff;--border: #222222;--muted: #9aa0a6;--bg-secondary: #1a1a1a}}html[data-theme=light]{--bg: #ffffff;--fg: #111111;--link: #0066cc;--border: #e6e6e6;--muted: #666666;--bg-secondary: #f8f9fa}html[data-theme=dark]{--bg: #0d0d0d;--fg: #e6e6e6;--link: #5aa7ff;--border: #222222;--muted: #9aa0a6;--bg-secondary: #1a1a1a}*{box-sizing:border-box}body{font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,sans-serif;max-width:700px;margin:0 auto;padding:0 1rem 2rem;line-height:1.6;background:var(--bg);color:var(--fg)}a{color:var(--link)}h1{font-size:1.5rem;margin-bottom:.5rem}.site-header{position:sticky;top:0;background:color-mix(in srgb,var(--bg) 90%,transparent);backdrop-filter:blur(8px);border-bottom:1px solid var(--border);margin:0 -1rem 1.5rem;padding:0 1rem;z-index:100}.site-header-inner{display:flex;gap:1rem;align-items:center;padding:.75rem 0}.site-header a{color:var(--fg);text-decoration:none;padding:.4rem .6rem;border-radius:6px;font-size:.9rem}.site-header a:hover{background:color-mix(in srgb,var(--fg) 5%,transparent)}.site-header .tg-link{color:#08c}.site-header .spacer{margin-left:auto}.theme-toggle{width:32px;height:32px;border:1px solid var(--border);border-radius:6px;background:var(--bg);color:var(--fg);cursor:pointer;font-size:1rem;display:flex;align-items:center;justify-content:center}.theme-toggle:hover{background:var(--bg-secondary)}.tg-spoiler{background:var(--spoiler-bg);color:transparent;border-radius:4px;padding:0 2px;cursor:pointer;transition:color .2s,background .2s}.tg-spoiler:hover,.tg-spoiler:focus,.tg-spoiler.revealed{color:inherit;background:var(--spoiler-bg-revealed)}:root{--spoiler-bg: rgba(0, 0, 0, .12);--spoiler-bg-revealed: rgba(0, 0, 0, .05)}@media(prefers-color-scheme:dark){:root{--spoiler-bg: rgba(255, 255, 255, .15);--spoiler-bg-revealed: rgba(255, 255, 255, .08)}}html[data-theme=light]{--spoiler-bg: rgba(0, 0, 0, .12);--spoiler-bg-revealed: rgba(0, 0, 0, .05)}html[data-theme=dark]{--spoiler-bg: rgba(255, 255, 255, .15);--spoiler-bg-revealed: rgba(255, 255, 255, .08)}
+</style><script type="module" src="/_astro/page.DTPp-pk-.js"></script></head> <body> <header class="site-header"> <nav class="site-header-inner"> <a href="/">Главная</a> <a href="/messages/">Ряды Фурье</a> <a href="/tvarium/">Зверские рассказы</a> <a href="/ads/">Реклама</a> <span class="spacer"></span> <a href="https://t.me/Fourier_series" target="_blank" rel="noopener" class="tg-link">TG</a> <button id="theme-toggle" class="theme-toggle" aria-label="Переключить тему">🖥️</button> </nav> </header> <main>   <h1 data-astro-cid-j7pv25f6>Ряды Фурье</h1> <div class="about" data-astro-cid-j7pv25f6> <p class="lead" data-astro-cid-j7pv25f6>Научпоп-канал с уклоном в ИТ.</p> <p class="lead" data-astro-cid-j7pv25f6>Угарные рассказы про реальные научные исследования с довольно высокой точностью. Но и угаром.</p> <p class="lead" data-astro-cid-j7pv25f6>Каждый день разбор научной работы (или нескольких по одной теме), простым языком и с юмором, очень детально и профессионально.</p> <p class="lead" data-astro-cid-j7pv25f6>Темы от биологии и медицины до квантовой физики и психологии.</p> <p class="lead" data-astro-cid-j7pv25f6>Аудитория — 30+ преимущественно мужская, предприниматели, айтишники (mid+, senior), деятели науки. В подписчиках канала ИТ-журналисты, ректоры ВУЗов Москвы, топ-инженеры Росатома, учёные проекта CERN, практикующие полевые генетики и так далее.</p> <p class="lead" data-astro-cid-j7pv25f6>Около канала есть развитое сообщество с очень высоким порогом входа: надо уметь читать. Также можно схватить бан за любые антинаучные действия, например, перепутанные цифра и числа или массу и вес.</p> <p class="lead" data-astro-cid-j7pv25f6>«Ряды Фурье» — это элитарный (в хорошем смысле слова) научпоп-канал для тех, у кого нет времени на чтение научных статей в оригинале, но есть запрос на глубокое понимание происходящего на переднем крае науки.</p> <p class="lead authors" data-astro-cid-j7pv25f6>Канал ведут Сергей Абдульманов (Milfgard) и Илья Мартын (Enjoykaz)</p> <p class="lead" data-astro-cid-j7pv25f6>Ну и ещё действуют особенные правила рекламы, ознакомьтесь <a href="/ads/" data-astro-cid-j7pv25f6>вот тут вот</a>.</p> </div> <div class="channel-gallery" data-astro-cid-j7pv25f6> <a href="#" class="gallery-item" data-image="/channel-images/1.jpg" data-astro-cid-j7pv25f6> <img src="/channel-images/1.jpg" alt="Фото 1" loading="lazy" data-astro-cid-j7pv25f6> </a> <a href="#" class="gallery-item" data-image="/channel-images/2.jpg" data-astro-cid-j7pv25f6> <img src="/channel-images/2.jpg" alt="Фото 2" loading="lazy" data-astro-cid-j7pv25f6> </a> <a href="#" class="gallery-item" data-image="/channel-images/3.jpg" data-astro-cid-j7pv25f6> <img src="/channel-images/3.jpg" alt="Фото 3" loading="lazy" data-astro-cid-j7pv25f6> </a> <a href="#" class="gallery-item" data-image="/channel-images/4.jpg" data-astro-cid-j7pv25f6> <img src="/channel-images/4.jpg" alt="Фото 4" loading="lazy" data-astro-cid-j7pv25f6> </a> <a href="#" class="gallery-item" data-image="/channel-images/5.jpg" data-astro-cid-j7pv25f6> <img src="/channel-images/5.jpg" alt="Фото 5" loading="lazy" data-astro-cid-j7pv25f6> </a> </div> <div id="imageModal" class="modal" data-astro-cid-j7pv25f6> <span class="modal-close" data-astro-cid-j7pv25f6>&times;</span> <img class="modal-content" id="modalImage" alt="" data-astro-cid-j7pv25f6> </div> <div class="actions" data-astro-cid-j7pv25f6> <a href="/ads/" data-astro-cid-j7pv25f6>Реклама и кейсы</a> <a href="https://t.me/Fourier_series" target="_blank" rel="noopener" data-astro-cid-j7pv25f6>Открыть канал в Telegram</a> </div> <section class="latest" data-astro-cid-j7pv25f6> <h2 data-astro-cid-j7pv25f6>Последние посты</h2> <ul class="latest-list" data-astro-cid-j7pv25f6> <li data-astro-cid-j7pv25f6> <a href="/posts/738-sova-adskiy-nochnoy-demon-besshumno-ubivayuschiy-iz-tmy-po-k" data-astro-cid-j7pv25f6> <span class="title" data-astro-cid-j7pv25f6>Сова — адский ночной демон, бесшумно убивающий из тьмы. По крайней мере, с точки зрения дневных птиц</span> <span class="date" data-astro-cid-j7pv25f6>10 февр.</span> </a> </li><li data-astro-cid-j7pv25f6> <a href="/posts/737-zhrete-podslastiteli-vmesto-sahara-stareete-kognitivno-dopol" data-astro-cid-j7pv25f6> <span class="title" data-astro-cid-j7pv25f6>Жрёте подсластители вместо сахара? Стареете когнитивно дополнительно на 1,6 года за 8 лет.</span> <span class="date" data-astro-cid-j7pv25f6>9 февр.</span> </a> </li><li data-astro-cid-j7pv25f6> <a href="/posts/736-mozhno-li-s-pomoschyu-gennoy-inzhenerii-sdelat-cheloveka-s-d" data-astro-cid-j7pv25f6> <span class="title" data-astro-cid-j7pv25f6>— Можно ли с помощью генной инженерии сделать человека с двумя Y-хромосомами (в яйцеклетке перед опл</span> <span class="date" data-astro-cid-j7pv25f6>7 февр.</span> </a> </li><li data-astro-cid-j7pv25f6> <a href="/posts/735-u-nas-segodnya-kupil-reklamu-avtor-kursa-pro-reshenie-golovo" data-astro-cid-j7pv25f6> <span class="title" data-astro-cid-j7pv25f6>У нас сегодня купил рекламу автор курса про решение головоломок, Виктор Горбатов. Точнее, сама платф</span> <span class="date" data-astro-cid-j7pv25f6>6 февр.</span> </a> </li><li data-astro-cid-j7pv25f6> <a href="/posts/734-byla-takaya-krasivaya-teoriya-pro-gen-rechi-foxp2-kotoryy-sd" data-astro-cid-j7pv25f6> <span class="title" data-astro-cid-j7pv25f6>Была такая красивая теория про ген речи FOXP2, который сделал обезьяну человеком.</span> <span class="date" data-astro-cid-j7pv25f6>6 февр.</span> </a> </li> </ul> <div class="archive-link" data-astro-cid-j7pv25f6> <a href="/messages/" data-astro-cid-j7pv25f6>Перейти в архив &rarr;</a> </div> </section> <script>
+    // Gallery modal
+    (function() {
+      var modal = document.getElementById('imageModal');
+      var modalImg = document.getElementById('modalImage');
+      var closeBtn = document.querySelector('.modal-close');
+
+      document.querySelectorAll('.gallery-item').forEach(function(item) {
+        item.addEventListener('click', function(e) {
+          e.preventDefault();
+          var imageSrc = this.getAttribute('data-image');
+          modalImg.src = imageSrc;
+          modal.classList.add('active');
+        });
+      });
+
+      closeBtn.addEventListener('click', function() {
+        modal.classList.remove('active');
+      });
+
+      modal.addEventListener('click', function(e) {
+        if (e.target === modal) {
+          modal.classList.remove('active');
+        }
+      });
+
+      document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape') {
+          modal.classList.remove('active');
+        }
+      });
+    })();
+  </script>  </main> <script>
+    // Theme toggle - runs on every page load (including View Transitions)
+    function initThemeToggle() {
+      var KEY = 'theme-preference';
+      var btn = document.getElementById('theme-toggle');
+      if (!btn) return;
+
+      var cycle = ['system', 'light', 'dark'];
+      function icon(mode) {
+        return mode === 'light' ? '☀️' : (mode === 'dark' ? '🌙' : '🖥️');
+      }
+      function apply(mode) {
+        if (mode === 'light' || mode === 'dark') {
+          document.documentElement.setAttribute('data-theme', mode);
+        } else {
+          document.documentElement.removeAttribute('data-theme');
+        }
+        btn.textContent = icon(mode);
+      }
+
+      var cur = localStorage.getItem(KEY) || 'system';
+      if (cycle.indexOf(cur) === -1) cur = 'system';
+      apply(cur);
+
+      // Remove old listener if any (for View Transitions)
+      var newBtn = btn.cloneNode(true);
+      btn.parentNode.replaceChild(newBtn, btn);
+      btn = newBtn;
+
+      btn.addEventListener('click', function() {
+        var idx = cycle.indexOf(cur);
+        cur = cycle[(idx + 1) % cycle.length];
+        localStorage.setItem(KEY, cur);
+        apply(cur);
+      });
+    }
+
+    // Run on initial load
+    initThemeToggle();
+    // Run after View Transitions navigation
+    document.addEventListener('astro:page-load', initThemeToggle);
+
+    // Preserve theme during View Transitions
+    document.addEventListener('astro:before-swap', function(e) {
+      var theme = document.documentElement.getAttribute('data-theme');
+      if (theme) {
+        e.newDocument.documentElement.setAttribute('data-theme', theme);
+      }
+    });
+  </script> </body> </html>

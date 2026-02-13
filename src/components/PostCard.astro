@@ -1,0 +1,41 @@
+---
+import { formatDate, getRuPostMap } from '@/lib/content';
+import { UI } from '@/lib/i18n';
+import type { Locale, PostRecord } from '@/lib/types';
+
+interface Props {
+  post: PostRecord;
+  locale: Locale;
+}
+
+const { post, locale } = Astro.props;
+
+const ruMap = locale === 'ru' ? getRuPostMap({ includeDeleted: true, includeDraft: true }) : null;
+const needsReview = locale === 'ru' && ruMap?.get(post.id)?.translation_status === 'needs_review';
+---
+
+<article class="post-card">
+  <a class="post-link" href={post.path}>
+    <div class="post-card-top">
+      <h2>{post.title}</h2>
+      <time datetime={post.date}>{formatDate(post.date, locale)}</time>
+    </div>
+    {post.summary && <p>{post.summary}</p>}
+  </a>
+
+  {needsReview && <p class="needs-review">Updated EN source detected; RU may need revision.</p>}
+
+  <div class="post-meta-row">
+    <a class="source-link" href={post.source_url} target="_blank" rel="noopener noreferrer">
+      {UI[locale].source}
+    </a>
+
+    {post.reactions && post.reactions.length > 0 && (
+      <div class="reactions" aria-label="Reactions">
+        {post.reactions.slice(0, 6).map((reaction) => (
+          <span>{reaction.emoji} {reaction.count}</span>
+        ))}
+      </div>
+    )}
+  </div>
+</article>

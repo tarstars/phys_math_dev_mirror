@@ -1,0 +1,14 @@
+---
+import { UI } from '@/lib/i18n';
+import type { Locale } from '@/lib/types';
+
+interface Props {
+  locale: Locale;
+}
+
+const { locale } = Astro.props;
+---
+
+<button class="theme-toggle" id="theme-toggle" aria-label={UI[locale].themeLabel} title={UI[locale].themeLabel}>
+  <span aria-hidden="true">◐</span>
+</button>

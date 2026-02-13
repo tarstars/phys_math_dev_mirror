@@ -1,0 +1,20 @@
+---
+const target = '/en/';
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="refresh" content={`0; url=${target}`} />
+    <link rel="canonical" href="https://phys-math.dev/en/" />
+    <meta name="robots" content="noindex,follow" />
+    <title>Redirecting…</title>
+  </head>
+  <body>
+    <p>Redirecting to <a href={target}>{target}</a></p>
+    <script is:inline>
+      window.location.replace('/en/');
+    </script>
+  </body>
+</html>

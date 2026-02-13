@@ -1,0 +1,21 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import { UI } from '@/lib/i18n';
+---
+
+<BaseLayout
+  title="404 · PhysMath Hub"
+  description="Page not found"
+  locale="en"
+  canonicalPath="/404/"
+  enPath="/en/"
+  ruPath="/ru/"
+  noIndex={true}
+>
+  <section class="not-found">
+    <h1>{UI.en.notFound}</h1>
+    <p>
+      <a href="/en/">{UI.en.backHome}</a>
+    </p>
+  </section>
+</BaseLayout>

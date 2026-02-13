@@ -1,0 +1,21 @@
+---
+import { UI } from '@/lib/i18n';
+import type { Locale } from '@/lib/types';
+
+interface Props {
+  locale: Locale;
+  currentPage: number;
+  totalPages: number;
+}
+
+const { locale, currentPage, totalPages } = Astro.props;
+
+const prev = currentPage > 1 ? `/${locale}/archive/${currentPage - 1}/` : null;
+const next = currentPage < totalPages ? `/${locale}/archive/${currentPage + 1}/` : null;
+---
+
+<nav class="pagination" aria-label="Pagination">
+  {prev ? <a href={prev}>{UI[locale].previous}</a> : <span class="disabled">{UI[locale].previous}</span>}
+  <span>{UI[locale].page} {currentPage} / {totalPages}</span>
+  {next ? <a href={next}>{UI[locale].next}</a> : <span class="disabled">{UI[locale].next}</span>}
+</nav>

@@ -1,0 +1,20 @@
+---
+import type { Locale } from '@/lib/types';
+
+interface Props {
+  currentLocale: Locale;
+  enPath: string;
+  ruPath: string;
+}
+
+const { currentLocale, enPath, ruPath } = Astro.props;
+---
+
+<nav class="lang-switch" aria-label="Language switch">
+  <a href={enPath} class={currentLocale === 'en' ? 'active' : ''} hreflang="en">
+    EN
+  </a>
+  <a href={ruPath} class={currentLocale === 'ru' ? 'active' : ''} hreflang="ru">
+    RU
+  </a>
+</nav>

@@ -1,0 +1,183 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import { formatDate, getEnPostMap, getRuPostMap, pageTitle } from '@/lib/content';
+import { LOCALES, UI } from '@/lib/i18n';
+import type { Locale, PostRecord } from '@/lib/types';
+
+export function getStaticPaths() {
+  const enPosts = Array.from(getEnPostMap({ includeDeleted: false }).values());
+
+  return enPosts.flatMap((post) => [
+    {
+      params: {
+        locale: 'en',
+        id: String(post.id),
+        slug: post.slug
+      }
+    },
+    {
+      params: {
+        locale: 'ru',
+        id: String(post.id),
+        slug: post.slug
+      }
+    }
+  ]);
+}
+
+const locale = Astro.params.locale as Locale;
+if (!LOCALES.includes(locale)) {
+  throw new Error('Unsupported locale route');
+}
+
+const id = Number(Astro.params.id);
+const enPost = getEnPostMap({ includeDeleted: true }).get(id);
+const ruPost = getRuPostMap({ includeDeleted: true, includeDraft: true }).get(id);
+
+const enPath = enPost ? `/en/post/${enPost.id}-${enPost.slug}/` : '/en/';
+const ruPath = ruPost && ruPost.translation_status !== 'draft' && !ruPost.deleted ? `/ru/post/${enPost?.id}-${enPost?.slug}/` : enPath;
+
+let post: PostRecord | undefined;
+let redirectTarget: string | null = null;
+let noIndex = false;
+
+if (locale === 'en') {
+  post = enPost;
+} else {
+  if (!ruPost || ruPost.deleted || ruPost.translation_status === 'draft') {
+    redirectTarget = enPath;
+    noIndex = true;
+  } else {
+    post = ruPost;
+  }
+}
+
+if (!enPost || enPost.deleted) {
+  Astro.response.status = 404;
+  noIndex = true;
+}
+
+const current = post ?? enPost;
+const title = pageTitle(current?.title ?? 'Post', locale);
+const description = current?.summary || (locale === 'ru' ? 'Публикация PhysMath Hub.' : 'PhysMath Hub post.');
+
+const site = import.meta.env.PUBLIC_SITE_URL || 'https://phys-math.dev';
+const postUrl = current ? new URL(`/${locale === 'en' ? 'en' : 'ru'}/post/${current.id}-${current.slug}/`, site).toString() : new URL(enPath, site).toString();
+const image = current?.media?.find((item) => item.kind === 'photo' || item.kind === 'video')?.url;
+
+const structuredData = current
+  ? {
+      '@context': 'https://schema.org',
+      '@type': 'BlogPosting',
+      headline: current.title,
+      inLanguage: locale,
+      datePublished: current.date,
+      dateModified: current.edited_at || current.updated_at || current.date,
+      mainEntityOfPage: postUrl,
+      url: postUrl,
+      description: current.summary,
+      image,
+      publisher: {
+        '@type': 'Organization',
+        name: 'PhysMath Hub',
+        url: site
+      },
+      author: {
+        '@type': 'Organization',
+        name: 'PhysMath Hub'
+      }
+    }
+  : null;
+---
+
+{!enPost || enPost.deleted ? (
+  <BaseLayout
+    title="404 · PhysMath Hub"
+    description="Post not found"
+    locale={locale}
+    canonicalPath={locale === 'ru' ? '/ru/' : '/en/'}
+    enPath="/en/"
+    ruPath="/ru/"
+    noIndex={true}
+  >
+    <section class="not-found">
+      <h1>{UI[locale].notFound}</h1>
+      <p>
+        <a href={`/${locale}/`}>{UI[locale].backHome}</a>
+      </p>
+    </section>
+  </BaseLayout>
+) : redirectTarget ? (
+  <BaseLayout
+    title={title}
+    description={description}
+    locale={locale}
+    canonicalPath={enPath}
+    enPath={enPath}
+    ruPath={ruPath}
+    noIndex={noIndex}
+  >
+    <section class="redirect-message">
+      <p>{UI[locale].translationPending}</p>
+      <p>
+        <a href={redirectTarget}>{locale === 'ru' ? 'Открыть EN версию' : 'Open EN version'}</a>
+      </p>
+    </section>
+    <script is:inline>
+      window.location.replace({JSON.stringify(redirectTarget)});
+    </script>
+  </BaseLayout>
+) : (
+  <BaseLayout
+    title={title}
+    description={description}
+    locale={locale}
+    canonicalPath={current?.path ?? enPath}
+    enPath={enPath}
+    ruPath={ruPath}
+    noIndex={noIndex}
+  >
+    {structuredData && (
+      <script type="application/ld+json" set:html={JSON.stringify(structuredData)}></script>
+    )}
+
+    <article class="post-page">
+      <h1>{current?.title}</h1>
+      <p class="post-date">{formatDate(current?.date ?? new Date().toISOString(), locale)}</p>
+
+      {current?.media && current.media.length > 0 && (
+        <section class="media-grid" aria-label="Post media">
+          {current.media.map((media) => (
+            <figure class="media-card">
+              {media.kind === 'photo' ? (
+                <img src={media.url} alt="" loading="lazy" />
+              ) : media.kind === 'video' ? (
+                <video controls preload="metadata" src={media.url}></video>
+              ) : (
+                <a class="file-link" href={media.url} target="_blank" rel="noopener noreferrer">
+                  {media.fileName || media.url}
+                </a>
+              )}
+            </figure>
+          ))}
+        </section>
+      )}
+
+      <section class="post-content" set:html={current?.bodyHtml ?? ''}></section>
+
+      <footer class="post-footer">
+        <p>
+          <a href={current?.source_url} target="_blank" rel="noopener noreferrer">{UI[locale].source}</a>
+        </p>
+
+        {current?.reactions && current.reactions.length > 0 && (
+          <p class="reactions">
+            {current.reactions.map((reaction) => (
+              <span>{reaction.emoji} {reaction.count}</span>
+            ))}
+          </p>
+        )}
+      </footer>
+    </article>
+  </BaseLayout>
+)}

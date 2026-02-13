@@ -1,0 +1,89 @@
+<!DOCTYPE html><html lang="ru"> <head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Есть проблема со временем. — Ряды Фурье</title><!-- SEO --><meta name="description" content="Есть проблема со временем. Всё, чем мы его можем измерить, говорит, что оно идёт вперёд и не идёт назад. Физики — они же простые парни. Если что-то работает,..."><link rel="canonical" href="https://jfourier.com/posts/435-est-problema-so-vremenem"><!-- Open Graph --><meta property="og:title" content="Есть проблема со временем."><meta property="og:description" content="Есть проблема со временем. Всё, чем мы его можем измерить, говорит, что оно идёт вперёд и не идёт назад. Физики — они же простые парни. Если что-то работает,..."><meta property="og:image" content="https://jfourier.com/og-default.jpg"><meta property="og:url" content="https://jfourier.com/posts/435-est-problema-so-vremenem"><meta property="og:type" content="article"><meta property="og:site_name" content="Ряды Фурье"><meta property="og:locale" content="ru_RU"><!-- Twitter Card --><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="Есть проблема со временем."><meta name="twitter:description" content="Есть проблема со временем. Всё, чем мы его можем измерить, говорит, что оно идёт вперёд и не идёт назад. Физики — они же простые парни. Если что-то работает,..."><meta name="twitter:image" content="https://jfourier.com/og-default.jpg"><!-- RSS --><link rel="alternate" type="application/rss+xml" title="Ряды Фурье" href="/rss.xml"><!-- View Transitions --><meta name="astro-view-transitions-enabled" content="true"><meta name="astro-view-transitions-fallback" content="animate"><script type="module" src="/_astro/ClientRouter.astro_astro_type_script_index_0_lang.DAJUkfHi.js"></script><script>
+    // Применяем тему до рендеринга (предотвращает мигание)
+    (function(){
+      try {
+        var v = localStorage.getItem('theme-preference') || 'system';
+        if (v === 'light' || v === 'dark') {
+          document.documentElement.setAttribute('data-theme', v);
+        }
+      } catch(e) {}
+    })();
+  </script><script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","headline":"Есть проблема со временем.","datePublished":"2025-07-02T09:23:23Z","dateModified":"2025-07-02T16:15:46Z","url":"https://jfourier.com/posts/435-est-problema-so-vremenem","author":{"@type":"Organization","name":"Ряды Фурье","url":"https://t.me/Fourier_series"},"publisher":{"@type":"Organization","name":"Ряды Фурье","url":"https://jfourier.com"}}</script><style>.date[data-astro-cid-gysqo7gh]{color:var(--muted);font-size:.9rem;margin-bottom:1rem}.content[data-astro-cid-gysqo7gh]{margin:1.5rem 0}.single-image[data-astro-cid-gysqo7gh] img[data-astro-cid-gysqo7gh]{max-width:100%;height:auto;border-radius:8px;margin:1rem 0}.gallery[data-astro-cid-gysqo7gh]{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:8px;margin:1rem 0}.gallery-item[data-astro-cid-gysqo7gh]{aspect-ratio:1;overflow:hidden;border-radius:8px;cursor:pointer;position:relative}.gallery-item[data-astro-cid-gysqo7gh] img[data-astro-cid-gysqo7gh]{width:100%;height:100%;object-fit:cover;transition:transform .2s ease}.gallery-item[data-astro-cid-gysqo7gh]:hover img[data-astro-cid-gysqo7gh]{transform:scale(1.05)}.gallery-count[data-astro-cid-gysqo7gh]{position:absolute;bottom:8px;right:8px;background:#000000b3;color:#fff;padding:2px 8px;border-radius:4px;font-size:.8rem}.lightbox[data-astro-cid-gysqo7gh]{display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:#000000f2;z-index:1000;align-items:center;justify-content:center}.lightbox[data-astro-cid-gysqo7gh].active{display:flex}.lightbox-content[data-astro-cid-gysqo7gh]{position:relative;max-width:90vw;max-height:90vh}.lightbox-content[data-astro-cid-gysqo7gh] img[data-astro-cid-gysqo7gh]{max-width:90vw;max-height:85vh;object-fit:contain;border-radius:4px}.lightbox-close[data-astro-cid-gysqo7gh]{position:absolute;top:-40px;right:0;background:none;border:none;color:#fff;font-size:2rem;cursor:pointer;padding:0 10px}.lightbox-nav[data-astro-cid-gysqo7gh]{position:absolute;top:50%;transform:translateY(-50%);background:#fff3;border:none;color:#fff;font-size:2rem;cursor:pointer;padding:20px 15px;border-radius:4px;transition:background .2s}.lightbox-nav[data-astro-cid-gysqo7gh]:hover{background:#ffffff4d}.lightbox-prev[data-astro-cid-gysqo7gh]{left:20px}.lightbox-next[data-astro-cid-gysqo7gh]{right:20px}.lightbox-counter[data-astro-cid-gysqo7gh]{position:absolute;bottom:-35px;left:50%;transform:translate(-50%);color:#fff;font-size:.9rem}.reactions[data-astro-cid-gysqo7gh]{display:flex;gap:1rem;flex-wrap:wrap;margin-top:1.5rem;padding-top:1rem;border-top:1px solid var(--border)}.reaction[data-astro-cid-gysqo7gh]{display:flex;align-items:center;gap:.25rem;font-size:.9rem}.telegram-link[data-astro-cid-gysqo7gh]{margin-top:1rem}.telegram-link[data-astro-cid-gysqo7gh] a[data-astro-cid-gysqo7gh]{color:#08c;text-decoration:none}
+.astro-route-announcer{position:absolute;left:0;top:0;clip:rect(0 0 0 0);clip-path:inset(50%);overflow:hidden;white-space:nowrap;width:1px;height:1px}:root{--bg: #ffffff;--fg: #111111;--link: #0066cc;--border: #e6e6e6;--muted: #666666;--bg-secondary: #f8f9fa}@media(prefers-color-scheme:dark){:root{--bg: #0d0d0d;--fg: #e6e6e6;--link: #5aa7ff;--border: #222222;--muted: #9aa0a6;--bg-secondary: #1a1a1a}}html[data-theme=light]{--bg: #ffffff;--fg: #111111;--link: #0066cc;--border: #e6e6e6;--muted: #666666;--bg-secondary: #f8f9fa}html[data-theme=dark]{--bg: #0d0d0d;--fg: #e6e6e6;--link: #5aa7ff;--border: #222222;--muted: #9aa0a6;--bg-secondary: #1a1a1a}*{box-sizing:border-box}body{font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,sans-serif;max-width:700px;margin:0 auto;padding:0 1rem 2rem;line-height:1.6;background:var(--bg);color:var(--fg)}a{color:var(--link)}h1{font-size:1.5rem;margin-bottom:.5rem}.site-header{position:sticky;top:0;background:color-mix(in srgb,var(--bg) 90%,transparent);backdrop-filter:blur(8px);border-bottom:1px solid var(--border);margin:0 -1rem 1.5rem;padding:0 1rem;z-index:100}.site-header-inner{display:flex;gap:1rem;align-items:center;padding:.75rem 0}.site-header a{color:var(--fg);text-decoration:none;padding:.4rem .6rem;border-radius:6px;font-size:.9rem}.site-header a:hover{background:color-mix(in srgb,var(--fg) 5%,transparent)}.site-header .tg-link{color:#08c}.site-header .spacer{margin-left:auto}.theme-toggle{width:32px;height:32px;border:1px solid var(--border);border-radius:6px;background:var(--bg);color:var(--fg);cursor:pointer;font-size:1rem;display:flex;align-items:center;justify-content:center}.theme-toggle:hover{background:var(--bg-secondary)}.tg-spoiler{background:var(--spoiler-bg);color:transparent;border-radius:4px;padding:0 2px;cursor:pointer;transition:color .2s,background .2s}.tg-spoiler:hover,.tg-spoiler:focus,.tg-spoiler.revealed{color:inherit;background:var(--spoiler-bg-revealed)}:root{--spoiler-bg: rgba(0, 0, 0, .12);--spoiler-bg-revealed: rgba(0, 0, 0, .05)}@media(prefers-color-scheme:dark){:root{--spoiler-bg: rgba(255, 255, 255, .15);--spoiler-bg-revealed: rgba(255, 255, 255, .08)}}html[data-theme=light]{--spoiler-bg: rgba(0, 0, 0, .12);--spoiler-bg-revealed: rgba(0, 0, 0, .05)}html[data-theme=dark]{--spoiler-bg: rgba(255, 255, 255, .15);--spoiler-bg-revealed: rgba(255, 255, 255, .08)}
+@keyframes astroFadeInOut{0%{opacity:1}to{opacity:0}}@keyframes astroFadeIn{0%{opacity:0;mix-blend-mode:plus-lighter}to{opacity:1;mix-blend-mode:plus-lighter}}@keyframes astroFadeOut{0%{opacity:1;mix-blend-mode:plus-lighter}to{opacity:0;mix-blend-mode:plus-lighter}}@keyframes astroSlideFromRight{0%{transform:translate(100%)}}@keyframes astroSlideFromLeft{0%{transform:translate(-100%)}}@keyframes astroSlideToRight{to{transform:translate(100%)}}@keyframes astroSlideToLeft{to{transform:translate(-100%)}}@media(prefers-reduced-motion){::view-transition-group(*),::view-transition-old(*),::view-transition-new(*){animation:none!important}[data-astro-transition-scope]{animation:none!important}}
+</style><script type="module" src="/_astro/page.DTPp-pk-.js"></script></head> <body> <header class="site-header"> <nav class="site-header-inner"> <a href="/">Главная</a> <a href="/messages/">Ряды Фурье</a> <a href="/tvarium/">Зверские рассказы</a> <a href="/ads/">Реклама</a> <span class="spacer"></span> <a href="https://t.me/Fourier_series" target="_blank" rel="noopener" class="tg-link">TG</a> <button id="theme-toggle" class="theme-toggle" aria-label="Переключить тему">🖥️</button> </nav> </header> <main>    <article data-astro-cid-gysqo7gh> <h1 data-astro-cid-gysqo7gh>Есть проблема со временем.</h1> <div class="date" data-astro-cid-gysqo7gh>2 июля 2025 г.</div>   <div class="content" data-astro-cid-gysqo7gh> <p>Есть проблема со временем.</p>
+<p>Всё, чем мы его можем измерить, говорит, что оно идёт вперёд и не идёт назад.</p>
+<p>Физики — они же простые парни. Если что-то работает, они на это смотрят, измеряют и говорят, как из этого построить катапульту.</p>
+<p>И вот появляется такой Гильберт и спрашивает: а какого, собственно, хрена? У него там чуть более общий вопрос, и вообще их всего 23. Но важно то, что из-за него тысячи людей морщили голову вместо игры в Color Lines и Dwarf Fortress. Ну или во что там ещё играют в университетах.</p>
+<p>Потому что время — это вообще штука из термодинамики, и, по идее, если не считать энтропию, должно спокойно ходить туда-сюда. Но почему-то так не делает.</p>
+<p>Вот <a href="https://www.youtube.com/watch?v=g1Sdngywob4">смешной ролик</a> на хорошем русском про это, который многим срывает крышу.</p>
+<p>Но теперь <a href="https://arxiv.org/pdf/2503.01800">появилась модель.</a></p>
+<p>Сразу — пока нерецензированная, но всё такая же красивая, как и многие другие хреново рецензированные вещи. А у нас такие тут уже были. Поэтому рассказываем.</p>
+<p>Вопрос хорошо было бы решать с того, как уравнения гидродинамики возникают из движения атомов. В теории мы могли бы отслеживать каждую молекулу жидкости, но их что-то дофига. Уравнения для потока мы знаем, для взаимодействия частиц тоже. И вот надо как-то свести вместе. Если что, где куча частиц становится потоком, примерно там и появляется время.</p>
+<p>Почему так: Ньютон говорит, что время работает в обе стороны, потому что упругие столкновения шаров всегда можно отмотать назад, и время — просто координата.</p>
+<p>А Больцман любит выдавливать зубную пасту из тюбика и просить Ньютона запихать её обратно. Он так показывает энтропию, то есть математическое описание необратимости. Это мера неопределённости, которая не даёт системе самой вернуться в предыдущее состояние.</p>
+<p>Иерархия процессов:
+— Законы Ньютона для N сталкивающихся частиц (микроскопический уровень).
+— Кинетический предел → уравнение Больцмана (мезоскопический уровень).
+— Гидродинамический предел → уравнения жидкости (макроскопический уровень, Эйлера и Навье-Стокса, на которых тоже немало народа полегло).</p>
+<p>В работе придумали математику, которая не сильно ломается от количества частиц. Раньше мы ловили стек оверфло и всё. А теперь можем примерно прикинуть.</p>
+<p>Тяжелее всего давался переход от Ньютона к Больцману, особенно, если надо больше пикосекунды. Прошлая работа частично решила эту проблему для ряда случаев. Там, где вы встречаете посреди формул слова “банально” (а они там часто встречаются) — это они как раз передают приветы всем теоретическим физикам до них и себе в прошлом.</p>
+<p>А в этой работе они связывают все уровни.</p>
+<p>Физикам внутри будет интересна концепция длинных связей и интервалов времени между столкновениями, математикам — эксцесс-функция. С ними смогли посчитать вероятности столкновений частиц точнее и сравнить разные сценарии. Плюс поверх этого всего положили алгоритм, который разрезает проблему большого количества столкновений на части и кластеризует.</p>
+<p>И вот поскольку тут из миллиона Ньютонов выводят одного Больцмана, нашлась точка, где это работает. Это возникновение необратимости во времени вблизи равновесия. Представьте, что вы кидаете мешок с миллионом игральных кубиков. Каждый из них отдельно можно рассчитать, и можно сказать, что его движение обратимо. Но когда их такая куча, то возникает очень много шума в системе, и эта случайность настолько сильно взаимозависима (там чуть ли не каждый влияет на каждого в каждый момент), что просчитать всё это становится сложно. Хотя каждый отдельный кубик подчиняется обратимым законам, статистическое поведение огромного количества кубиков приводит к необратимости. Хаос и случайность на макроскопическом уровне создают направление времени, хотя на микроскопическом уровне её нет. Так вот тут показывают, когда куча отдельных кубиков превращается в мешок, который можно обработать только статистически, но не рассчитать в той симуляции, где мы живём )</p>
+<p>Напоминаем, что такие работы следует употреблять с особой осторожностью, но красиво же!</p>
+<p>За наводку спасибо <a href="https://t.me/x7CFE">@x7CFE</a></p>
+<p>—
+<a href="https://t.me/Fourier_series">Вступайте в ряды Фурье!</a> <span class="tg-spoiler">Двухмерный ёж причёсывается в любом направлении. Трёхмерный ёж принципиально не причёсывается.</span></p> </div> <div class="reactions" data-astro-cid-gysqo7gh> <span class="reaction" data-astro-cid-gysqo7gh> <span data-astro-cid-gysqo7gh>🔥</span> <span data-astro-cid-gysqo7gh>183</span> </span><span class="reaction" data-astro-cid-gysqo7gh> <span data-astro-cid-gysqo7gh>❤</span> <span data-astro-cid-gysqo7gh>82</span> </span><span class="reaction" data-astro-cid-gysqo7gh> <span data-astro-cid-gysqo7gh>👍</span> <span data-astro-cid-gysqo7gh>45</span> </span><span class="reaction" data-astro-cid-gysqo7gh> <span data-astro-cid-gysqo7gh>🤯</span> <span data-astro-cid-gysqo7gh>17</span> </span><span class="reaction" data-astro-cid-gysqo7gh> <span data-astro-cid-gysqo7gh>✍</span> <span data-astro-cid-gysqo7gh>12</span> </span><span class="reaction" data-astro-cid-gysqo7gh> <span data-astro-cid-gysqo7gh>🤡</span> <span data-astro-cid-gysqo7gh>3</span> </span> </div> <div class="telegram-link" data-astro-cid-gysqo7gh> <a href="https://t.me/Fourier_series/435" target="_blank" rel="noopener" data-astro-cid-gysqo7gh>
+Открыть в Telegram →
+</a> </div> </article>  </main> <script>
+    // Theme toggle - runs on every page load (including View Transitions)
+    function initThemeToggle() {
+      var KEY = 'theme-preference';
+      var btn = document.getElementById('theme-toggle');
+      if (!btn) return;
+
+      var cycle = ['system', 'light', 'dark'];
+      function icon(mode) {
+        return mode === 'light' ? '☀️' : (mode === 'dark' ? '🌙' : '🖥️');
+      }
+      function apply(mode) {
+        if (mode === 'light' || mode === 'dark') {
+          document.documentElement.setAttribute('data-theme', mode);
+        } else {
+          document.documentElement.removeAttribute('data-theme');
+        }
+        btn.textContent = icon(mode);
+      }
+
+      var cur = localStorage.getItem(KEY) || 'system';
+      if (cycle.indexOf(cur) === -1) cur = 'system';
+      apply(cur);
+
+      // Remove old listener if any (for View Transitions)
+      var newBtn = btn.cloneNode(true);
+      btn.parentNode.replaceChild(newBtn, btn);
+      btn = newBtn;
+
+      btn.addEventListener('click', function() {
+        var idx = cycle.indexOf(cur);
+        cur = cycle[(idx + 1) % cycle.length];
+        localStorage.setItem(KEY, cur);
+        apply(cur);
+      });
+    }
+
+    // Run on initial load
+    initThemeToggle();
+    // Run after View Transitions navigation
+    document.addEventListener('astro:page-load', initThemeToggle);
+
+    // Preserve theme during View Transitions
+    document.addEventListener('astro:before-swap', function(e) {
+      var theme = document.documentElement.getAttribute('data-theme');
+      if (theme) {
+        e.newDocument.documentElement.setAttribute('data-theme', theme);
+      }
+    });
+  </script> <script defer src="https://static.cloudflareinsights.com/beacon.min.js/vcd15cbe7772f49c399c6a5babf22c1241717689176015" integrity="sha512-ZpsOmlRQV6y907TI0dKBHq9Md29nnaEIPlkf84rnaERnq6zvWvPUqr2ft8M1aS28oN72PdrCzSjY4U6VaAw1EQ==" data-cf-beacon='{"version":"2024.11.0","token":"fa5737a6992d48e8968691f037f1b1ef","r":1,"server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
+</body> </html>

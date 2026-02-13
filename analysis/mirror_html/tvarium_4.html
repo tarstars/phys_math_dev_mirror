@@ -1,0 +1,502 @@
+<!DOCTYPE html><html lang="ru"> <head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Зверские рассказы — страница 4 — Ряды Фурье</title><!-- SEO --><meta name="description" content="Архив постов канала Зверские рассказы (@Tvarium). Страница 4 из 5."><link rel="canonical" href="https://jfourier.com/tvarium/4"><!-- Open Graph --><meta property="og:title" content="Зверские рассказы — страница 4"><meta property="og:description" content="Архив постов канала Зверские рассказы (@Tvarium). Страница 4 из 5."><meta property="og:image" content="https://jfourier.com/og-default.jpg"><meta property="og:url" content="https://jfourier.com/tvarium/4"><meta property="og:type" content="website"><meta property="og:site_name" content="Ряды Фурье"><meta property="og:locale" content="ru_RU"><!-- Twitter Card --><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="Зверские рассказы — страница 4"><meta name="twitter:description" content="Архив постов канала Зверские рассказы (@Tvarium). Страница 4 из 5."><meta name="twitter:image" content="https://jfourier.com/og-default.jpg"><!-- RSS --><link rel="alternate" type="application/rss+xml" title="Ряды Фурье" href="/rss.xml"><!-- View Transitions --><meta name="astro-view-transitions-enabled" content="true"><meta name="astro-view-transitions-fallback" content="animate"><script type="module" src="/_astro/ClientRouter.astro_astro_type_script_index_0_lang.DAJUkfHi.js"></script><script>
+    // Применяем тему до рендеринга (предотвращает мигание)
+    (function(){
+      try {
+        var v = localStorage.getItem('theme-preference') || 'system';
+        if (v === 'light' || v === 'dark') {
+          document.documentElement.setAttribute('data-theme', v);
+        }
+      } catch(e) {}
+    })();
+  </script><style>.posts[data-astro-cid-zrl4zvhu]{list-style:none;padding:0;margin:0}.post[data-astro-cid-zrl4zvhu]{padding:1rem 0;border-bottom:1px solid var(--border)}.post[data-astro-cid-zrl4zvhu]:last-child{border-bottom:none}.post-link[data-astro-cid-zrl4zvhu]{text-decoration:none;color:inherit;display:flex;gap:1rem}.post-link[data-astro-cid-zrl4zvhu]:hover .post-title[data-astro-cid-zrl4zvhu]{color:var(--link)}.post-thumb[data-astro-cid-zrl4zvhu]{flex-shrink:0;width:80px;height:80px;border-radius:8px;overflow:hidden}.post-thumb[data-astro-cid-zrl4zvhu] img[data-astro-cid-zrl4zvhu]{width:100%;height:100%;object-fit:cover}.post-content[data-astro-cid-zrl4zvhu]{flex:1;min-width:0}.post-title[data-astro-cid-zrl4zvhu]{font-size:1rem;font-weight:500;margin:0 0 .5rem;transition:color .2s}.post-preview[data-astro-cid-zrl4zvhu]{font-size:.95rem;color:var(--fg);opacity:.8;margin:.5rem 0;line-height:1.5}.read-more[data-astro-cid-zrl4zvhu]{color:var(--link);font-size:.9rem}.post-meta[data-astro-cid-zrl4zvhu]{font-size:.85rem;color:var(--muted);display:flex;gap:1rem}.post-reactions[data-astro-cid-zrl4zvhu]{display:flex;gap:.5rem}.pagination[data-astro-cid-zrl4zvhu]{display:flex;justify-content:center;gap:1rem;margin-top:2rem;padding-top:1rem;border-top:1px solid var(--border)}.pagination[data-astro-cid-zrl4zvhu] a[data-astro-cid-zrl4zvhu]{color:var(--link);text-decoration:none;padding:.5rem 1rem;border:1px solid var(--border);border-radius:4px}.pagination[data-astro-cid-zrl4zvhu] a[data-astro-cid-zrl4zvhu]:hover{background:var(--bg-secondary)}.pagination[data-astro-cid-zrl4zvhu] .disabled[data-astro-cid-zrl4zvhu]{color:var(--muted);pointer-events:none}.page-info[data-astro-cid-zrl4zvhu]{color:var(--muted);font-size:.9rem;text-align:center;margin-top:1rem}
+.astro-route-announcer{position:absolute;left:0;top:0;clip:rect(0 0 0 0);clip-path:inset(50%);overflow:hidden;white-space:nowrap;width:1px;height:1px}:root{--bg: #ffffff;--fg: #111111;--link: #0066cc;--border: #e6e6e6;--muted: #666666;--bg-secondary: #f8f9fa}@media(prefers-color-scheme:dark){:root{--bg: #0d0d0d;--fg: #e6e6e6;--link: #5aa7ff;--border: #222222;--muted: #9aa0a6;--bg-secondary: #1a1a1a}}html[data-theme=light]{--bg: #ffffff;--fg: #111111;--link: #0066cc;--border: #e6e6e6;--muted: #666666;--bg-secondary: #f8f9fa}html[data-theme=dark]{--bg: #0d0d0d;--fg: #e6e6e6;--link: #5aa7ff;--border: #222222;--muted: #9aa0a6;--bg-secondary: #1a1a1a}*{box-sizing:border-box}body{font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,sans-serif;max-width:700px;margin:0 auto;padding:0 1rem 2rem;line-height:1.6;background:var(--bg);color:var(--fg)}a{color:var(--link)}h1{font-size:1.5rem;margin-bottom:.5rem}.site-header{position:sticky;top:0;background:color-mix(in srgb,var(--bg) 90%,transparent);backdrop-filter:blur(8px);border-bottom:1px solid var(--border);margin:0 -1rem 1.5rem;padding:0 1rem;z-index:100}.site-header-inner{display:flex;gap:1rem;align-items:center;padding:.75rem 0}.site-header a{color:var(--fg);text-decoration:none;padding:.4rem .6rem;border-radius:6px;font-size:.9rem}.site-header a:hover{background:color-mix(in srgb,var(--fg) 5%,transparent)}.site-header .tg-link{color:#08c}.site-header .spacer{margin-left:auto}.theme-toggle{width:32px;height:32px;border:1px solid var(--border);border-radius:6px;background:var(--bg);color:var(--fg);cursor:pointer;font-size:1rem;display:flex;align-items:center;justify-content:center}.theme-toggle:hover{background:var(--bg-secondary)}.tg-spoiler{background:var(--spoiler-bg);color:transparent;border-radius:4px;padding:0 2px;cursor:pointer;transition:color .2s,background .2s}.tg-spoiler:hover,.tg-spoiler:focus,.tg-spoiler.revealed{color:inherit;background:var(--spoiler-bg-revealed)}:root{--spoiler-bg: rgba(0, 0, 0, .12);--spoiler-bg-revealed: rgba(0, 0, 0, .05)}@media(prefers-color-scheme:dark){:root{--spoiler-bg: rgba(255, 255, 255, .15);--spoiler-bg-revealed: rgba(255, 255, 255, .08)}}html[data-theme=light]{--spoiler-bg: rgba(0, 0, 0, .12);--spoiler-bg-revealed: rgba(0, 0, 0, .05)}html[data-theme=dark]{--spoiler-bg: rgba(255, 255, 255, .15);--spoiler-bg-revealed: rgba(255, 255, 255, .08)}
+@keyframes astroFadeInOut{0%{opacity:1}to{opacity:0}}@keyframes astroFadeIn{0%{opacity:0;mix-blend-mode:plus-lighter}to{opacity:1;mix-blend-mode:plus-lighter}}@keyframes astroFadeOut{0%{opacity:1;mix-blend-mode:plus-lighter}to{opacity:0;mix-blend-mode:plus-lighter}}@keyframes astroSlideFromRight{0%{transform:translate(100%)}}@keyframes astroSlideFromLeft{0%{transform:translate(-100%)}}@keyframes astroSlideToRight{to{transform:translate(100%)}}@keyframes astroSlideToLeft{to{transform:translate(-100%)}}@media(prefers-reduced-motion){::view-transition-group(*),::view-transition-old(*),::view-transition-new(*){animation:none!important}[data-astro-transition-scope]{animation:none!important}}
+</style><script type="module" src="/_astro/page.DTPp-pk-.js"></script><style>[data-astro-transition-scope="astro-hyr2zha4-1"] { view-transition-name: tvarium-image-61; }@layer astro { ::view-transition-old(tvarium-image-61) { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeOut; }::view-transition-new(tvarium-image-61) { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeIn; }[data-astro-transition=back]::view-transition-old(tvarium-image-61) { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeOut; }[data-astro-transition=back]::view-transition-new(tvarium-image-61) { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeIn; } }[data-astro-transition-fallback="old"] [data-astro-transition-scope="astro-hyr2zha4-1"],
+			[data-astro-transition-fallback="old"][data-astro-transition-scope="astro-hyr2zha4-1"] { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeOut; }[data-astro-transition-fallback="new"] [data-astro-transition-scope="astro-hyr2zha4-1"],
+			[data-astro-transition-fallback="new"][data-astro-transition-scope="astro-hyr2zha4-1"] { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeIn; }[data-astro-transition=back][data-astro-transition-fallback="old"] [data-astro-transition-scope="astro-hyr2zha4-1"],
+			[data-astro-transition=back][data-astro-transition-fallback="old"][data-astro-transition-scope="astro-hyr2zha4-1"] { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeOut; }[data-astro-transition=back][data-astro-transition-fallback="new"] [data-astro-transition-scope="astro-hyr2zha4-1"],
+			[data-astro-transition=back][data-astro-transition-fallback="new"][data-astro-transition-scope="astro-hyr2zha4-1"] { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeIn; }</style><style>[data-astro-transition-scope="astro-hyr2zha4-2"] { view-transition-name: tvarium-image-56; }@layer astro { ::view-transition-old(tvarium-image-56) { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeOut; }::view-transition-new(tvarium-image-56) { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeIn; }[data-astro-transition=back]::view-transition-old(tvarium-image-56) { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeOut; }[data-astro-transition=back]::view-transition-new(tvarium-image-56) { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeIn; } }[data-astro-transition-fallback="old"] [data-astro-transition-scope="astro-hyr2zha4-2"],
+			[data-astro-transition-fallback="old"][data-astro-transition-scope="astro-hyr2zha4-2"] { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeOut; }[data-astro-transition-fallback="new"] [data-astro-transition-scope="astro-hyr2zha4-2"],
+			[data-astro-transition-fallback="new"][data-astro-transition-scope="astro-hyr2zha4-2"] { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeIn; }[data-astro-transition=back][data-astro-transition-fallback="old"] [data-astro-transition-scope="astro-hyr2zha4-2"],
+			[data-astro-transition=back][data-astro-transition-fallback="old"][data-astro-transition-scope="astro-hyr2zha4-2"] { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeOut; }[data-astro-transition=back][data-astro-transition-fallback="new"] [data-astro-transition-scope="astro-hyr2zha4-2"],
+			[data-astro-transition=back][data-astro-transition-fallback="new"][data-astro-transition-scope="astro-hyr2zha4-2"] { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeIn; }</style><style>[data-astro-transition-scope="astro-hyr2zha4-3"] { view-transition-name: tvarium-image-51; }@layer astro { ::view-transition-old(tvarium-image-51) { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeOut; }::view-transition-new(tvarium-image-51) { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeIn; }[data-astro-transition=back]::view-transition-old(tvarium-image-51) { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeOut; }[data-astro-transition=back]::view-transition-new(tvarium-image-51) { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeIn; } }[data-astro-transition-fallback="old"] [data-astro-transition-scope="astro-hyr2zha4-3"],
+			[data-astro-transition-fallback="old"][data-astro-transition-scope="astro-hyr2zha4-3"] { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeOut; }[data-astro-transition-fallback="new"] [data-astro-transition-scope="astro-hyr2zha4-3"],
+			[data-astro-transition-fallback="new"][data-astro-transition-scope="astro-hyr2zha4-3"] { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeIn; }[data-astro-transition=back][data-astro-transition-fallback="old"] [data-astro-transition-scope="astro-hyr2zha4-3"],
+			[data-astro-transition=back][data-astro-transition-fallback="old"][data-astro-transition-scope="astro-hyr2zha4-3"] { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeOut; }[data-astro-transition=back][data-astro-transition-fallback="new"] [data-astro-transition-scope="astro-hyr2zha4-3"],
+			[data-astro-transition=back][data-astro-transition-fallback="new"][data-astro-transition-scope="astro-hyr2zha4-3"] { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeIn; }</style><style>[data-astro-transition-scope="astro-hyr2zha4-4"] { view-transition-name: tvarium-image-50; }@layer astro { ::view-transition-old(tvarium-image-50) { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeOut; }::view-transition-new(tvarium-image-50) { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeIn; }[data-astro-transition=back]::view-transition-old(tvarium-image-50) { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeOut; }[data-astro-transition=back]::view-transition-new(tvarium-image-50) { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeIn; } }[data-astro-transition-fallback="old"] [data-astro-transition-scope="astro-hyr2zha4-4"],
+			[data-astro-transition-fallback="old"][data-astro-transition-scope="astro-hyr2zha4-4"] { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeOut; }[data-astro-transition-fallback="new"] [data-astro-transition-scope="astro-hyr2zha4-4"],
+			[data-astro-transition-fallback="new"][data-astro-transition-scope="astro-hyr2zha4-4"] { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeIn; }[data-astro-transition=back][data-astro-transition-fallback="old"] [data-astro-transition-scope="astro-hyr2zha4-4"],
+			[data-astro-transition=back][data-astro-transition-fallback="old"][data-astro-transition-scope="astro-hyr2zha4-4"] { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeOut; }[data-astro-transition=back][data-astro-transition-fallback="new"] [data-astro-transition-scope="astro-hyr2zha4-4"],
+			[data-astro-transition=back][data-astro-transition-fallback="new"][data-astro-transition-scope="astro-hyr2zha4-4"] { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeIn; }</style><style>[data-astro-transition-scope="astro-hyr2zha4-5"] { view-transition-name: tvarium-image-49; }@layer astro { ::view-transition-old(tvarium-image-49) { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeOut; }::view-transition-new(tvarium-image-49) { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeIn; }[data-astro-transition=back]::view-transition-old(tvarium-image-49) { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeOut; }[data-astro-transition=back]::view-transition-new(tvarium-image-49) { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeIn; } }[data-astro-transition-fallback="old"] [data-astro-transition-scope="astro-hyr2zha4-5"],
+			[data-astro-transition-fallback="old"][data-astro-transition-scope="astro-hyr2zha4-5"] { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeOut; }[data-astro-transition-fallback="new"] [data-astro-transition-scope="astro-hyr2zha4-5"],
+			[data-astro-transition-fallback="new"][data-astro-transition-scope="astro-hyr2zha4-5"] { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeIn; }[data-astro-transition=back][data-astro-transition-fallback="old"] [data-astro-transition-scope="astro-hyr2zha4-5"],
+			[data-astro-transition=back][data-astro-transition-fallback="old"][data-astro-transition-scope="astro-hyr2zha4-5"] { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeOut; }[data-astro-transition=back][data-astro-transition-fallback="new"] [data-astro-transition-scope="astro-hyr2zha4-5"],
+			[data-astro-transition=back][data-astro-transition-fallback="new"][data-astro-transition-scope="astro-hyr2zha4-5"] { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeIn; }</style><style>[data-astro-transition-scope="astro-hyr2zha4-6"] { view-transition-name: tvarium-image-46; }@layer astro { ::view-transition-old(tvarium-image-46) { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeOut; }::view-transition-new(tvarium-image-46) { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeIn; }[data-astro-transition=back]::view-transition-old(tvarium-image-46) { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeOut; }[data-astro-transition=back]::view-transition-new(tvarium-image-46) { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeIn; } }[data-astro-transition-fallback="old"] [data-astro-transition-scope="astro-hyr2zha4-6"],
+			[data-astro-transition-fallback="old"][data-astro-transition-scope="astro-hyr2zha4-6"] { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeOut; }[data-astro-transition-fallback="new"] [data-astro-transition-scope="astro-hyr2zha4-6"],
+			[data-astro-transition-fallback="new"][data-astro-transition-scope="astro-hyr2zha4-6"] { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeIn; }[data-astro-transition=back][data-astro-transition-fallback="old"] [data-astro-transition-scope="astro-hyr2zha4-6"],
+			[data-astro-transition=back][data-astro-transition-fallback="old"][data-astro-transition-scope="astro-hyr2zha4-6"] { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeOut; }[data-astro-transition=back][data-astro-transition-fallback="new"] [data-astro-transition-scope="astro-hyr2zha4-6"],
+			[data-astro-transition=back][data-astro-transition-fallback="new"][data-astro-transition-scope="astro-hyr2zha4-6"] { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeIn; }</style><style>[data-astro-transition-scope="astro-hyr2zha4-7"] { view-transition-name: tvarium-image-45; }@layer astro { ::view-transition-old(tvarium-image-45) { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeOut; }::view-transition-new(tvarium-image-45) { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeIn; }[data-astro-transition=back]::view-transition-old(tvarium-image-45) { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeOut; }[data-astro-transition=back]::view-transition-new(tvarium-image-45) { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeIn; } }[data-astro-transition-fallback="old"] [data-astro-transition-scope="astro-hyr2zha4-7"],
+			[data-astro-transition-fallback="old"][data-astro-transition-scope="astro-hyr2zha4-7"] { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeOut; }[data-astro-transition-fallback="new"] [data-astro-transition-scope="astro-hyr2zha4-7"],
+			[data-astro-transition-fallback="new"][data-astro-transition-scope="astro-hyr2zha4-7"] { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeIn; }[data-astro-transition=back][data-astro-transition-fallback="old"] [data-astro-transition-scope="astro-hyr2zha4-7"],
+			[data-astro-transition=back][data-astro-transition-fallback="old"][data-astro-transition-scope="astro-hyr2zha4-7"] { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeOut; }[data-astro-transition=back][data-astro-transition-fallback="new"] [data-astro-transition-scope="astro-hyr2zha4-7"],
+			[data-astro-transition=back][data-astro-transition-fallback="new"][data-astro-transition-scope="astro-hyr2zha4-7"] { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeIn; }</style><style>[data-astro-transition-scope="astro-hyr2zha4-8"] { view-transition-name: tvarium-image-41; }@layer astro { ::view-transition-old(tvarium-image-41) { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeOut; }::view-transition-new(tvarium-image-41) { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeIn; }[data-astro-transition=back]::view-transition-old(tvarium-image-41) { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeOut; }[data-astro-transition=back]::view-transition-new(tvarium-image-41) { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeIn; } }[data-astro-transition-fallback="old"] [data-astro-transition-scope="astro-hyr2zha4-8"],
+			[data-astro-transition-fallback="old"][data-astro-transition-scope="astro-hyr2zha4-8"] { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeOut; }[data-astro-transition-fallback="new"] [data-astro-transition-scope="astro-hyr2zha4-8"],
+			[data-astro-transition-fallback="new"][data-astro-transition-scope="astro-hyr2zha4-8"] { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeIn; }[data-astro-transition=back][data-astro-transition-fallback="old"] [data-astro-transition-scope="astro-hyr2zha4-8"],
+			[data-astro-transition=back][data-astro-transition-fallback="old"][data-astro-transition-scope="astro-hyr2zha4-8"] { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeOut; }[data-astro-transition=back][data-astro-transition-fallback="new"] [data-astro-transition-scope="astro-hyr2zha4-8"],
+			[data-astro-transition=back][data-astro-transition-fallback="new"][data-astro-transition-scope="astro-hyr2zha4-8"] { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeIn; }</style><style>[data-astro-transition-scope="astro-hyr2zha4-9"] { view-transition-name: tvarium-image-40; }@layer astro { ::view-transition-old(tvarium-image-40) { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeOut; }::view-transition-new(tvarium-image-40) { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeIn; }[data-astro-transition=back]::view-transition-old(tvarium-image-40) { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeOut; }[data-astro-transition=back]::view-transition-new(tvarium-image-40) { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeIn; } }[data-astro-transition-fallback="old"] [data-astro-transition-scope="astro-hyr2zha4-9"],
+			[data-astro-transition-fallback="old"][data-astro-transition-scope="astro-hyr2zha4-9"] { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeOut; }[data-astro-transition-fallback="new"] [data-astro-transition-scope="astro-hyr2zha4-9"],
+			[data-astro-transition-fallback="new"][data-astro-transition-scope="astro-hyr2zha4-9"] { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeIn; }[data-astro-transition=back][data-astro-transition-fallback="old"] [data-astro-transition-scope="astro-hyr2zha4-9"],
+			[data-astro-transition=back][data-astro-transition-fallback="old"][data-astro-transition-scope="astro-hyr2zha4-9"] { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeOut; }[data-astro-transition=back][data-astro-transition-fallback="new"] [data-astro-transition-scope="astro-hyr2zha4-9"],
+			[data-astro-transition=back][data-astro-transition-fallback="new"][data-astro-transition-scope="astro-hyr2zha4-9"] { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeIn; }</style><style>[data-astro-transition-scope="astro-hyr2zha4-10"] { view-transition-name: tvarium-image-39; }@layer astro { ::view-transition-old(tvarium-image-39) { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeOut; }::view-transition-new(tvarium-image-39) { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeIn; }[data-astro-transition=back]::view-transition-old(tvarium-image-39) { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeOut; }[data-astro-transition=back]::view-transition-new(tvarium-image-39) { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeIn; } }[data-astro-transition-fallback="old"] [data-astro-transition-scope="astro-hyr2zha4-10"],
+			[data-astro-transition-fallback="old"][data-astro-transition-scope="astro-hyr2zha4-10"] { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeOut; }[data-astro-transition-fallback="new"] [data-astro-transition-scope="astro-hyr2zha4-10"],
+			[data-astro-transition-fallback="new"][data-astro-transition-scope="astro-hyr2zha4-10"] { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeIn; }[data-astro-transition=back][data-astro-transition-fallback="old"] [data-astro-transition-scope="astro-hyr2zha4-10"],
+			[data-astro-transition=back][data-astro-transition-fallback="old"][data-astro-transition-scope="astro-hyr2zha4-10"] { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeOut; }[data-astro-transition=back][data-astro-transition-fallback="new"] [data-astro-transition-scope="astro-hyr2zha4-10"],
+			[data-astro-transition=back][data-astro-transition-fallback="new"][data-astro-transition-scope="astro-hyr2zha4-10"] { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeIn; }</style><style>[data-astro-transition-scope="astro-hyr2zha4-11"] { view-transition-name: tvarium-image-37; }@layer astro { ::view-transition-old(tvarium-image-37) { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeOut; }::view-transition-new(tvarium-image-37) { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeIn; }[data-astro-transition=back]::view-transition-old(tvarium-image-37) { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeOut; }[data-astro-transition=back]::view-transition-new(tvarium-image-37) { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeIn; } }[data-astro-transition-fallback="old"] [data-astro-transition-scope="astro-hyr2zha4-11"],
+			[data-astro-transition-fallback="old"][data-astro-transition-scope="astro-hyr2zha4-11"] { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeOut; }[data-astro-transition-fallback="new"] [data-astro-transition-scope="astro-hyr2zha4-11"],
+			[data-astro-transition-fallback="new"][data-astro-transition-scope="astro-hyr2zha4-11"] { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeIn; }[data-astro-transition=back][data-astro-transition-fallback="old"] [data-astro-transition-scope="astro-hyr2zha4-11"],
+			[data-astro-transition=back][data-astro-transition-fallback="old"][data-astro-transition-scope="astro-hyr2zha4-11"] { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeOut; }[data-astro-transition=back][data-astro-transition-fallback="new"] [data-astro-transition-scope="astro-hyr2zha4-11"],
+			[data-astro-transition=back][data-astro-transition-fallback="new"][data-astro-transition-scope="astro-hyr2zha4-11"] { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeIn; }</style><style>[data-astro-transition-scope="astro-hyr2zha4-12"] { view-transition-name: tvarium-image-36; }@layer astro { ::view-transition-old(tvarium-image-36) { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeOut; }::view-transition-new(tvarium-image-36) { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeIn; }[data-astro-transition=back]::view-transition-old(tvarium-image-36) { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeOut; }[data-astro-transition=back]::view-transition-new(tvarium-image-36) { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeIn; } }[data-astro-transition-fallback="old"] [data-astro-transition-scope="astro-hyr2zha4-12"],
+			[data-astro-transition-fallback="old"][data-astro-transition-scope="astro-hyr2zha4-12"] { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeOut; }[data-astro-transition-fallback="new"] [data-astro-transition-scope="astro-hyr2zha4-12"],
+			[data-astro-transition-fallback="new"][data-astro-transition-scope="astro-hyr2zha4-12"] { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeIn; }[data-astro-transition=back][data-astro-transition-fallback="old"] [data-astro-transition-scope="astro-hyr2zha4-12"],
+			[data-astro-transition=back][data-astro-transition-fallback="old"][data-astro-transition-scope="astro-hyr2zha4-12"] { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeOut; }[data-astro-transition=back][data-astro-transition-fallback="new"] [data-astro-transition-scope="astro-hyr2zha4-12"],
+			[data-astro-transition=back][data-astro-transition-fallback="new"][data-astro-transition-scope="astro-hyr2zha4-12"] { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeIn; }</style></head> <body> <header class="site-header"> <nav class="site-header-inner"> <a href="/">Главная</a> <a href="/messages/">Ряды Фурье</a> <a href="/tvarium/">Зверские рассказы</a> <a href="/ads/">Реклама</a> <span class="spacer"></span> <a href="https://t.me/Fourier_series" target="_blank" rel="noopener" class="tg-link">TG</a> <button id="theme-toggle" class="theme-toggle" aria-label="Переключить тему">🖥️</button> </nav> </header> <main>   <h1 data-astro-cid-zrl4zvhu>Зверские рассказы</h1> <ul class="posts" data-astro-cid-zrl4zvhu> <li class="post" data-astro-cid-zrl4zvhu> <a href="/tvarium/62-idet-ezhik-po-parku-vidit-okurok-on-ne-ponimaet-chto-eto-i-p" class="post-link" data-astro-cid-zrl4zvhu>  <div class="post-content" data-astro-cid-zrl4zvhu> <h2 class="post-title" data-astro-cid-zrl4zvhu>Идет ёжик по парку, видит окурок. Он не понимает, что это и почему оно так странно пахнет. Тогда ёж </h2> <p class="post-preview" data-astro-cid-zrl4zvhu>На месте окурка может оказаться любой предмет, который в парадигме ежа подходит под категорию «‎оно незнакомое и воняет»‎. Ежи так жуют цветы, падаль, собачьи какашки, мыло, жабью кожу — что угодно. Но не едят, только жуют. Иногда процедура длится до часа, сразу в несколько...</p> <div class="post-meta" data-astro-cid-zrl4zvhu> <span data-astro-cid-zrl4zvhu>2 дек. 2025 г.</span> <span class="post-reactions" data-astro-cid-zrl4zvhu> <span data-astro-cid-zrl4zvhu>❤ 140</span><span data-astro-cid-zrl4zvhu>😁 109</span><span data-astro-cid-zrl4zvhu>👍 30</span> </span> </div> </div> </a> </li><li class="post" data-astro-cid-zrl4zvhu> <a href="/tvarium/61-est-takaya-smeshnaya-tvaryuga-binturong-on-zhe-koshachiy-med" class="post-link" data-astro-cid-zrl4zvhu> <div class="post-thumb" data-astro-cid-zrl4zvhu> <img src="/photos/tvarium/2025/12/61_1.webp" alt="" loading="lazy" decoding="async" data-astro-cid-zrl4zvhu data-astro-transition-scope="astro-hyr2zha4-1"> </div> <div class="post-content" data-astro-cid-zrl4zvhu> <h2 class="post-title" data-astro-cid-zrl4zvhu>Есть такая смешная тварюга, бинтуронг. Он же кошачий медвед.</h2> <p class="post-preview" data-astro-cid-zrl4zvhu>Этот хрен постоянно пахнет попкорном. Отчего воспринимается многими как ми-ми-мишка и вообще бро. Потом по вечерам его угнетает самка, потому что у Arctictis binturong самки крупнее и доминируют. И это как-то связано с запахом. Необходимость исследования обосновали тем, что...</p> <div class="post-meta" data-astro-cid-zrl4zvhu> <span data-astro-cid-zrl4zvhu>1 дек. 2025 г.</span> <span class="post-reactions" data-astro-cid-zrl4zvhu> <span data-astro-cid-zrl4zvhu>🔥 150</span><span data-astro-cid-zrl4zvhu>❤ 76</span><span data-astro-cid-zrl4zvhu>👍 29</span> </span> </div> </div> </a> </li><li class="post" data-astro-cid-zrl4zvhu> <a href="/tvarium/59-eto-kanal-pro-zverey-i-on-ochen-zverskiy" class="post-link" data-astro-cid-zrl4zvhu>  <div class="post-content" data-astro-cid-zrl4zvhu> <h2 class="post-title" data-astro-cid-zrl4zvhu>Это канал про зверей, и он очень зверский.</h2> <p class="post-preview" data-astro-cid-zrl4zvhu>Ведут его Лиза @lizaveta_korotkova, тревел-журналист и очень милая девушка и Сергей @milfgard, который больше разбирает зверей, чем собирает. Как инженер. Теоретически. Топ: — Инструкция, как чинить кошку, если она на вас нападает — Вы для своей кошки — крупная странная кошка —...</p> <div class="post-meta" data-astro-cid-zrl4zvhu> <span data-astro-cid-zrl4zvhu>30 нояб. 2025 г.</span> <span class="post-reactions" data-astro-cid-zrl4zvhu> <span data-astro-cid-zrl4zvhu>❤ 159</span><span data-astro-cid-zrl4zvhu>👍 60</span><span data-astro-cid-zrl4zvhu>🤩 25</span> </span> </div> </div> </a> </li><li class="post" data-astro-cid-zrl4zvhu> <a href="/tvarium/56-znakomtes-trubkozub-koshmar-stomatologa" class="post-link" data-astro-cid-zrl4zvhu> <div class="post-thumb" data-astro-cid-zrl4zvhu> <img src="/photos/tvarium/2025/11/56_1.webp" alt="" loading="lazy" decoding="async" data-astro-cid-zrl4zvhu data-astro-transition-scope="astro-hyr2zha4-2"> </div> <div class="post-content" data-astro-cid-zrl4zvhu> <h2 class="post-title" data-astro-cid-zrl4zvhu>Знакомьтесь, трубкозуб — кошмар стоматолога.</h2> <p class="post-preview" data-astro-cid-zrl4zvhu>Сегодня суббота — день странных тварюг! Вот этот поросёнок с заячьими ушами очень любит есть после шести. Каждую ночь он устраивает зажор тысяч эдак на 50 термитов. Для этого и отрастил такие странные зубы. Каждый зуб — это примерно 1500 тоненьких трубочек, склеенных цементом...</p> <div class="post-meta" data-astro-cid-zrl4zvhu> <span data-astro-cid-zrl4zvhu>29 нояб. 2025 г.</span> <span class="post-reactions" data-astro-cid-zrl4zvhu> <span data-astro-cid-zrl4zvhu>❤ 208</span><span data-astro-cid-zrl4zvhu>👍 64</span><span data-astro-cid-zrl4zvhu>👏 22</span> </span> </div> </div> </a> </li><li class="post" data-astro-cid-zrl4zvhu> <a href="/tvarium/55-tut-v-1944-godu-sostavili-koshko-chelovekovyy-slovar-razbira" class="post-link" data-astro-cid-zrl4zvhu>  <div class="post-content" data-astro-cid-zrl4zvhu> <h2 class="post-title" data-astro-cid-zrl4zvhu>Тут в 1944 году составили кошко-человековый словарь. Разбираем!</h2> <p class="post-preview" data-astro-cid-zrl4zvhu>Рот закрыт: — Мурлыкание (прррр!) — грубые вибрации — &quot;Мне интересно&quot;, а более гладкое мурлыканье — расслабление или, наоборот, очень сильная заинтересованность, когда кошка дышит глубже. — Один раз протяжный &quot;вдох&quot; мурлыканья. &quot;Привет! Я тут. Посмотри на меня!&quot; — Более...</p> <div class="post-meta" data-astro-cid-zrl4zvhu> <span data-astro-cid-zrl4zvhu>28 нояб. 2025 г.</span> <span class="post-reactions" data-astro-cid-zrl4zvhu> <span data-astro-cid-zrl4zvhu>❤ 168</span><span data-astro-cid-zrl4zvhu>😁 61</span><span data-astro-cid-zrl4zvhu>👍 45</span> </span> </div> </div> </a> </li><li class="post" data-astro-cid-zrl4zvhu> <a href="/tvarium/54-vy-mozhete-nadolgo-ugodit-v-chernyy-spisok-k-voronu-esli-odi" class="post-link" data-astro-cid-zrl4zvhu>  <div class="post-content" data-astro-cid-zrl4zvhu> <h2 class="post-title" data-astro-cid-zrl4zvhu>Вы можете надолго угодить в чёрный список к ворону, если один раз его обидите.</h2> <p class="post-preview" data-astro-cid-zrl4zvhu>Дело в том, что он очень умный и очень ранимый. А это страшное сочетание. Так что потом не удивляйтесь, если в тёмном переулке вас начнёт кошмарить стая разъярённых воронов. Вероятно, обиженный птыц запомнил вас и донёс всем. И теперь эти «‎все»‎ вас тоже не любят. Это как если...</p> <div class="post-meta" data-astro-cid-zrl4zvhu> <span data-astro-cid-zrl4zvhu>27 нояб. 2025 г.</span> <span class="post-reactions" data-astro-cid-zrl4zvhu> <span data-astro-cid-zrl4zvhu>❤ 138</span><span data-astro-cid-zrl4zvhu>👍 67</span><span data-astro-cid-zrl4zvhu>🔥 41</span> </span> </div> </div> </a> </li><li class="post" data-astro-cid-zrl4zvhu> <a href="/tvarium/51-vot-kit-neryaha-i-opryatnyy-kit" class="post-link" data-astro-cid-zrl4zvhu> <div class="post-thumb" data-astro-cid-zrl4zvhu> <img src="/photos/tvarium/2025/11/51_1.webp" alt="" loading="lazy" decoding="async" data-astro-cid-zrl4zvhu data-astro-transition-scope="astro-hyr2zha4-3"> </div> <div class="post-content" data-astro-cid-zrl4zvhu> <h2 class="post-title" data-astro-cid-zrl4zvhu>Вот кит-неряха и опрятный кит.</h2> <p class="post-preview" data-astro-cid-zrl4zvhu>Верхний ещё просто не сплавал в салон красоты. То есть пока не полинял и ходит преимущественно серый с чёрными помехами. А нижний за собой поухаживал — поэтому теперь чёрный и блестящий, но с серыми ошмётками. Они скоро тоже сойдут. В Охотском море живёт популяция гренландских...</p> <div class="post-meta" data-astro-cid-zrl4zvhu> <span data-astro-cid-zrl4zvhu>26 нояб. 2025 г.</span> <span class="post-reactions" data-astro-cid-zrl4zvhu> <span data-astro-cid-zrl4zvhu>❤ 205</span><span data-astro-cid-zrl4zvhu>🔥 65</span><span data-astro-cid-zrl4zvhu>🐳 48</span> </span> </div> </div> </a> </li><li class="post" data-astro-cid-zrl4zvhu> <a href="/tvarium/50-u-sinits-est-vstroennye-onlayn-karty-s-reytingom-kafe" class="post-link" data-astro-cid-zrl4zvhu> <div class="post-thumb" data-astro-cid-zrl4zvhu> <img src="/photos/tvarium/2025/11/50_1.webp" alt="" loading="lazy" decoding="async" data-astro-cid-zrl4zvhu data-astro-transition-scope="astro-hyr2zha4-4"> </div> <div class="post-content" data-astro-cid-zrl4zvhu> <h2 class="post-title" data-astro-cid-zrl4zvhu>У синиц есть встроенные ‎онлайн-карты‎ с рейтингом кафе.</h2> <p class="post-preview" data-astro-cid-zrl4zvhu>Если синица когда-то поела у вас на подоконнике, она это запомнит. И, скорее всего, вернётся на следующий год. Даже если вы не повесили кормушку. У синицы на «‎карте»‎ тут отмечен общепит. Она бережно хранит информацию о том, что здесь когда-то было неплохое кафе для...</p> <div class="post-meta" data-astro-cid-zrl4zvhu> <span data-astro-cid-zrl4zvhu>25 нояб. 2025 г.</span> <span class="post-reactions" data-astro-cid-zrl4zvhu> <span data-astro-cid-zrl4zvhu>❤ 213</span><span data-astro-cid-zrl4zvhu>👍 63</span><span data-astro-cid-zrl4zvhu>🥰 43</span> </span> </div> </div> </a> </li><li class="post" data-astro-cid-zrl4zvhu> <a href="/tvarium/49-slysh-ty-seryy-disyudana-ty-s-kakoy-vetki-che-takoy-tusklyy" class="post-link" data-astro-cid-zrl4zvhu> <div class="post-thumb" data-astro-cid-zrl4zvhu> <img src="/photos/tvarium/2025/11/49_1.webp" alt="" loading="lazy" decoding="async" data-astro-cid-zrl4zvhu data-astro-transition-scope="astro-hyr2zha4-5"> </div> <div class="post-content" data-astro-cid-zrl4zvhu> <h2 class="post-title" data-astro-cid-zrl4zvhu>— Слышь, ты, серый! Дисюдана! Ты с какой ветки? Чё такой тусклый, неместный?</h2> <p class="post-preview" data-astro-cid-zrl4zvhu>Вот примерно это говорит хамелеон своим цветом. Хамелеон не только овладел стилем ходьбы &quot;пьяный мастер&quot; (его качает примерно так же, как дерево на ветру, и они вместе сливаются с фоном) — но и отлично меняет цвет. Правда, не только для маскировки. Для общения. Он так семафорит...</p> <div class="post-meta" data-astro-cid-zrl4zvhu> <span data-astro-cid-zrl4zvhu>24 нояб. 2025 г.</span> <span class="post-reactions" data-astro-cid-zrl4zvhu> <span data-astro-cid-zrl4zvhu>😁 175</span><span data-astro-cid-zrl4zvhu>❤ 64</span><span data-astro-cid-zrl4zvhu>🔥 17</span> </span> </div> </div> </a> </li><li class="post" data-astro-cid-zrl4zvhu> <a href="/tvarium/46-losenka-mozhno-priruchit" class="post-link" data-astro-cid-zrl4zvhu> <div class="post-thumb" data-astro-cid-zrl4zvhu> <img src="/photos/tvarium/2025/11/46_1.webp" alt="" loading="lazy" decoding="async" data-astro-cid-zrl4zvhu data-astro-transition-scope="astro-hyr2zha4-6"> </div> <div class="post-content" data-astro-cid-zrl4zvhu> <h2 class="post-title" data-astro-cid-zrl4zvhu>Лосёнка можно приручить.</h2> <p class="post-preview" data-astro-cid-zrl4zvhu>Вырастет прожорливый здоровый лоб, который при желании может разнести к чертям сарай или перемахнуть через двухметровый забор. Но очень милый. Будет ластиться к вам и приходить за морковкой по расписанию. Так делают на лосиных фермах. Самое сложное — «‎оторвать»‎ лосёнка от...</p> <div class="post-meta" data-astro-cid-zrl4zvhu> <span data-astro-cid-zrl4zvhu>23 нояб. 2025 г.</span> <span class="post-reactions" data-astro-cid-zrl4zvhu> <span data-astro-cid-zrl4zvhu>❤ 272</span><span data-astro-cid-zrl4zvhu>👍 64</span><span data-astro-cid-zrl4zvhu>⚡ 14</span> </span> </div> </div> </a> </li><li class="post" data-astro-cid-zrl4zvhu> <a href="/tvarium/45-znakomtes-vechno-nedovolnaya-lyagushenka-breviceps-fuscus-iz" class="post-link" data-astro-cid-zrl4zvhu> <div class="post-thumb" data-astro-cid-zrl4zvhu> <img src="/photos/tvarium/2025/11/45_1.webp" alt="" loading="lazy" decoding="async" data-astro-cid-zrl4zvhu data-astro-transition-scope="astro-hyr2zha4-7"> </div> <div class="post-content" data-astro-cid-zrl4zvhu> <h2 class="post-title" data-astro-cid-zrl4zvhu>Знакомьтесь, вечно недовольная лягушенька (Breviceps fuscus) из Африки.</h2> <p class="post-preview" data-astro-cid-zrl4zvhu>Обычно она лежит и орёт. А вот здесь её попросили улыбнуться для фото. Она улыбнулась как умеет. Почему она лежит и орёт? Дело в том, что она совсем не умеет драться. Не может ни ядом во врага прыснуть, ни ускакать от него. Только ковыляет, переваливаясь с лапки на лапку. Даже...</p> <div class="post-meta" data-astro-cid-zrl4zvhu> <span data-astro-cid-zrl4zvhu>22 нояб. 2025 г.</span> <span class="post-reactions" data-astro-cid-zrl4zvhu> <span data-astro-cid-zrl4zvhu>❤ 231</span><span data-astro-cid-zrl4zvhu>🥰 61</span><span data-astro-cid-zrl4zvhu>👍 42</span> </span> </div> </div> </a> </li><li class="post" data-astro-cid-zrl4zvhu> <a href="/tvarium/44-kak-pogovorit-s-kitom" class="post-link" data-astro-cid-zrl4zvhu>  <div class="post-content" data-astro-cid-zrl4zvhu> <h2 class="post-title" data-astro-cid-zrl4zvhu>Как поговорить с китом?</h2> <p class="post-preview" data-astro-cid-zrl4zvhu>Ну, можно записать сигналы и проиграть их киту. Вдруг чего новое скажет? Самка сказала. Вот работа. Учёные проанализировали этот 20-минутный диалог и решили, что кит не просто случайно издавал звуки, а вступал в осознанное намеренное общение. Итак, Аляска, 2021, 38-летняя самка...</p> <div class="post-meta" data-astro-cid-zrl4zvhu> <span data-astro-cid-zrl4zvhu>21 нояб. 2025 г.</span> <span class="post-reactions" data-astro-cid-zrl4zvhu> <span data-astro-cid-zrl4zvhu>🔥 123</span><span data-astro-cid-zrl4zvhu>😁 65</span><span data-astro-cid-zrl4zvhu>❤ 37</span> </span> </div> </div> </a> </li><li class="post" data-astro-cid-zrl4zvhu> <a href="/tvarium/43-segodnya-uchimsya-uhazhivat-za-zhenschinami-kak-ezhi" class="post-link" data-astro-cid-zrl4zvhu>  <div class="post-content" data-astro-cid-zrl4zvhu> <h2 class="post-title" data-astro-cid-zrl4zvhu>Сегодня учимся ухаживать за женщинами, как ежи!</h2> <p class="post-preview" data-astro-cid-zrl4zvhu>Сразу готовьтесь, что ежихи — страшные зануды в отношениях. Характер у них ещё более колючий, чем шкурка. Первое, что надо уяснить: если вы мужчина-ёж в активном поиске, то шансы на успех неприлично малы. Всего 4–7% ухаживаний кончаютсяHaigh%20et%20al2012.pdf) счастливо. В...</p> <div class="post-meta" data-astro-cid-zrl4zvhu> <span data-astro-cid-zrl4zvhu>20 нояб. 2025 г.</span> <span class="post-reactions" data-astro-cid-zrl4zvhu> <span data-astro-cid-zrl4zvhu>❤ 200</span><span data-astro-cid-zrl4zvhu>🔥 59</span><span data-astro-cid-zrl4zvhu>✍ 55</span> </span> </div> </div> </a> </li><li class="post" data-astro-cid-zrl4zvhu> <a href="/tvarium/42-chtoby-proverit-nravites-li-vy-kotu-pomorgayte-na-nego" class="post-link" data-astro-cid-zrl4zvhu>  <div class="post-content" data-astro-cid-zrl4zvhu> <h2 class="post-title" data-astro-cid-zrl4zvhu>Чтобы проверить, нравитесь ли вы коту, поморгайте на него.</h2> <p class="post-preview" data-astro-cid-zrl4zvhu>Если вы широко улыбаетесь, скорее всего, для кота вы скалитесь и хотите его съесть. Ну или он просто не понимает посыла. Но ещё хуже, когда вы при этом смотрите, не мигая. Прямой непрерывный взгляд в природе обычно значит, что вам скоро дадут в лоб: чтобы атаковать, надо сначала...</p> <div class="post-meta" data-astro-cid-zrl4zvhu> <span data-astro-cid-zrl4zvhu>19 нояб. 2025 г.</span> <span class="post-reactions" data-astro-cid-zrl4zvhu> <span data-astro-cid-zrl4zvhu>👍 143</span><span data-astro-cid-zrl4zvhu>😁 140</span><span data-astro-cid-zrl4zvhu>❤ 71</span> </span> </div> </div> </a> </li><li class="post" data-astro-cid-zrl4zvhu> <a href="/tvarium/41-kosatkami-pravit-babushka" class="post-link" data-astro-cid-zrl4zvhu> <div class="post-thumb" data-astro-cid-zrl4zvhu> <img src="/photos/tvarium/2025/11/41_1.webp" alt="" loading="lazy" decoding="async" data-astro-cid-zrl4zvhu data-astro-transition-scope="astro-hyr2zha4-8"> </div> <div class="post-content" data-astro-cid-zrl4zvhu> <h2 class="post-title" data-astro-cid-zrl4zvhu>Косатками правит бабушка!</h2> <p class="post-preview" data-astro-cid-zrl4zvhu>Она курит трубку угощает обалденными пирожками с лососем. А ещё показывает молодёжи самые рыбные места, учит охотиться и вызволяет из драк. Ей природа подарила менопаузу — в природе большая редкость. Косатке в это время надо уже не рожать, а возглавлять свой матриархат: плавать...</p> <div class="post-meta" data-astro-cid-zrl4zvhu> <span data-astro-cid-zrl4zvhu>18 нояб. 2025 г.</span> <span class="post-reactions" data-astro-cid-zrl4zvhu> <span data-astro-cid-zrl4zvhu>❤ 297</span><span data-astro-cid-zrl4zvhu>🔥 115</span><span data-astro-cid-zrl4zvhu>🐳 47</span> </span> </div> </div> </a> </li><li class="post" data-astro-cid-zrl4zvhu> <a href="/tvarium/40-v-1996-godu-nakopali-dva-novyh-vida-kitayskih-dinozavrov-pus" class="post-link" data-astro-cid-zrl4zvhu> <div class="post-thumb" data-astro-cid-zrl4zvhu> <img src="/photos/tvarium/2025/11/40_1.webp" alt="" loading="lazy" decoding="async" data-astro-cid-zrl4zvhu data-astro-transition-scope="astro-hyr2zha4-9"> </div> <div class="post-content" data-astro-cid-zrl4zvhu> <h2 class="post-title" data-astro-cid-zrl4zvhu>В 1996 году накопали два новых вида китайских динозавров. Пушистиков!</h2> <p class="post-preview" data-astro-cid-zrl4zvhu>В смысле, оба были с перьями. Причём перья оказались очень похожи на перья современных птиц. Однако анализ их скелетов показал, что эти существа — нифига ни разу не птицы. Именно в этот момент ваша курица показывает звериный оскал тираннозавра. Потому что если её побрить налысо,...</p> <div class="post-meta" data-astro-cid-zrl4zvhu> <span data-astro-cid-zrl4zvhu>17 нояб. 2025 г.</span> <span class="post-reactions" data-astro-cid-zrl4zvhu> <span data-astro-cid-zrl4zvhu>🔥 152</span><span data-astro-cid-zrl4zvhu>👍 36</span><span data-astro-cid-zrl4zvhu>❤ 25</span> </span> </div> </div> </a> </li><li class="post" data-astro-cid-zrl4zvhu> <a href="/tvarium/39-kvokka-vam-ne-ulybaetsya" class="post-link" data-astro-cid-zrl4zvhu> <div class="post-thumb" data-astro-cid-zrl4zvhu> <img src="/photos/tvarium/2025/11/39_1.webp" alt="" loading="lazy" decoding="async" data-astro-cid-zrl4zvhu data-astro-transition-scope="astro-hyr2zha4-10"> </div> <div class="post-content" data-astro-cid-zrl4zvhu> <h2 class="post-title" data-astro-cid-zrl4zvhu>Квокка вам не улыбается.</h2> <p class="post-preview" data-astro-cid-zrl4zvhu>Вот прямо на этой фотографии квокка, возможно, нас всех ненавидит и хочет убить. Но мы не узнаем. У неё просто довольно вштыренная физиономия. Люди однажды её увидели и очеловечили — обозвали «‎самым счастливым животным в мире»‎. Теперь, даже когда у квокки плохое настроение,...</p> <div class="post-meta" data-astro-cid-zrl4zvhu> <span data-astro-cid-zrl4zvhu>16 нояб. 2025 г.</span> <span class="post-reactions" data-astro-cid-zrl4zvhu> <span data-astro-cid-zrl4zvhu>😁 184</span><span data-astro-cid-zrl4zvhu>👍 45</span><span data-astro-cid-zrl4zvhu>❤ 37</span> </span> </div> </div> </a> </li><li class="post" data-astro-cid-zrl4zvhu> <a href="/tvarium/38-esli-enot-vas-aktivno-schupaet-begite" class="post-link" data-astro-cid-zrl4zvhu>  <div class="post-content" data-astro-cid-zrl4zvhu> <h2 class="post-title" data-astro-cid-zrl4zvhu>Если енот вас активно щупает — бегите!</h2> <p class="post-preview" data-astro-cid-zrl4zvhu>Эти пушистые гопники видят свою еду мокрыми лапками. И в них лучше не попадаться. Вот поймал енот лягушку. Вроде бы. Теперь надо убедиться, точно ли это она, а не кто-то страшный с шипами или жалом. А ещё понять, не течёт ли по этой штуке какая-нибудь ядовитая слизь. Короче,...</p> <div class="post-meta" data-astro-cid-zrl4zvhu> <span data-astro-cid-zrl4zvhu>15 нояб. 2025 г.</span> <span class="post-reactions" data-astro-cid-zrl4zvhu> <span data-astro-cid-zrl4zvhu>❤ 182</span><span data-astro-cid-zrl4zvhu>😁 108</span><span data-astro-cid-zrl4zvhu>🥰 50</span> </span> </div> </div> </a> </li><li class="post" data-astro-cid-zrl4zvhu> <a href="/tvarium/37-vot-rabota-gde-analizirovali-zvuki-delfinov-ee-podskazal-xen" class="post-link" data-astro-cid-zrl4zvhu> <div class="post-thumb" data-astro-cid-zrl4zvhu> <img src="/photos/tvarium/2025/11/37_1.webp" alt="" loading="lazy" decoding="async" data-astro-cid-zrl4zvhu data-astro-transition-scope="astro-hyr2zha4-11"> </div> <div class="post-content" data-astro-cid-zrl4zvhu> <h2 class="post-title" data-astro-cid-zrl4zvhu>Вот работа, где анализировали звуки дельфинов — её подсказал @Xenobreeder.</h2> <p class="post-preview" data-astro-cid-zrl4zvhu>Есть предположение, что звук, который они передают, чтобы что-то описать, примерно похож на тот же звук, который отражается от всяких штук, когда они ощупывают сонаром. К слову о фальсифицируемости, это предположение основывается на стойком убеждении учёных, больше ни на чём. Но...</p> <div class="post-meta" data-astro-cid-zrl4zvhu> <span data-astro-cid-zrl4zvhu>14 нояб. 2025 г.</span> <span class="post-reactions" data-astro-cid-zrl4zvhu> <span data-astro-cid-zrl4zvhu>👍 130</span><span data-astro-cid-zrl4zvhu>😁 63</span><span data-astro-cid-zrl4zvhu>🐳 43</span> </span> </div> </div> </a> </li><li class="post" data-astro-cid-zrl4zvhu> <a href="/tvarium/36-vy-popali-na-vampirskuyu-vecherinku-k-letuchim-mysham" class="post-link" data-astro-cid-zrl4zvhu> <div class="post-thumb" data-astro-cid-zrl4zvhu> <img src="/photos/tvarium/2025/11/36_1.webp" alt="" loading="lazy" decoding="async" data-astro-cid-zrl4zvhu data-astro-transition-scope="astro-hyr2zha4-12"> </div> <div class="post-content" data-astro-cid-zrl4zvhu> <h2 class="post-title" data-astro-cid-zrl4zvhu>Вы попали на вампирскую вечеринку к летучим мышам!</h2> <p class="post-preview" data-astro-cid-zrl4zvhu>А там царят взаимовыручка и доброта: мышки-вампиры очень мило и альтруистично делятся друг с другом добытой кровью. Встречаются после охоты сытый мыш и мыш-неудачник — не родственники. Сытый щедро отрыгивает часть своего ужина в рот голодному, чтобы тот не умер. Мол, ещё...</p> <div class="post-meta" data-astro-cid-zrl4zvhu> <span data-astro-cid-zrl4zvhu>13 нояб. 2025 г.</span> <span class="post-reactions" data-astro-cid-zrl4zvhu> <span data-astro-cid-zrl4zvhu>❤ 214</span><span data-astro-cid-zrl4zvhu>🔥 70</span><span data-astro-cid-zrl4zvhu>👍 48</span> </span> </div> </div> </a> </li> </ul> <nav class="pagination" data-astro-cid-zrl4zvhu> <a href="/tvarium/3" class data-astro-cid-zrl4zvhu>
+&larr; Новее
+</a> <a href="/tvarium/5" class data-astro-cid-zrl4zvhu>
+Старее &rarr;
+</a> </nav> <div class="page-info" data-astro-cid-zrl4zvhu>
+Страница 4 из 5 (99 постов)
+</div>  </main> <script>
+    // Theme toggle - runs on every page load (including View Transitions)
+    function initThemeToggle() {
+      var KEY = 'theme-preference';
+      var btn = document.getElementById('theme-toggle');
+      if (!btn) return;
+
+      var cycle = ['system', 'light', 'dark'];
+      function icon(mode) {
+        return mode === 'light' ? '☀️' : (mode === 'dark' ? '🌙' : '🖥️');
+      }
+      function apply(mode) {
+        if (mode === 'light' || mode === 'dark') {
+          document.documentElement.setAttribute('data-theme', mode);
+        } else {
+          document.documentElement.removeAttribute('data-theme');
+        }
+        btn.textContent = icon(mode);
+      }
+
+      var cur = localStorage.getItem(KEY) || 'system';
+      if (cycle.indexOf(cur) === -1) cur = 'system';
+      apply(cur);
+
+      // Remove old listener if any (for View Transitions)
+      var newBtn = btn.cloneNode(true);
+      btn.parentNode.replaceChild(newBtn, btn);
+      btn = newBtn;
+
+      btn.addEventListener('click', function() {
+        var idx = cycle.indexOf(cur);
+        cur = cycle[(idx + 1) % cycle.length];
+        localStorage.setItem(KEY, cur);
+        apply(cur);
+      });
+    }
+
+    // Run on initial load
+    initThemeToggle();
+    // Run after View Transitions navigation
+    document.addEventListener('astro:page-load', initThemeToggle);
+
+    // Preserve theme during View Transitions
+    document.addEventListener('astro:before-swap', function(e) {
+      var theme = document.documentElement.getAttribute('data-theme');
+      if (theme) {
+        e.newDocument.documentElement.setAttribute('data-theme', theme);
+      }
+    });
+  </script> <script defer src="https://static.cloudflareinsights.com/beacon.min.js/vcd15cbe7772f49c399c6a5babf22c1241717689176015" integrity="sha512-ZpsOmlRQV6y907TI0dKBHq9Md29nnaEIPlkf84rnaERnq6zvWvPUqr2ft8M1aS28oN72PdrCzSjY4U6VaAw1EQ==" data-cf-beacon='{"version":"2024.11.0","token":"fa5737a6992d48e8968691f037f1b1ef","r":1,"server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
+</body> </html>

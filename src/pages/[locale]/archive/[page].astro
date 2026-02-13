@@ -1,0 +1,70 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import Pagination from '@/components/Pagination.astro';
+import PostCard from '@/components/PostCard.astro';
+import { getLocalePosts, pageTitle } from '@/lib/content';
+import { LOCALES } from '@/lib/i18n';
+import type { Locale, PostRecord } from '@/lib/types';
+
+export function getStaticPaths() {
+  const pageSize = 20;
+  const paths: Array<{ params: { locale: Locale; page: string }; props: { locale: Locale; page: number; totalPages: number; posts: PostRecord[] } }> = [];
+
+  for (const locale of LOCALES) {
+    const posts = getLocalePosts(locale, { includeDeleted: false, includeDraft: false });
+    const totalPages = Math.max(1, Math.ceil(posts.length / pageSize));
+
+    for (let page = 1; page <= totalPages; page += 1) {
+      const start = (page - 1) * pageSize;
+      const end = start + pageSize;
+      paths.push({
+        params: { locale, page: String(page) },
+        props: {
+          locale,
+          page,
+          totalPages,
+          posts: posts.slice(start, end)
+        }
+      });
+    }
+  }
+
+  return paths;
+}
+
+const { locale, page, totalPages, posts } = Astro.props as {
+  locale: Locale;
+  page: number;
+  totalPages: number;
+  posts: PostRecord[];
+};
+
+const PAGE_SIZE = 20;
+const otherLocale: Locale = locale === 'en' ? 'ru' : 'en';
+const otherCount = Math.max(1, Math.ceil(getLocalePosts(otherLocale, { includeDeleted: false, includeDraft: false }).length / PAGE_SIZE));
+const otherPath = page <= otherCount ? `/${otherLocale}/archive/${page}/` : `/${otherLocale}/archive/1/`;
+
+const title = pageTitle(locale === 'ru' ? `Архив, страница ${page}` : `Archive, page ${page}`, locale);
+const description = locale === 'ru' ? `Страница ${page} архива публикаций.` : `Archive page ${page}.`;
+---
+
+<BaseLayout
+  title={title}
+  description={description}
+  locale={locale}
+  canonicalPath={`/${locale}/archive/${page}/`}
+  enPath={locale === 'en' ? `/${locale}/archive/${page}/` : otherPath}
+  ruPath={locale === 'ru' ? `/${locale}/archive/${page}/` : otherPath}
+>
+  <section class="archive-head">
+    <h1>{locale === 'ru' ? `Архив · страница ${page}` : `Archive · page ${page}`}</h1>
+  </section>
+
+  <div class="posts-grid">
+    {posts.map((post) => (
+      <PostCard post={post} locale={locale} />
+    ))}
+  </div>
+
+  <Pagination locale={locale} currentPage={page} totalPages={totalPages} />
+</BaseLayout>

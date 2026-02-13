@@ -1,0 +1,28 @@
+---
+import { LOCALES } from '@/lib/i18n';
+import type { Locale } from '@/lib/types';
+
+export function getStaticPaths() {
+  return LOCALES.map((locale) => ({ params: { locale } }));
+}
+
+const locale = Astro.params.locale as Locale;
+if (!LOCALES.includes(locale)) {
+  throw new Error('Unsupported locale route');
+}
+const target = `/${locale}/archive/1/`;
+---
+
+<!doctype html>
+<html lang={locale}>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="refresh" content={`0; url=${target}`} />
+    <link rel="canonical" href={target} />
+    <meta name="robots" content="noindex,follow" />
+    <title>Redirecting…</title>
+  </head>
+  <body>
+    <p><a href={target}>Continue</a></p>
+  </body>
+</html>

@@ -1,0 +1,4 @@
+boto3==1.36.0
+python-frontmatter==1.1.0
+python-slugify==8.0.4
+telethon==1.38.1
