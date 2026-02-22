@@ -122,7 +122,6 @@ jobs:
           npm run build
           npx wrangler pages deploy dist \
             --project-name "${CF_PAGES_PROJECT_NAME}" \
-            --functions functions \
             --branch "rollout-gates-${GITHUB_RUN_NUMBER}"
 
           echo "Gate 4 passed"
