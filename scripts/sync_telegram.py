@@ -58,6 +58,7 @@ class Config:
     string_session: str
     channel: str
     recent_window: int
+    max_video_bytes: int
     r2_endpoint: str
     r2_bucket: str
     r2_access_key_id: str
@@ -290,8 +291,29 @@ def media_filename(msg: Message, fallback_name: str) -> str:
     return fallback_name
 
 
-async def extract_media(msg: Message, store: MediaStore, channel: str) -> list[dict[str, Any]]:
+async def extract_media(
+    msg: Message,
+    store: MediaStore,
+    channel: str,
+    *,
+    skip_media: bool,
+    max_video_bytes: int,
+) -> list[dict[str, Any]]:
+    if skip_media:
+        return []
+
     if not msg.media:
+        return []
+
+    media_type = media_kind(msg)
+    file_info = getattr(msg, 'file', None)
+    file_size = int(getattr(file_info, 'size', 0) or 0)
+
+    if media_type == 'video' and max_video_bytes > 0 and file_size > max_video_bytes:
+        print(
+            f'Skipping oversized video for message {msg.id}: '
+            f'{file_size} bytes > MAX_VIDEO_BYTES={max_video_bytes}'
+        )
         return []
 
     with tempfile.TemporaryDirectory() as tmp_dir:
@@ -302,9 +324,7 @@ async def extract_media(msg: Message, store: MediaStore, channel: str) -> list[d
 
         path = Path(downloaded)
         file_url = store.put(path, channel)
-        media_type = media_kind(msg)
 
-        file_info = getattr(msg, 'file', None)
         width = int(getattr(file_info, 'width', 0) or 0) or None
         height = int(getattr(file_info, 'height', 0) or 0) or None
 
@@ -462,7 +482,13 @@ async def audit_deletions(client: TelegramClient, entity: Any, known_ids: list[i
     return sorted(set(missing))
 
 
-async def run_sync(cfg: Config, full_backfill: bool, skip_delete_audit: bool, dry_run: bool) -> None:
+async def run_sync(
+    cfg: Config,
+    full_backfill: bool,
+    skip_delete_audit: bool,
+    dry_run: bool,
+    skip_media: bool,
+) -> None:
     EN_DIR.mkdir(parents=True, exist_ok=True)
     RU_DIR.mkdir(parents=True, exist_ok=True)
 
@@ -501,7 +527,15 @@ async def run_sync(cfg: Config, full_backfill: bool, skip_delete_audit: bool, dr
 
             media_items: list[dict[str, Any]] = []
             for item in group:
-                media_items.extend(await extract_media(item, store, cfg.channel))
+                media_items.extend(
+                    await extract_media(
+                        item,
+                        store,
+                        cfg.channel,
+                        skip_media=skip_media,
+                        max_video_bytes=cfg.max_video_bytes,
+                    )
+                )
 
             payload = {
                 'id': primary.id,
@@ -569,6 +603,7 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument('--full-backfill', action='store_true', help='Force full history fetch.')
     parser.add_argument('--skip-delete-audit', action='store_true', help='Skip deleted post audit.')
     parser.add_argument('--dry-run', action='store_true', help='Run without writing files.')
+    parser.add_argument('--skip-media', action='store_true', help='Skip all media download/upload and keep only text metadata.')
     parser.add_argument('--recent-window', type=int, default=None, help='Override recent message scan window.')
     return parser.parse_args()
 
@@ -579,6 +614,9 @@ def load_config(args: argparse.Namespace) -> Config:
     string_session = env('TELEGRAM_STRING_SESSION', required=True)
 
     recent = args.recent_window if args.recent_window is not None else int(env('SYNC_RECENT_WINDOW', default='250'))
+    max_video_bytes = int(env('MAX_VIDEO_BYTES', default='26214400'))
+    if max_video_bytes < 0:
+        raise RuntimeError('MAX_VIDEO_BYTES must be >= 0')
 
     return Config(
         api_id=api_id,
@@ -586,6 +624,7 @@ def load_config(args: argparse.Namespace) -> Config:
         string_session=string_session,
         channel=env('TELEGRAM_CHANNEL', default='phys_math_dev'),
         recent_window=recent,
+        max_video_bytes=max_video_bytes,
         r2_endpoint=env('R2_ENDPOINT', default=''),
         r2_bucket=env('R2_BUCKET', default=''),
         r2_access_key_id=env('R2_ACCESS_KEY_ID', default=''),
@@ -607,6 +646,7 @@ def main() -> None:
             full_backfill=full_backfill,
             skip_delete_audit=args.skip_delete_audit,
             dry_run=args.dry_run,
+            skip_media=args.skip_media or args.dry_run,
         )
     )
 

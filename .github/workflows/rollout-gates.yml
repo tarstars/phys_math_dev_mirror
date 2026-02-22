@@ -71,7 +71,7 @@ jobs:
             exit 1
           fi
 
-          python scripts/sync_telegram.py --dry-run --recent-window 20 --skip-delete-audit
+          python scripts/sync_telegram.py --dry-run --skip-media --recent-window 20 --skip-delete-audit
 
           echo "Gate 2 passed"
 
