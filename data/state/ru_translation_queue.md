@@ -1,13 +1,137 @@
 # RU Translation Queue
 
-Generated: 2026-02-11T08:04:46.577225+00:00
+Generated: 2026-02-23T05:58:46.195804+00:00
 
-- New drafts: **0**
+- New drafts: **125**
 - Needs review: **0**
 
 ## New Drafts
 
-- None
+- `3` · Hello everyone! · https://t.me/phys_math_dev/3
+- `4` · Here it is— a historical picture of a modification my friend and I made to gradient-boosted decision trees. It all started at Equi · https://t.me/phys_math_dev/4
+- `5` · Credit scoring problem statement · https://t.me/phys_math_dev/5
+- `6` · Intro · https://t.me/phys_math_dev/6
+- `9` · Math in Telegram · https://t.me/phys_math_dev/9
+- `11` · Latex in Telegram · https://t.me/phys_math_dev/11
+- `12` · Forging the algorithm · https://t.me/phys_math_dev/12
+- `13` · ⁠ · https://t.me/phys_math_dev/13
+- `14` · I have just tested one more way to publish Instant View articles. It uses · https://t.me/phys_math_dev/14
+- `15` · Congratulations! · https://t.me/phys_math_dev/15
+- `17` · ⁠ · https://t.me/phys_math_dev/17
+- `18` · https://t.me/boost/phys_math_dev · https://t.me/phys_math_dev/18
+- `19` · Great news everyone! · https://t.me/phys_math_dev/19
+- `20` · The same post in a slightly different format. Let's try and see what's work better for us. · https://t.me/phys_math_dev/20
+- `21` · Hand-written caption · https://t.me/phys_math_dev/21
+- `22` · Scatter upside-down · https://t.me/phys_math_dev/22
+- `23` · Scatter - normal orientation · https://t.me/phys_math_dev/23
+- `24` · Post 24 · https://t.me/phys_math_dev/24
+- `26` · ⁠ · https://t.me/phys_math_dev/26
+- `27` · How to find linear superposition in chaos · https://t.me/phys_math_dev/27
+- `28` · extrapolating function · https://t.me/phys_math_dev/28
+- `29` · narrow band · https://t.me/phys_math_dev/29
+- `30` · The second iteration of RANSAC approach · https://t.me/phys_math_dev/30
+- `31` · The second dataset with all letters capital · https://t.me/phys_math_dev/31
+- `32` · The final dataset · https://t.me/phys_math_dev/32
+- `33` · Meta joke - joke about LLM cognition. To be honest, I didn't get this joke until asked iron friend to explain it. · https://t.me/phys_math_dev/33
+- `34` · How to set up openai helper in jupyterlab · https://t.me/phys_math_dev/34
+- `35` · It's alive! · https://t.me/phys_math_dev/35
+- `36` · Some simple EDA steps: number of components in the whole dataset · https://t.me/phys_math_dev/36
+- `37` · The first group in the dataset · https://t.me/phys_math_dev/37
+- `38` · The key graph in catching a culprit: basis functions. In wrong basis functions there wasn't any periods, just one slope. · https://t.me/phys_math_dev/38
+- `39` · Retrophotos. Physics. · https://t.me/phys_math_dev/39
+- `40` · Tree. From Gradient Boosted Decision Trees. · https://t.me/phys_math_dev/40
+- `41` · Four basis functions. · https://t.me/phys_math_dev/41
+- `42` · Three out of eight · https://t.me/phys_math_dev/42
+- `46` · The Absolute Evil of Default Parameters · https://t.me/phys_math_dev/46
+- `51` · Everybody wants to be like ewe · https://t.me/phys_math_dev/51
+- `52` · The Farmer Was Replaced · https://t.me/phys_math_dev/52
+- `53` · Memories Awakened by “The Farmer Was Replaced” · https://t.me/phys_math_dev/53
+- `54` · TFWR. Navigation. · https://t.me/phys_math_dev/54
+- `55` · Hello everyone! · https://t.me/phys_math_dev/55
+- `56` · Eggcorn of the day · https://t.me/phys_math_dev/56
+- `57` · Some time ago my friend, who worked with native English speakers, told me that when they worked with a colleague on a piece of tec · https://t.me/phys_math_dev/57
+- `58` · Dawn of the day · https://t.me/phys_math_dev/58
+- `59` · Torus navigation · https://t.me/phys_math_dev/59
+- `60` · Liquid Nitrogen Station · https://t.me/phys_math_dev/60
+- `61` · Big MSE dataset for GBDT · https://t.me/phys_math_dev/61
+- `62` · Big MSE dataset. Depth of trees. · https://t.me/phys_math_dev/62
+- `63` · GBDTE log‑loss dataset · https://t.me/phys_math_dev/63
+- `64` · In my other channel I published post about physical exposition which my father and I found in 1988. Quite an exclusive material .  · https://t.me/phys_math_dev/64
+- `65` · Riddle of the day · https://t.me/phys_math_dev/65
+- `66` · When is a door not a door? · https://t.me/phys_math_dev/66
+- `67` · TFWR. Labyrinth · https://t.me/phys_math_dev/67
+- `68` · GBDTE: LogLoss dataset · https://t.me/phys_math_dev/68
+- `69` · Logloss dataset for GBDTE · https://t.me/phys_math_dev/69
+- `70` · Bubble sort of one cacti column in TFWR · https://t.me/phys_math_dev/70
+- `71` · TFWR. Spawn drones. · https://t.me/phys_math_dev/71
+- `72` · GBDTE. Culprit is found. · https://t.me/phys_math_dev/72
+- `73` · Ultraviolet lamp · https://t.me/phys_math_dev/73
+- `74` · LLM in education · https://t.me/phys_math_dev/74
+- `75` · Topics request · https://t.me/phys_math_dev/75
+- `77` · The First Vibe Coding Project · https://t.me/phys_math_dev/77
+- `78` · TFWR. Drone coordination. · https://t.me/phys_math_dev/78
+- `79` · Programming flood · https://t.me/phys_math_dev/79
+- `80` · A short update on GBDTE presentation. · https://t.me/phys_math_dev/80
+- `81` · the point of no return has been crossed · https://t.me/phys_math_dev/81
+- `82` · sin(a+b), cos(a+b) · https://t.me/phys_math_dev/82
+- `83` · Post 83 · https://t.me/phys_math_dev/83
+- `84` · Heteronym of the day · https://t.me/phys_math_dev/84
+- `85` · Sunflower achievement · https://t.me/phys_math_dev/85
+- `86` · MapReduce in The Farmer Was Replaced · https://t.me/phys_math_dev/86
+- `87` · GBDTE presentation. Unstable class. · https://t.me/phys_math_dev/87
+- `88` · Word of the day · https://t.me/phys_math_dev/88
+- `89` · Competitive programming guides. · https://t.me/phys_math_dev/89
+- `90` · MapReduce in The Farmer Was Replaced · https://t.me/phys_math_dev/90
+- `91` · Sunflowers. MapReduce. · https://t.me/phys_math_dev/91
+- `93` · Post 93 · https://t.me/phys_math_dev/93
+- `94` · Sine cosine machine · https://t.me/phys_math_dev/94
+- `96` · Word of the day: spendthrift · https://t.me/phys_math_dev/96
+- `97` · Qbasic and polar coordinates · https://t.me/phys_math_dev/97
+- `98` · Algorithm Flood · https://t.me/phys_math_dev/98
+- `99` · De Morgan's rule · https://t.me/phys_math_dev/99
+- `100` · Walrus operator · https://t.me/phys_math_dev/100
+- `101` · Post 101 · https://t.me/phys_math_dev/101
+- `102` · Chat for discussions · https://t.me/phys_math_dev/102
+- `103` · Cannabis curve · https://t.me/phys_math_dev/103
+- `104` · English joke of the day · https://t.me/phys_math_dev/104
+- `105` · 2025 in a nutshell. Kinda... · https://t.me/phys_math_dev/105
+- `106` · Water jets · https://t.me/phys_math_dev/106
+- `107` · Pouring-out velocity · https://t.me/phys_math_dev/107
+- `108` · Not exponential. This time. · https://t.me/phys_math_dev/108
+- `109` · New school level physics problem · https://t.me/phys_math_dev/109
+- `110` · For TFWR solutions discussions · https://t.me/phys_math_dev/110
+- `111` · NotebookLM · https://t.me/phys_math_dev/111
+- `112` · EGBDT Logloss - Learning curves · https://t.me/phys_math_dev/112
+- `113` · Group emblem · https://t.me/phys_math_dev/113
+- `115` · 2D sort · https://t.me/phys_math_dev/115
+- `116` · 2D insertion sort. Implementation. · https://t.me/phys_math_dev/116
+- `117` · Left hand rule in The Farmer Was Replaced · https://t.me/phys_math_dev/117
+- `119` · TFWR. Left hand maze traversal. · https://t.me/phys_math_dev/119
+- `120` · Microsoft scientists declared that they will be replaced by AI · https://t.me/phys_math_dev/120
+- `121` · Your AI partner · https://t.me/phys_math_dev/121
+- `122` · Dict vs % · https://t.me/phys_math_dev/122
+- `123` · GBDTE · https://t.me/phys_math_dev/123
+- `124` · Repository is public · https://t.me/phys_math_dev/124
+- `126` · The ideal model. Part 1. · https://t.me/phys_math_dev/126
+- `127` · Congratulations! · https://t.me/phys_math_dev/127
+- `128` · Levels of liquid in a Markov process = PageRank · https://t.me/phys_math_dev/128
+- `131` · Vibe Coding Guide · https://t.me/phys_math_dev/131
+- `132` · Slightly improved MapReduce sunflowers · https://t.me/phys_math_dev/132
+- `133` · To those, who want to understand agents properly · https://t.me/phys_math_dev/133
+- `134` · From uplift to logit · https://t.me/phys_math_dev/134
+- `135` · Titanic - Maching Learning from Disaster · https://t.me/phys_math_dev/135
+- `136` · Old but gold · https://t.me/phys_math_dev/136
+- `137` · How to vibecode Chizhik-Pyzchic app · https://t.me/phys_math_dev/137
+- `138` · Old but gold · https://t.me/phys_math_dev/138
+- `139` · The Deleted Photo · https://t.me/phys_math_dev/139
+- `140` · Periods in digits and remainders · https://t.me/phys_math_dev/140
+- `141` · Table with leaves · https://t.me/phys_math_dev/141
+- `142` · Element of 2D sort · https://t.me/phys_math_dev/142
+- `143` · How Codex is built · https://t.me/phys_math_dev/143
+- `144` · Post 144 · https://t.me/phys_math_dev/144
+- `145` · RAG is dead, long live agentic retrieval · https://t.me/phys_math_dev/145
+- `146` · Baghramyan mystery · https://t.me/phys_math_dev/146
+- `147` · Web mirror of phys_math_dev is alive! · https://t.me/phys_math_dev/147
 
 ## Needs Review
 
