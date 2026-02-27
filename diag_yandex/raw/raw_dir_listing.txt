@@ -1,0 +1,8 @@
+итого 24
+drwxrwxr-x 2 tarstars tarstars 4096 Feb 26 11:08 .
+drwxrwxr-x 3 tarstars tarstars 4096 Feb 26 11:08 ..
+-rw-rw-r-- 1 tarstars tarstars  218 Feb 26 11:08 config_file_scan.txt
+-rw-rw-r-- 1 tarstars tarstars  198 Feb 26 11:08 env_info.txt
+-rw-rw-r-- 1 tarstars tarstars 2248 Feb 26 11:08 ls_la_root.txt
+-rw-rw-r-- 1 tarstars tarstars  582 Feb 26 11:08 package_json.txt
+-rw-rw-r-- 1 tarstars tarstars    0 Feb 26 11:08 raw_dir_listing.txt

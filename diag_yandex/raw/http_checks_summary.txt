@@ -1,0 +1,58 @@
+UA=NORMAL
+- https://phys-math.dev/
+  HEAD=302 location=/en/
+  FOLLOW_CHAIN=302 -> 200
+- https://phys-math.dev/en/
+  HEAD=200
+  FOLLOW_CHAIN=200
+- https://phys-math.dev/en/archive/1/
+  HEAD=200
+  FOLLOW_CHAIN=200
+- https://phys-math.dev/en/post/149-reality-check/
+  HEAD=200
+  FOLLOW_CHAIN=200
+- https://phys-math.dev/robots.txt
+  HEAD=200
+  FOLLOW_CHAIN=200
+- https://phys-math.dev/sitemap.xml
+  HEAD=200
+  FOLLOW_CHAIN=200
+- https://phys-math.dev/sitemap_index.xml
+  HEAD=404
+  FOLLOW_CHAIN=404
+- https://phys-math.dev/yandex_b2fb10ca15940053.html
+  HEAD=308 location=/yandex_b2fb10ca15940053
+  FOLLOW_CHAIN=200
+- https://phys-math.dev/yandex_b2fb10ca15940053
+  HEAD=200
+  FOLLOW_CHAIN=200
+
+UA=YANDEX
+- https://phys-math.dev/
+  HEAD=302 location=/en/
+  FOLLOW_CHAIN=302 -> 200
+- https://phys-math.dev/en/
+  HEAD=200
+  FOLLOW_CHAIN=200
+- https://phys-math.dev/en/archive/1/
+  HEAD=200
+  FOLLOW_CHAIN=200
+- https://phys-math.dev/en/post/149-reality-check/
+  HEAD=200
+  FOLLOW_CHAIN=200
+- https://phys-math.dev/robots.txt
+  HEAD=200
+  FOLLOW_CHAIN=200
+- https://phys-math.dev/sitemap.xml
+  HEAD=200
+  FOLLOW_CHAIN=200
+- https://phys-math.dev/sitemap_index.xml
+  HEAD=404
+  FOLLOW_CHAIN=404
+- https://phys-math.dev/yandex_b2fb10ca15940053.html
+  HEAD=308 location=/yandex_b2fb10ca15940053
+  FOLLOW_CHAIN=200
+- https://phys-math.dev/yandex_b2fb10ca15940053
+  HEAD=200
+  FOLLOW_CHAIN=200
+

@@ -307,6 +307,33 @@ main {
   margin: 0.9rem 0;
 }
 
+.post-content pre {
+  margin: 1rem 0;
+  padding: 0.9rem 1rem;
+  overflow-x: auto;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  background: color-mix(in srgb, var(--bg-soft) 70%, var(--surface));
+}
+
+.post-content code {
+  font-family: 'JetBrains Mono', 'Fira Code', 'Cascadia Code', 'Consolas', monospace;
+  font-size: 0.9em;
+  background: color-mix(in srgb, var(--bg-soft) 70%, var(--surface));
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  padding: 0.05rem 0.35rem;
+}
+
+.post-content pre code {
+  border: 0;
+  border-radius: 0;
+  padding: 0;
+  background: transparent;
+  display: block;
+  line-height: 1.45;
+}
+
 .post-footer {
   margin-top: 1.2rem;
   padding-top: 0.9rem;

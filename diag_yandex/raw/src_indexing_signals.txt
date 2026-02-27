@@ -1,0 +1,16 @@
+=== src noindex / robots directives ===
+src/layouts/BaseLayout.astro:63:    {noIndex && <meta name="robots" content="noindex,nofollow" />}
+src/pages/index.astro:11:    <meta name="robots" content="noindex,follow" />
+src/pages/[locale]/archive/index.astro:22:    <meta name="robots" content="noindex,follow" />
+
+=== src canonical for entry pages ===
+src/pages/[locale]/post/[id]-[slug].astro:98:    canonicalPath={locale === 'ru' ? '/ru/' : '/en/'}
+src/pages/[locale]/post/[id]-[slug].astro:115:    canonicalPath={enPath}
+src/pages/[locale]/post/[id]-[slug].astro:135:    canonicalPath={current?.path ?? enPath}
+src/layouts/BaseLayout.astro:12:  canonicalPath: string;
+src/layouts/BaseLayout.astro:22:  canonicalPath,
+src/layouts/BaseLayout.astro:29:const canonicalUrl = new URL(canonicalPath, site).toString();
+src/layouts/BaseLayout.astro:47:    <link rel="canonical" href={canonicalUrl} />
+src/layouts/BaseLayout.astro:56:    <meta property="og:url" content={canonicalUrl} />
+src/pages/[locale]/archive/index.astro:21:    <link rel="canonical" href={target} />
+src/pages/index.astro:10:    <link rel="canonical" href="https://phys-math.dev/en/" />

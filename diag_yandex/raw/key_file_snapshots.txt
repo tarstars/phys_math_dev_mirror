@@ -1,0 +1,446 @@
+===== FILE: astro.config.mjs =====
+import { defineConfig } from 'astro/config';
+import { fileURLToPath } from 'node:url';
+
+export default defineConfig({
+  site: 'https://phys-math.dev',
+  output: 'static',
+  trailingSlash: 'always',
+  vite: {
+    resolve: {
+      alias: {
+        '@': fileURLToPath(new URL('./src', import.meta.url))
+      }
+    }
+  }
+});
+
+===== FILE: wrangler.toml =====
+name = "phys-math-dev"
+compatibility_date = "2026-02-11"
+pages_build_output_dir = "dist"
+
+===== FILE: public/_redirects =====
+/ /en/ 302
+
+===== FILE: public/_headers =====
+(missing)
+
+===== FILE: public/_routes.json =====
+{
+  "version": 1,
+  "include": [
+    "/yandex_b2fb10ca15940053.html"
+  ],
+  "exclude": []
+}
+
+===== FILE: src/pages/robots.txt.ts =====
+export function GET() {
+  const body = `User-agent: *
+Allow: /
+
+Host: https://phys-math.dev
+Sitemap: https://phys-math.dev/sitemap.xml
+`;
+
+  return new Response(body, {
+    headers: {
+      'Content-Type': 'text/plain; charset=utf-8'
+    }
+  });
+}
+
+===== FILE: src/pages/sitemap.xml.ts =====
+import { getEnPostMap, getLocalePosts, getRuPostMap } from '@/lib/content';
+
+type UrlNode = {
+  loc: string;
+  lastmod?: string;
+  alternates?: string[];
+};
+
+function xmlEscape(input: string): string {
+  return input
+    .replaceAll('&', '&amp;')
+    .replaceAll('<', '&lt;')
+    .replaceAll('>', '&gt;')
+    .replaceAll('"', '&quot;')
+    .replaceAll("'", '&apos;');
+}
+
+export function GET() {
+  const site = 'https://phys-math.dev';
+  const urls: UrlNode[] = [];
+
+  const enPosts = Array.from(getEnPostMap({ includeDeleted: false }).values());
+  const ruMap = getRuPostMap({ includeDeleted: false, includeDraft: false });
+
+  urls.push({
+    loc: `${site}/en/`,
+    alternates: [`${site}/en/`, `${site}/ru/`]
+  });
+  urls.push({
+    loc: `${site}/ru/`,
+    alternates: [`${site}/en/`, `${site}/ru/`]
+  });
+
+  const enPages = Math.max(1, Math.ceil(getLocalePosts('en').length / 20));
+  const ruPages = Math.max(1, Math.ceil(getLocalePosts('ru').length / 20));
+
+  for (let page = 1; page <= enPages; page += 1) {
+    const ruPage = page <= ruPages ? `${site}/ru/archive/${page}/` : `${site}/ru/archive/1/`;
+    urls.push({
+      loc: `${site}/en/archive/${page}/`,
+      alternates: [`${site}/en/archive/${page}/`, ruPage]
+    });
+  }
+
+  for (let page = 1; page <= ruPages; page += 1) {
+    const enPage = page <= enPages ? `${site}/en/archive/${page}/` : `${site}/en/archive/1/`;
+    urls.push({
+      loc: `${site}/ru/archive/${page}/`,
+      alternates: [enPage, `${site}/ru/archive/${page}/`]
+    });
+  }
+
+  for (const enPost of enPosts) {
+    const enLoc = `${site}${enPost.path}`;
+    const ruPost = ruMap.get(enPost.id);
+
+    if (ruPost) {
+      const ruLoc = `${site}${ruPost.path}`;
+      urls.push({
+        loc: enLoc,
+        lastmod: enPost.edited_at || enPost.updated_at || enPost.date,
+        alternates: [enLoc, ruLoc]
+      });
+      urls.push({
+        loc: ruLoc,
+        lastmod: ruPost.edited_at || ruPost.updated_at || ruPost.date,
+        alternates: [enLoc, ruLoc]
+      });
+    } else {
+      urls.push({
+        loc: enLoc,
+        lastmod: enPost.edited_at || enPost.updated_at || enPost.date,
+        alternates: [enLoc]
+      });
+    }
+  }
+
+  const body = `<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+${urls
+  .map((node) => {
+    const alternates = (node.alternates || [])
+      .map((alt) => {
+        const lang = alt.includes('/ru/') ? 'ru' : 'en';
+        return `    <xhtml:link rel="alternate" hreflang="${lang}" href="${xmlEscape(alt)}" />`;
+      })
+      .join('\n');
+
+    const xDefault = node.alternates?.some((x) => x.includes('/en/'))
+      ? `\n    <xhtml:link rel="alternate" hreflang="x-default" href="${xmlEscape(node.alternates.find((x) => x.includes('/en/')) || `${site}/en/`)}" />`
+      : '';
+
+    return `  <url>
+    <loc>${xmlEscape(node.loc)}</loc>
+${node.lastmod ? `    <lastmod>${xmlEscape(new Date(node.lastmod).toISOString())}</lastmod>\n` : ''}${alternates}${xDefault}
+  </url>`;
+  })
+  .join('\n')}
+</urlset>`;
+
+  return new Response(body, {
+    headers: {
+      'Content-Type': 'application/xml; charset=utf-8'
+    }
+  });
+}
+
+===== FILE: functions/yandex_b2fb10ca15940053.html.ts =====
+export const onRequestGet = async () => {
+  const body = `<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    </head>
+    <body>Verification: b2fb10ca15940053</body>
+</html>`;
+
+  return new Response(body, {
+    status: 200,
+    headers: {
+      'content-type': 'text/html; charset=UTF-8',
+      'cache-control': 'public, max-age=300',
+    },
+  });
+};
+
+===== FILE: public/yandex_b2fb10ca15940053.html =====
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    </head>
+    <body>Verification: b2fb10ca15940053</body>
+</html>
+
+===== FILE: src/layouts/BaseLayout.astro =====
+---
+import '@/styles/global.css';
+import LanguageSwitch from '@/components/LanguageSwitch.astro';
+import ThemeToggle from '@/components/ThemeToggle.astro';
+import { UI, oppositeLocale } from '@/lib/i18n';
+import type { Locale } from '@/lib/types';
+
+interface Props {
+  title: string;
+  description: string;
+  locale: Locale;
+  canonicalPath: string;
+  enPath: string;
+  ruPath: string;
+  noIndex?: boolean;
+}
+
+const {
+  title,
+  description,
+  locale,
+  canonicalPath,
+  enPath,
+  ruPath,
+  noIndex = false
+} = Astro.props;
+
+const site = import.meta.env.PUBLIC_SITE_URL || 'https://phys-math.dev';
+const canonicalUrl = new URL(canonicalPath, site).toString();
+const enUrl = new URL(enPath, site).toString();
+const ruUrl = new URL(ruPath, site).toString();
+const token = import.meta.env.PUBLIC_CF_ANALYTICS_TOKEN;
+
+const thisLocaleHome = `/${locale}/`;
+const thisLocaleArchive = `/${locale}/archive/1/`;
+const opposite = oppositeLocale(locale);
+---
+
+<!doctype html>
+<html lang={locale}>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" type="image/jpeg" href="/favicon.jpg" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <link rel="canonical" href={canonicalUrl} />
+
+    <link rel="alternate" hreflang="en" href={enUrl} />
+    <link rel="alternate" hreflang="ru" href={ruUrl} />
+    <link rel="alternate" hreflang="x-default" href={enUrl} />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonicalUrl} />
+    <meta property="og:site_name" content="PhysMath Hub" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+
+    {noIndex && <meta name="robots" content="noindex,nofollow" />}
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-KW8VXVXW7N"></script>
+    <script is:inline>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag('js', new Date());
+
+      gtag('config', 'G-KW8VXVXW7N');
+    </script>
+
+    <!-- Yandex.Metrika counter -->
+    <script type="text/javascript" is:inline>
+      (function(m,e,t,r,i,k,a){
+          m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+          m[i].l=1*new Date();
+          for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+          k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a);
+      })(window, document, 'script', 'https://mc.yandex.ru/metrika/tag.js?id=106989967', 'ym');
+
+      ym(106989967, 'init', {
+        ssr: true,
+        webvisor: true,
+        clickmap: true,
+        ecommerce: 'dataLayer',
+        referrer: document.referrer,
+        url: location.href,
+        accurateTrackBounce: true,
+        trackLinks: true
+      });
+    </script>
+    <!-- /Yandex.Metrika counter -->
+
+    <script is:inline>
+      (() => {
+        const key = 'theme-preference';
+        const value = localStorage.getItem(key) || 'system';
+        if (value === 'light' || value === 'dark') {
+          document.documentElement.setAttribute('data-theme', value);
+        }
+      })();
+    </script>
+  </head>
+  <body>
+    <noscript>
+      <div><img src="https://mc.yandex.ru/watch/106989967" style="position:absolute; left:-9999px;" alt="" /></div>
+    </noscript>
+
+    <header class="site-header">
+      <div class="site-header-inner">
+        <a class="brand" href={thisLocaleHome}>PhysMath Hub</a>
+
+        <nav class="site-nav" aria-label="Primary">
+          <a href={thisLocaleHome}>{UI[locale].home}</a>
+          <a href={thisLocaleArchive}>{UI[locale].archive}</a>
+        </nav>
+
+        <div class="site-tools">
+          <LanguageSwitch currentLocale={locale} enPath={enPath} ruPath={ruPath} />
+          <ThemeToggle locale={locale} />
+        </div>
+      </div>
+      <p class="locale-chip" data-locale={locale}>{locale.toUpperCase()} / {opposite.toUpperCase()}</p>
+    </header>
+
+    <main>
+      <slot />
+    </main>
+
+    <footer class="site-footer">
+      <p>PhysMath Hub · Physics · Mathematics · Programming</p>
+    </footer>
+
+    <script is:inline>
+      (() => {
+        const key = 'theme-preference';
+        const cycle = ['system', 'light', 'dark'];
+        const button = document.getElementById('theme-toggle');
+
+        const apply = (mode) => {
+          if (mode === 'light' || mode === 'dark') {
+            document.documentElement.setAttribute('data-theme', mode);
+          } else {
+            document.documentElement.removeAttribute('data-theme');
+          }
+          if (button) {
+            button.textContent = mode === 'light' ? '☀' : mode === 'dark' ? '☾' : '◐';
+          }
+        };
+
+        let current = localStorage.getItem(key) || 'system';
+        if (!cycle.includes(current)) {
+          current = 'system';
+        }
+        apply(current);
+
+        button?.addEventListener('click', () => {
+          const idx = cycle.indexOf(current);
+          current = cycle[(idx + 1) % cycle.length];
+          localStorage.setItem(key, current);
+          apply(current);
+        });
+      })();
+    </script>
+
+    {token && (
+      <script
+        defer
+        src="https://static.cloudflareinsights.com/beacon.min.js"
+        data-cf-beacon={`{"token":"${token}"}`}
+      ></script>
+    )}
+  </body>
+</html>
+
+===== FILE: src/pages/index.astro =====
+---
+const target = '/en/';
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="refresh" content={`0; url=${target}`} />
+    <link rel="canonical" href="https://phys-math.dev/en/" />
+    <meta name="robots" content="noindex,follow" />
+    <title>Redirecting…</title>
+  </head>
+  <body>
+    <p>Redirecting to <a href={target}>{target}</a></p>
+    <script is:inline>
+      window.location.replace('/en/');
+    </script>
+  </body>
+</html>
+
+===== FILE: src/pages/[locale]/index.astro =====
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import PostCard from '@/components/PostCard.astro';
+import { getLocalePosts, getSiteText, pageTitle } from '@/lib/content';
+import { LOCALES, UI } from '@/lib/i18n';
+import type { Locale } from '@/lib/types';
+
+export function getStaticPaths() {
+  return LOCALES.map((locale) => ({ params: { locale } }));
+}
+
+const locale = Astro.params.locale as Locale;
+if (!LOCALES.includes(locale)) {
+  throw new Error('Unsupported locale route');
+}
+
+const siteText = getSiteText(locale);
+const posts = getLocalePosts(locale, { includeDeleted: false, includeDraft: false }).slice(0, 12);
+
+const title = pageTitle(siteText.title, locale);
+const description = siteText.subtitle || (locale === 'ru' ? 'Хаб для любителей физики, математики и программирования.' : 'Hub for physics, mathematics, and programming enthusiasts.');
+---
+
+<BaseLayout
+  title={title}
+  description={description}
+  locale={locale}
+  canonicalPath={`/${locale}/`}
+  enPath="/en/"
+  ruPath="/ru/"
+>
+  <section class="hero">
+    <h1>{siteText.title}</h1>
+    {siteText.subtitle && <p>{siteText.subtitle}</p>}
+    {siteText.bodyHtml && <div set:html={siteText.bodyHtml} />}
+  </section>
+
+  <section>
+    <h2>{UI[locale].latestPosts}</h2>
+    {posts.length === 0 ? (
+      <p>{locale === 'ru' ? 'Пока нет опубликованных постов для этого языка.' : 'No published posts yet for this language.'}</p>
+    ) : (
+      <div class="posts-grid">
+        {posts.map((post) => (
+          <PostCard post={post} locale={locale} />
+        ))}
+      </div>
+    )}
+
+    <p>
+      <a href={`/${locale}/archive/1/`}>{UI[locale].allPosts}</a>
+    </p>
+  </section>
+</BaseLayout>
+

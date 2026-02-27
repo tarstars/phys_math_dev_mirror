@@ -1,0 +1,25 @@
+$ curl -sS -D - -o /dev/null -A 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 Chrome/120 Safari/537.36' 'https://phys-math.dev/yandex_b2fb10ca15940053.html'
+HTTP/2 200 
+date: Thu, 26 Feb 2026 08:13:49 GMT
+content-type: text/html; charset=UTF-8
+cache-control: public, max-age=300
+report-to: {"group":"cf-nel","max_age":604800,"endpoints":[{"url":"https://a.nel.cloudflare.com/report/v4?s=mQ6I7hLaH5NZlReedt9AKa4J0jaE%2BVHneiNlFOu%2FQewL4RRMziMgQHwy62i1D24w%2BNbeH9Ck3BN5dIwJ0O4BMoGQBMrsSd1XvJ1RvLossGk%2FacQ12WPc2bY%3D"}]}
+nel: {"report_to":"cf-nel","success_fraction":0.0,"max_age":604800}
+server: cloudflare
+cf-cache-status: DYNAMIC
+cf-ray: 9d3dfc431dc15cc8-ARN
+alt-svc: h3=":443"; ma=86400
+
+
+$ curl -sS -D - -o /dev/null -A 'Mozilla/5.0 (compatible; YandexBot/3.0; +http://yandex.com/bots)' 'https://phys-math.dev/yandex_b2fb10ca15940053.html'
+HTTP/2 200 
+date: Thu, 26 Feb 2026 08:13:50 GMT
+content-type: text/html; charset=UTF-8
+cache-control: public, max-age=300
+report-to: {"group":"cf-nel","max_age":604800,"endpoints":[{"url":"https://a.nel.cloudflare.com/report/v4?s=ltf4B%2Bm1clpqYlwOZnJxHuT6m8y7%2F4C0D73LaPIgTuahVXBDaoVAOtXKoqioz8DfBzHoUL%2BkDJ7GF3UuvbF%2BmTRLtnJH8fxU8KT10ycpFnok4LkNHaHC"}]}
+nel: {"report_to":"cf-nel","success_fraction":0.0,"max_age":604800}
+server: cloudflare
+cf-cache-status: DYNAMIC
+cf-ray: 9d3dfc46e9759d45-DME
+alt-svc: h3=":443"; ma=86400
+

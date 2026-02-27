@@ -1,0 +1,10 @@
+./CLOUDFLARE_SETUP.md
+./analysis/sitemap-0.xml
+./analysis/sitemap-index.xml
+./astro.config.mjs
+./dist/_redirects
+./dist/robots.txt
+./dist/sitemap.xml
+./node_modules/prismjs/_headers
+./public/_redirects
+./wrangler.toml

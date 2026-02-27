@@ -30,8 +30,9 @@ import frontmatter
 from botocore.exceptions import ClientError
 from slugify import slugify
 from telethon import TelegramClient
+from telethon.helpers import add_surrogate, del_surrogate, within_surrogate
 from telethon.sessions import StringSession
-from telethon.tl.types import DocumentAttributeFilename, Message, MessageEmpty
+from telethon.tl.types import DocumentAttributeFilename, Message, MessageEmpty, MessageEntityCode, MessageEntityPre
 
 ROOT = Path(__file__).resolve().parents[1]
 EN_DIR = ROOT / 'content' / 'en' / 'posts'
@@ -350,6 +351,56 @@ def normalize_markdown(text: str) -> str:
     return '\n'.join(line.rstrip() for line in text.replace('\r\n', '\n').split('\n')).strip() + '\n'
 
 
+def message_to_markdown(msg: Message) -> str:
+    raw_text = msg.message or ''
+    if not raw_text:
+        return ''
+
+    entities = getattr(msg, 'entities', None) or []
+    code_entities = [entity for entity in entities if isinstance(entity, (MessageEntityCode, MessageEntityPre))]
+    if not code_entities:
+        return raw_text
+
+    surrogated_text = add_surrogate(raw_text)
+    insertions: list[tuple[int, int, str]] = []
+
+    for entity in code_entities:
+        start = int(getattr(entity, 'offset', 0) or 0)
+        length = int(getattr(entity, 'length', 0) or 0)
+        end = start + length
+
+        if length <= 0 or start < 0 or end > len(surrogated_text):
+            continue
+
+        entity_text = del_surrogate(surrogated_text[start:end])
+
+        if isinstance(entity, MessageEntityPre) or '\n' in entity_text:
+            language = str(getattr(entity, 'language', '') or '').strip()
+            opening = f'```{language}\n' if language else '```\n'
+            closing = '\n```'
+
+            # Keep fenced blocks detached from surrounding text when the entity is inline.
+            if start > 0 and surrogated_text[start - 1] != '\n':
+                opening = '\n' + opening
+            if end < len(surrogated_text) and surrogated_text[end] != '\n':
+                closing = closing + '\n'
+
+            insertions.append((start, 1, opening))
+            insertions.append((end, 0, closing))
+            continue
+
+        delimiter = '``' if '`' in entity_text else '`'
+        insertions.append((start, 1, delimiter))
+        insertions.append((end, 0, delimiter))
+
+    for position, _, token in sorted(insertions, key=lambda row: (row[0], row[1]), reverse=True):
+        while within_surrogate(surrogated_text, position):
+            position += 1
+        surrogated_text = surrogated_text[:position] + token + surrogated_text[position:]
+
+    return del_surrogate(surrogated_text)
+
+
 def channel_url(channel: str, post_id: int) -> str:
     username = channel[1:] if channel.startswith('@') else channel
     return f'https://t.me/{username}/{post_id}'
@@ -507,7 +558,7 @@ async def run_sync(
         canonical = build_canonical_posts(messages)
 
         for primary, group in canonical:
-            text = normalize_markdown((primary.message or '').strip())
+            text = normalize_markdown(message_to_markdown(primary).strip())
             if not text and not any(item.media for item in group):
                 continue
 

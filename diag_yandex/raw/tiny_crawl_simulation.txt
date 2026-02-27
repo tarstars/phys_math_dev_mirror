@@ -1,0 +1,14 @@
+
+URL https://phys-math.dev/en/ STATUS 200
+X-Robots-Tag None
+meta robots: None
+meta yandex: None
+canonical: https://phys-math.dev/en/
+text_len: 3683
+
+URL https://phys-math.dev/en/archive/1/ STATUS 200
+X-Robots-Tag None
+meta robots: None
+meta yandex: None
+canonical: https://phys-math.dev/en/archive/1/
+text_len: 5653

@@ -1,0 +1,1715 @@
+==============================
+USER_AGENT: NORMAL
+UA_VALUE: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 Chrome/120 Safari/537.36
+==============================
+
+---- URL: https://phys-math.dev/ ----
+$ curl -I -A 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 Chrome/120 Safari/537.36' 'https://phys-math.dev/'
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+HTTP/2 302 
+date: Thu, 26 Feb 2026 08:10:27 GMT
+content-type: text/plain;charset=UTF-8
+location: /en/
+access-control-allow-origin: *
+referrer-policy: strict-origin-when-cross-origin
+x-content-type-options: nosniff
+report-to: {"group":"cf-nel","max_age":604800,"endpoints":[{"url":"https://a.nel.cloudflare.com/report/v4?s=UkxkhHYt%2BQTjstD0%2F%2BpcfazhVNW6WmDGpVTjTRtmCWrRM4LHOQAItexj4o39%2BYWjjMi4uYs0jq%2FhXrFErWATX60km%2FQmTUZfisB9aALMhBkgM5e6AhOL86I%3D"}]}
+nel: {"report_to":"cf-nel","success_fraction":0.0,"max_age":604800}
+server: cloudflare
+cf-cache-status: DYNAMIC
+cf-ray: 9d3df754190a3017-ARN
+alt-svc: h3=":443"; ma=86400
+
+
+$ curl -sS -L -D - -o /dev/null -A 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 Chrome/120 Safari/537.36' 'https://phys-math.dev/'
+HTTP/2 302 
+date: Thu, 26 Feb 2026 08:10:28 GMT
+content-type: text/plain;charset=UTF-8
+content-length: 19
+location: /en/
+access-control-allow-origin: *
+referrer-policy: strict-origin-when-cross-origin
+x-content-type-options: nosniff
+report-to: {"group":"cf-nel","max_age":604800,"endpoints":[{"url":"https://a.nel.cloudflare.com/report/v4?s=YBtAo%2Bf9D6ZpE6bkDmG%2F2PBR6KLx4D3v%2F1fmC3Tp0eUayGTXD7We1MJR4RrsL471dtquhK0l5Itl7qWsRr8rSqpzQ1jk2lOGewL6uBhtD5bKQm4wiwEJovE%3D"}]}
+nel: {"report_to":"cf-nel","success_fraction":0.0,"max_age":604800}
+server: cloudflare
+cf-cache-status: DYNAMIC
+cf-ray: 9d3df7579a06562f-ARN
+alt-svc: h3=":443"; ma=86400
+
+HTTP/2 200 
+date: Thu, 26 Feb 2026 08:10:28 GMT
+content-type: text/html; charset=utf-8
+access-control-allow-origin: *
+cache-control: public, max-age=0, must-revalidate
+referrer-policy: strict-origin-when-cross-origin
+x-content-type-options: nosniff
+report-to: {"group":"cf-nel","max_age":604800,"endpoints":[{"url":"https://a.nel.cloudflare.com/report/v4?s=RmUXLz1LM%2FLDr9OS79y2Ugbn0ZRQeKNZyZ4SjE3cHkDlgyk%2Fw2DMjF0OEVDyOkVtMnYIi9KiweqqK0FzQFLOyz4k9OQVGrzBmnqjLqUbx5PO0AHuA0p%2Ftg0%3D"}]}
+nel: {"report_to":"cf-nel","success_fraction":0.0,"max_age":604800}
+server: cloudflare
+cf-cache-status: DYNAMIC
+cf-ray: 9d3df758bc3c562f-ARN
+alt-svc: h3=":443"; ma=86400
+
+
+$ curl -sS -L -A 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 Chrome/120 Safari/537.36' 'https://phys-math.dev/' | sed -n '1,120p'
+<!DOCTYPE html><html lang="en"> <head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="icon" type="image/jpeg" href="/favicon.jpg"><title>PhysMath Hub · PhysMath Hub</title><meta name="description" content="A shared space for people who love physics, mathematics, and programming."><link rel="canonical" href="https://phys-math.dev/en/"><link rel="alternate" hreflang="en" href="https://phys-math.dev/en/"><link rel="alternate" hreflang="ru" href="https://phys-math.dev/ru/"><link rel="alternate" hreflang="x-default" href="https://phys-math.dev/en/"><meta property="og:type" content="website"><meta property="og:title" content="PhysMath Hub · PhysMath Hub"><meta property="og:description" content="A shared space for people who love physics, mathematics, and programming."><meta property="og:url" content="https://phys-math.dev/en/"><meta property="og:site_name" content="PhysMath Hub"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="PhysMath Hub · PhysMath Hub"><meta name="twitter:description" content="A shared space for people who love physics, mathematics, and programming."><!-- Google tag (gtag.js) --><script async src="https://www.googletagmanager.com/gtag/js?id=G-KW8VXVXW7N"></script><script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag('js', new Date());
+
+      gtag('config', 'G-KW8VXVXW7N');
+    </script><!-- Yandex.Metrika counter --><script type="text/javascript">
+      (function(m,e,t,r,i,k,a){
+          m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+          m[i].l=1*new Date();
+          for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+          k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a);
+      })(window, document, 'script', 'https://mc.yandex.ru/metrika/tag.js?id=106989967', 'ym');
+
+      ym(106989967, 'init', {
+        ssr: true,
+        webvisor: true,
+        clickmap: true,
+        ecommerce: 'dataLayer',
+        referrer: document.referrer,
+        url: location.href,
+        accurateTrackBounce: true,
+        trackLinks: true
+      });
+    </script><!-- /Yandex.Metrika counter --><script>
+      (() => {
+        const key = 'theme-preference';
+        const value = localStorage.getItem(key) || 'system';
+        if (value === 'light' || value === 'dark') {
+          document.documentElement.setAttribute('data-theme', value);
+        }
+      })();
+    </script><link rel="stylesheet" href="/_astro/_page_.BOlKRXuh.css"></head> <body> <noscript> <div><img src="https://mc.yandex.ru/watch/106989967" style="position:absolute; left:-9999px;" alt=""></div> </noscript> <header class="site-header"> <div class="site-header-inner"> <a class="brand" href="/en/">PhysMath Hub</a> <nav class="site-nav" aria-label="Primary"> <a href="/en/">Home</a> <a href="/en/archive/1/">Archive</a> </nav> <div class="site-tools"> <nav class="lang-switch" aria-label="Language switch"> <a href="/en/" class="active" hreflang="en">
+EN
+</a> <a href="/ru/" class hreflang="ru">
+RU
+</a> </nav> <button class="theme-toggle" id="theme-toggle" aria-label="Switch theme" title="Switch theme"> <span aria-hidden="true">◐</span> </button> </div> </div> <p class="locale-chip" data-locale="en">EN / RU</p> </header> <main>  <section class="hero"> <h1>PhysMath Hub</h1> <p>A shared space for people who love physics, mathematics, and programming.</p> <div><p>This project mirrors <strong>phys_math_dev</strong> and turns daily channel knowledge into a durable, searchable archive.</p>
+<p>The goal is simple: share useful ideas, keep them accessible, and help curious people connect across disciplines.</p>
+<p>If you enjoy learning how theory meets engineering practice, this hub is for you.</p>
+</div> </section> <section> <h2>Latest posts</h2> <div class="posts-grid"> <article class="post-card"> <a class="post-link" href="/en/post/149-reality-check/"> <div class="post-card-top"> <h2>Reality check</h2> <time datetime="2026-02-25T13:07:37.000Z">February 25, 2026</time> </div> <p>Reality check Yesterday I posted a hand-drawn sketch of the metro station. But I totally forgot that you can just take a photo of the place. Today, on the way to the office, I took this shot. Now you can compare the sket</p> </a>  <div class="post-meta-row"> <a class="source-link" href="https://t.me/phys_math_dev/149" target="_blank" rel="noopener noreferrer"> Original Telegram post </a>  </div> </article><article class="post-card"> <a class="post-link" href="/en/post/148-baghramyan-mystery-revealed/"> <div class="post-card-top"> <h2>Baghramyan mystery revealed</h2> <time datetime="2026-02-24T17:39:51.000Z">February 24, 2026</time> </div> <p>Baghramyan mystery revealed Previously, I posted three mysterious photos. Today, let&#39;s solve the puzzle. These triangles are the result of a strange coincidence. Shadows of handrails intersect in the middle of the step. </p> </a>  <div class="post-meta-row"> <a class="source-link" href="https://t.me/phys_math_dev/148" target="_blank" rel="noopener noreferrer"> Original Telegram post </a>  </div> </article><article class="post-card"> <a class="post-link" href="/en/post/147-web-mirror-of-phys-math-dev-is-alive/"> <div class="post-card-top"> <h2>Web mirror of phys_math_dev is alive!</h2> <time datetime="2026-02-22T16:32:54.000Z">February 22, 2026</time> </div> <p>Web mirror of phys_math_dev is alive! It was… kinda terrible. Not when Codex wrote the code. Not when I deployed it to GitHub. It started when I logged into Cloudflare and began clicking around in the GUI. The real pain </p> </a>  <div class="post-meta-row"> <a class="source-link" href="https://t.me/phys_math_dev/147" target="_blank" rel="noopener noreferrer"> Original Telegram post </a>  </div> </article><article class="post-card"> <a class="post-link" href="/en/post/146-baghramyan-mystery/"> <div class="post-card-top"> <h2>Baghramyan mystery</h2> <time datetime="2026-02-21T10:14:32.000Z">February 21, 2026</time> </div> <p>Baghramyan mystery I made these three photos of an escalator steps of Baghramyan metro station in Yerevan. These black and white triangles in the middle of the step intrigue me. After the third attempt ChatGPT gave me cl</p> </a>  <div class="post-meta-row"> <a class="source-link" href="https://t.me/phys_math_dev/146" target="_blank" rel="noopener noreferrer"> Original Telegram post </a>  </div> </article><article class="post-card"> <a class="post-link" href="/en/post/145-rag-is-dead-long-live-agentic-retrieval/"> <div class="post-card-top"> <h2>RAG is dead, long live agentic retrieval</h2> <time datetime="2026-02-20T07:08:20.000Z">February 20, 2026</time> </div> <p>RAG is dead, long live agentic retrieval Video touches a question I keep bumping into lately: do I actually need to learn RAG? Very roughly: RAG is a way to preprocess your data into embeddings — high-dimensional vectors</p> </a>  <div class="post-meta-row"> <a class="source-link" href="https://t.me/phys_math_dev/145" target="_blank" rel="noopener noreferrer"> Original Telegram post </a>  </div> </article><article class="post-card"> <a class="post-link" href="/en/post/144-post-144/"> <div class="post-card-top"> <h2>Post 144</h2> <time datetime="2026-02-19T07:05:31.000Z">February 19, 2026</time> </div>  </a>  <div class="post-meta-row"> <a class="source-link" href="https://t.me/phys_math_dev/144" target="_blank" rel="noopener noreferrer"> Original Telegram post </a> <div class="reactions" aria-label="Reactions"> <span>👍 3</span> </div> </div> </article><article class="post-card"> <a class="post-link" href="/en/post/143-how-codex-is-built/"> <div class="post-card-top"> <h2>How Codex is built</h2> <time datetime="2026-02-18T08:49:56.000Z">February 18, 2026</time> </div> <p>How Codex is built I&#39;m actively using the &quot;Codex&quot; agent in my work and it has always intrigued me how it works. I even wanted to find a repository with the source code and read it. Fortunately, today I stumbled upon a li</p> </a>  <div class="post-meta-row"> <a class="source-link" href="https://t.me/phys_math_dev/143" target="_blank" rel="noopener noreferrer"> Original Telegram post </a> <div class="reactions" aria-label="Reactions"> <span>🔥 1</span> </div> </div> </article><article class="post-card"> <a class="post-link" href="/en/post/142-element-of-2d-sort/"> <div class="post-card-top"> <h2>Element of 2D sort</h2> <time datetime="2026-02-17T17:59:20.000Z">February 17, 2026</time> </div> <p>Element of 2D sort I don&#39;t have a fully cooked idea today, so let&#39;s discuss half-baked. In The Farmer Was Replaced game there is a subgame where you plant cacti. Quite a complex description of game rules boils down to qu</p> </a>  <div class="post-meta-row"> <a class="source-link" href="https://t.me/phys_math_dev/142" target="_blank" rel="noopener noreferrer"> Original Telegram post </a>  </div> </article><article class="post-card"> <a class="post-link" href="/en/post/141-table-with-leaves/"> <div class="post-card-top"> <h2>Table with leaves</h2> <time datetime="2026-02-15T12:32:16.000Z">February 15, 2026</time> </div> <p>Table with leaves Who would guess that these wooden foldable panels on the sides of a table are &quot;leaves&quot;? Not only decision trees and bushes have them.</p> </a>  <div class="post-meta-row"> <a class="source-link" href="https://t.me/phys_math_dev/141" target="_blank" rel="noopener noreferrer"> Original Telegram post </a>  </div> </article><article class="post-card"> <a class="post-link" href="/en/post/140-periods-in-digits-and-remainders/"> <div class="post-card-top"> <h2>Periods in digits and remainders</h2> <time datetime="2026-02-14T17:41:13.000Z">February 14, 2026</time> </div> <p>Periods in digits and remainders I&#39;m preparing a post with a solution for the first problem in the post . And there is a small question which has irked me for a while. When we calculate digits of 1/n, there is a function</p> </a>  <div class="post-meta-row"> <a class="source-link" href="https://t.me/phys_math_dev/140" target="_blank" rel="noopener noreferrer"> Original Telegram post </a> <div class="reactions" aria-label="Reactions"> <span>👍 1</span> </div> </div> </article><article class="post-card"> <a class="post-link" href="/en/post/139-the-deleted-photo/"> <div class="post-card-top"> <h2>The Deleted Photo</h2> <time datetime="2026-02-13T09:25:26.000Z">February 13, 2026</time> </div> <p>The Deleted Photo A long long time ago my colleague lent me a short-focused lens for my camera. I tested it for a week and this is my favorite shot from that week. Just after I took this shot, it turned out the place was</p> </a>  <div class="post-meta-row"> <a class="source-link" href="https://t.me/phys_math_dev/139" target="_blank" rel="noopener noreferrer"> Original Telegram post </a> <div class="reactions" aria-label="Reactions"> <span>❤ 3</span><span>🔥 3</span> </div> </div> </article><article class="post-card"> <a class="post-link" href="/en/post/138-old-but-gold/"> <div class="post-card-top"> <h2>Old but gold</h2> <time datetime="2026-02-12T06:52:53.000Z">February 12, 2026</time> </div> <p>Old but gold There seems to be two different problems. But really, it&#39;s the same problem. 1. Find the repeating and non-repeating parts of the decimal expansion of 1/n. 1/3 = 0.(3) 1/6 = 0.1(6) 2. For a singly linked lis</p> </a>  <div class="post-meta-row"> <a class="source-link" href="https://t.me/phys_math_dev/138" target="_blank" rel="noopener noreferrer"> Original Telegram post </a> <div class="reactions" aria-label="Reactions"> <span>👀 2</span> </div> </div> </article> </div> <p> <a href="/en/archive/1/">Browse all posts</a> </p> </section>  </main> <footer class="site-footer"> <p>PhysMath Hub · Physics · Mathematics · Programming</p> </footer> <script>
+      (() => {
+        const key = 'theme-preference';
+        const cycle = ['system', 'light', 'dark'];
+        const button = document.getElementById('theme-toggle');
+
+        const apply = (mode) => {
+          if (mode === 'light' || mode === 'dark') {
+            document.documentElement.setAttribute('data-theme', mode);
+          } else {
+            document.documentElement.removeAttribute('data-theme');
+          }
+          if (button) {
+            button.textContent = mode === 'light' ? '☀' : mode === 'dark' ? '☾' : '◐';
+          }
+        };
+
+        let current = localStorage.getItem(key) || 'system';
+        if (!cycle.includes(current)) {
+          current = 'system';
+        }
+        apply(current);
+
+        button?.addEventListener('click', () => {
+          const idx = cycle.indexOf(current);
+          current = cycle[(idx + 1) % cycle.length];
+          localStorage.setItem(key, current);
+          apply(current);
+        });
+      })();
+    </script>  </body> </html>
+
+---- URL: https://phys-math.dev/en/ ----
+$ curl -I -A 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 Chrome/120 Safari/537.36' 'https://phys-math.dev/en/'
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+HTTP/2 200 
+date: Thu, 26 Feb 2026 08:10:31 GMT
+content-type: text/html; charset=utf-8
+access-control-allow-origin: *
+cache-control: public, max-age=0, must-revalidate
+cf-cache-status: DYNAMIC
+referrer-policy: strict-origin-when-cross-origin
+x-content-type-options: nosniff
+report-to: {"group":"cf-nel","max_age":604800,"endpoints":[{"url":"https://a.nel.cloudflare.com/report/v4?s=%2FY5DYJ65QO6sT7vhAzsc0qHnMra1pbNA5eFt2kV%2FIEQsphpu1Io%2F56GgozxcHxRb1VcNUsw4fRnEHvQVCzjb8xb3pAdB4fAlKWhYETAvcpwhNi%2FlUb%2Fw6nU%3D"}]}
+nel: {"report_to":"cf-nel","success_fraction":0.0,"max_age":604800}
+server: cloudflare
+cf-ray: 9d3df76a99e7de5f-ARN
+alt-svc: h3=":443"; ma=86400
+
+
+$ curl -sS -L -D - -o /dev/null -A 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 Chrome/120 Safari/537.36' 'https://phys-math.dev/en/'
+HTTP/2 200 
+date: Thu, 26 Feb 2026 08:10:32 GMT
+content-type: text/html; charset=utf-8
+access-control-allow-origin: *
+cache-control: public, max-age=0, must-revalidate
+referrer-policy: strict-origin-when-cross-origin
+x-content-type-options: nosniff
+report-to: {"group":"cf-nel","max_age":604800,"endpoints":[{"url":"https://a.nel.cloudflare.com/report/v4?s=2VYikR56KH3PjmUl9oLODbZNLwEBrbZACkYO%2BlCls2JWY9ZDD7F9Ea5SvL1CZ13DQ9I35ID0KhTQAFouYIY1%2F4Yq82I8nKMkXRVKEaaJWoXrstpoDLYN"}]}
+nel: {"report_to":"cf-nel","success_fraction":0.0,"max_age":604800}
+server: cloudflare
+cf-cache-status: DYNAMIC
+cf-ray: 9d3df76e1943ec56-DME
+alt-svc: h3=":443"; ma=86400
+
+
+$ curl -sS -L -A 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 Chrome/120 Safari/537.36' 'https://phys-math.dev/en/' | sed -n '1,120p'
+<!DOCTYPE html><html lang="en"> <head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="icon" type="image/jpeg" href="/favicon.jpg"><title>PhysMath Hub · PhysMath Hub</title><meta name="description" content="A shared space for people who love physics, mathematics, and programming."><link rel="canonical" href="https://phys-math.dev/en/"><link rel="alternate" hreflang="en" href="https://phys-math.dev/en/"><link rel="alternate" hreflang="ru" href="https://phys-math.dev/ru/"><link rel="alternate" hreflang="x-default" href="https://phys-math.dev/en/"><meta property="og:type" content="website"><meta property="og:title" content="PhysMath Hub · PhysMath Hub"><meta property="og:description" content="A shared space for people who love physics, mathematics, and programming."><meta property="og:url" content="https://phys-math.dev/en/"><meta property="og:site_name" content="PhysMath Hub"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="PhysMath Hub · PhysMath Hub"><meta name="twitter:description" content="A shared space for people who love physics, mathematics, and programming."><!-- Google tag (gtag.js) --><script async src="https://www.googletagmanager.com/gtag/js?id=G-KW8VXVXW7N"></script><script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag('js', new Date());
+
+      gtag('config', 'G-KW8VXVXW7N');
+    </script><!-- Yandex.Metrika counter --><script type="text/javascript">
+      (function(m,e,t,r,i,k,a){
+          m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+          m[i].l=1*new Date();
+          for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+          k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a);
+      })(window, document, 'script', 'https://mc.yandex.ru/metrika/tag.js?id=106989967', 'ym');
+
+      ym(106989967, 'init', {
+        ssr: true,
+        webvisor: true,
+        clickmap: true,
+        ecommerce: 'dataLayer',
+        referrer: document.referrer,
+        url: location.href,
+        accurateTrackBounce: true,
+        trackLinks: true
+      });
+    </script><!-- /Yandex.Metrika counter --><script>
+      (() => {
+        const key = 'theme-preference';
+        const value = localStorage.getItem(key) || 'system';
+        if (value === 'light' || value === 'dark') {
+          document.documentElement.setAttribute('data-theme', value);
+        }
+      })();
+    </script><link rel="stylesheet" href="/_astro/_page_.BOlKRXuh.css"></head> <body> <noscript> <div><img src="https://mc.yandex.ru/watch/106989967" style="position:absolute; left:-9999px;" alt=""></div> </noscript> <header class="site-header"> <div class="site-header-inner"> <a class="brand" href="/en/">PhysMath Hub</a> <nav class="site-nav" aria-label="Primary"> <a href="/en/">Home</a> <a href="/en/archive/1/">Archive</a> </nav> <div class="site-tools"> <nav class="lang-switch" aria-label="Language switch"> <a href="/en/" class="active" hreflang="en">
+EN
+</a> <a href="/ru/" class hreflang="ru">
+RU
+</a> </nav> <button class="theme-toggle" id="theme-toggle" aria-label="Switch theme" title="Switch theme"> <span aria-hidden="true">◐</span> </button> </div> </div> <p class="locale-chip" data-locale="en">EN / RU</p> </header> <main>  <section class="hero"> <h1>PhysMath Hub</h1> <p>A shared space for people who love physics, mathematics, and programming.</p> <div><p>This project mirrors <strong>phys_math_dev</strong> and turns daily channel knowledge into a durable, searchable archive.</p>
+<p>The goal is simple: share useful ideas, keep them accessible, and help curious people connect across disciplines.</p>
+<p>If you enjoy learning how theory meets engineering practice, this hub is for you.</p>
+</div> </section> <section> <h2>Latest posts</h2> <div class="posts-grid"> <article class="post-card"> <a class="post-link" href="/en/post/149-reality-check/"> <div class="post-card-top"> <h2>Reality check</h2> <time datetime="2026-02-25T13:07:37.000Z">February 25, 2026</time> </div> <p>Reality check Yesterday I posted a hand-drawn sketch of the metro station. But I totally forgot that you can just take a photo of the place. Today, on the way to the office, I took this shot. Now you can compare the sket</p> </a>  <div class="post-meta-row"> <a class="source-link" href="https://t.me/phys_math_dev/149" target="_blank" rel="noopener noreferrer"> Original Telegram post </a>  </div> </article><article class="post-card"> <a class="post-link" href="/en/post/148-baghramyan-mystery-revealed/"> <div class="post-card-top"> <h2>Baghramyan mystery revealed</h2> <time datetime="2026-02-24T17:39:51.000Z">February 24, 2026</time> </div> <p>Baghramyan mystery revealed Previously, I posted three mysterious photos. Today, let&#39;s solve the puzzle. These triangles are the result of a strange coincidence. Shadows of handrails intersect in the middle of the step. </p> </a>  <div class="post-meta-row"> <a class="source-link" href="https://t.me/phys_math_dev/148" target="_blank" rel="noopener noreferrer"> Original Telegram post </a>  </div> </article><article class="post-card"> <a class="post-link" href="/en/post/147-web-mirror-of-phys-math-dev-is-alive/"> <div class="post-card-top"> <h2>Web mirror of phys_math_dev is alive!</h2> <time datetime="2026-02-22T16:32:54.000Z">February 22, 2026</time> </div> <p>Web mirror of phys_math_dev is alive! It was… kinda terrible. Not when Codex wrote the code. Not when I deployed it to GitHub. It started when I logged into Cloudflare and began clicking around in the GUI. The real pain </p> </a>  <div class="post-meta-row"> <a class="source-link" href="https://t.me/phys_math_dev/147" target="_blank" rel="noopener noreferrer"> Original Telegram post </a>  </div> </article><article class="post-card"> <a class="post-link" href="/en/post/146-baghramyan-mystery/"> <div class="post-card-top"> <h2>Baghramyan mystery</h2> <time datetime="2026-02-21T10:14:32.000Z">February 21, 2026</time> </div> <p>Baghramyan mystery I made these three photos of an escalator steps of Baghramyan metro station in Yerevan. These black and white triangles in the middle of the step intrigue me. After the third attempt ChatGPT gave me cl</p> </a>  <div class="post-meta-row"> <a class="source-link" href="https://t.me/phys_math_dev/146" target="_blank" rel="noopener noreferrer"> Original Telegram post </a>  </div> </article><article class="post-card"> <a class="post-link" href="/en/post/145-rag-is-dead-long-live-agentic-retrieval/"> <div class="post-card-top"> <h2>RAG is dead, long live agentic retrieval</h2> <time datetime="2026-02-20T07:08:20.000Z">February 20, 2026</time> </div> <p>RAG is dead, long live agentic retrieval Video touches a question I keep bumping into lately: do I actually need to learn RAG? Very roughly: RAG is a way to preprocess your data into embeddings — high-dimensional vectors</p> </a>  <div class="post-meta-row"> <a class="source-link" href="https://t.me/phys_math_dev/145" target="_blank" rel="noopener noreferrer"> Original Telegram post </a>  </div> </article><article class="post-card"> <a class="post-link" href="/en/post/144-post-144/"> <div class="post-card-top"> <h2>Post 144</h2> <time datetime="2026-02-19T07:05:31.000Z">February 19, 2026</time> </div>  </a>  <div class="post-meta-row"> <a class="source-link" href="https://t.me/phys_math_dev/144" target="_blank" rel="noopener noreferrer"> Original Telegram post </a> <div class="reactions" aria-label="Reactions"> <span>👍 3</span> </div> </div> </article><article class="post-card"> <a class="post-link" href="/en/post/143-how-codex-is-built/"> <div class="post-card-top"> <h2>How Codex is built</h2> <time datetime="2026-02-18T08:49:56.000Z">February 18, 2026</time> </div> <p>How Codex is built I&#39;m actively using the &quot;Codex&quot; agent in my work and it has always intrigued me how it works. I even wanted to find a repository with the source code and read it. Fortunately, today I stumbled upon a li</p> </a>  <div class="post-meta-row"> <a class="source-link" href="https://t.me/phys_math_dev/143" target="_blank" rel="noopener noreferrer"> Original Telegram post </a> <div class="reactions" aria-label="Reactions"> <span>🔥 1</span> </div> </div> </article><article class="post-card"> <a class="post-link" href="/en/post/142-element-of-2d-sort/"> <div class="post-card-top"> <h2>Element of 2D sort</h2> <time datetime="2026-02-17T17:59:20.000Z">February 17, 2026</time> </div> <p>Element of 2D sort I don&#39;t have a fully cooked idea today, so let&#39;s discuss half-baked. In The Farmer Was Replaced game there is a subgame where you plant cacti. Quite a complex description of game rules boils down to qu</p> </a>  <div class="post-meta-row"> <a class="source-link" href="https://t.me/phys_math_dev/142" target="_blank" rel="noopener noreferrer"> Original Telegram post </a>  </div> </article><article class="post-card"> <a class="post-link" href="/en/post/141-table-with-leaves/"> <div class="post-card-top"> <h2>Table with leaves</h2> <time datetime="2026-02-15T12:32:16.000Z">February 15, 2026</time> </div> <p>Table with leaves Who would guess that these wooden foldable panels on the sides of a table are &quot;leaves&quot;? Not only decision trees and bushes have them.</p> </a>  <div class="post-meta-row"> <a class="source-link" href="https://t.me/phys_math_dev/141" target="_blank" rel="noopener noreferrer"> Original Telegram post </a>  </div> </article><article class="post-card"> <a class="post-link" href="/en/post/140-periods-in-digits-and-remainders/"> <div class="post-card-top"> <h2>Periods in digits and remainders</h2> <time datetime="2026-02-14T17:41:13.000Z">February 14, 2026</time> </div> <p>Periods in digits and remainders I&#39;m preparing a post with a solution for the first problem in the post . And there is a small question which has irked me for a while. When we calculate digits of 1/n, there is a function</p> </a>  <div class="post-meta-row"> <a class="source-link" href="https://t.me/phys_math_dev/140" target="_blank" rel="noopener noreferrer"> Original Telegram post </a> <div class="reactions" aria-label="Reactions"> <span>👍 1</span> </div> </div> </article><article class="post-card"> <a class="post-link" href="/en/post/139-the-deleted-photo/"> <div class="post-card-top"> <h2>The Deleted Photo</h2> <time datetime="2026-02-13T09:25:26.000Z">February 13, 2026</time> </div> <p>The Deleted Photo A long long time ago my colleague lent me a short-focused lens for my camera. I tested it for a week and this is my favorite shot from that week. Just after I took this shot, it turned out the place was</p> </a>  <div class="post-meta-row"> <a class="source-link" href="https://t.me/phys_math_dev/139" target="_blank" rel="noopener noreferrer"> Original Telegram post </a> <div class="reactions" aria-label="Reactions"> <span>❤ 3</span><span>🔥 3</span> </div> </div> </article><article class="post-card"> <a class="post-link" href="/en/post/138-old-but-gold/"> <div class="post-card-top"> <h2>Old but gold</h2> <time datetime="2026-02-12T06:52:53.000Z">February 12, 2026</time> </div> <p>Old but gold There seems to be two different problems. But really, it&#39;s the same problem. 1. Find the repeating and non-repeating parts of the decimal expansion of 1/n. 1/3 = 0.(3) 1/6 = 0.1(6) 2. For a singly linked lis</p> </a>  <div class="post-meta-row"> <a class="source-link" href="https://t.me/phys_math_dev/138" target="_blank" rel="noopener noreferrer"> Original Telegram post </a> <div class="reactions" aria-label="Reactions"> <span>👀 2</span> </div> </div> </article> </div> <p> <a href="/en/archive/1/">Browse all posts</a> </p> </section>  </main> <footer class="site-footer"> <p>PhysMath Hub · Physics · Mathematics · Programming</p> </footer> <script>
+      (() => {
+        const key = 'theme-preference';
+        const cycle = ['system', 'light', 'dark'];
+        const button = document.getElementById('theme-toggle');
+
+        const apply = (mode) => {
+          if (mode === 'light' || mode === 'dark') {
+            document.documentElement.setAttribute('data-theme', mode);
+          } else {
+            document.documentElement.removeAttribute('data-theme');
+          }
+          if (button) {
+            button.textContent = mode === 'light' ? '☀' : mode === 'dark' ? '☾' : '◐';
+          }
+        };
+
+        let current = localStorage.getItem(key) || 'system';
+        if (!cycle.includes(current)) {
+          current = 'system';
+        }
+        apply(current);
+
+        button?.addEventListener('click', () => {
+          const idx = cycle.indexOf(current);
+          current = cycle[(idx + 1) % cycle.length];
+          localStorage.setItem(key, current);
+          apply(current);
+        });
+      })();
+    </script>  </body> </html>
+
+---- URL: https://phys-math.dev/en/archive/1/ ----
+$ curl -I -A 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 Chrome/120 Safari/537.36' 'https://phys-math.dev/en/archive/1/'
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+HTTP/2 200 
+date: Thu, 26 Feb 2026 08:10:34 GMT
+content-type: text/html; charset=utf-8
+access-control-allow-origin: *
+cache-control: public, max-age=0, must-revalidate
+cf-cache-status: DYNAMIC
+referrer-policy: strict-origin-when-cross-origin
+x-content-type-options: nosniff
+report-to: {"group":"cf-nel","max_age":604800,"endpoints":[{"url":"https://a.nel.cloudflare.com/report/v4?s=deM81A4nLVxIoBJwV9Sab24b09EqLgPtPbZL1YC98Jkci5FTk7XX%2FDIC7AYs9qZnLSrnCoLpNOF8PDEhQ7%2BSCBu%2B2LPNzK4nf4ByGrpFHrUA%2BA0%2FD0lXmvA%3D"}]}
+nel: {"report_to":"cf-nel","success_fraction":0.0,"max_age":604800}
+server: cloudflare
+cf-ray: 9d3df77d1de32aea-ARN
+alt-svc: h3=":443"; ma=86400
+
+
+$ curl -sS -L -D - -o /dev/null -A 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 Chrome/120 Safari/537.36' 'https://phys-math.dev/en/archive/1/'
+HTTP/2 200 
+date: Thu, 26 Feb 2026 08:10:35 GMT
+content-type: text/html; charset=utf-8
+access-control-allow-origin: *
+cache-control: public, max-age=0, must-revalidate
+referrer-policy: strict-origin-when-cross-origin
+x-content-type-options: nosniff
+report-to: {"group":"cf-nel","max_age":604800,"endpoints":[{"url":"https://a.nel.cloudflare.com/report/v4?s=lQH5KKfFm%2BjhYHFoDIDtGom0PvLQwAQb6683eFufdNU0pHnXGkWYW%2Bg2bbhS%2B6%2FUxcUHTCzmxc0%2FWghxOCrbWCVZ0sbANPg4xX%2FWQR7LZup3Uc2RnH8H5wI%3D"}]}
+nel: {"report_to":"cf-nel","success_fraction":0.0,"max_age":604800}
+server: cloudflare
+cf-cache-status: DYNAMIC
+cf-ray: 9d3df785ab0ef3bd-ARN
+alt-svc: h3=":443"; ma=86400
+
+
+$ curl -sS -L -A 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 Chrome/120 Safari/537.36' 'https://phys-math.dev/en/archive/1/' | sed -n '1,120p'
+<!DOCTYPE html><html lang="en"> <head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="icon" type="image/jpeg" href="/favicon.jpg"><title>Archive, page 1 · PhysMath Hub</title><meta name="description" content="Archive page 1."><link rel="canonical" href="https://phys-math.dev/en/archive/1/"><link rel="alternate" hreflang="en" href="https://phys-math.dev/en/archive/1/"><link rel="alternate" hreflang="ru" href="https://phys-math.dev/ru/archive/1/"><link rel="alternate" hreflang="x-default" href="https://phys-math.dev/en/archive/1/"><meta property="og:type" content="website"><meta property="og:title" content="Archive, page 1 · PhysMath Hub"><meta property="og:description" content="Archive page 1."><meta property="og:url" content="https://phys-math.dev/en/archive/1/"><meta property="og:site_name" content="PhysMath Hub"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="Archive, page 1 · PhysMath Hub"><meta name="twitter:description" content="Archive page 1."><!-- Google tag (gtag.js) --><script async src="https://www.googletagmanager.com/gtag/js?id=G-KW8VXVXW7N"></script><script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag('js', new Date());
+
+      gtag('config', 'G-KW8VXVXW7N');
+    </script><!-- Yandex.Metrika counter --><script type="text/javascript">
+      (function(m,e,t,r,i,k,a){
+          m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+          m[i].l=1*new Date();
+          for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+          k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a);
+      })(window, document, 'script', 'https://mc.yandex.ru/metrika/tag.js?id=106989967', 'ym');
+
+      ym(106989967, 'init', {
+        ssr: true,
+        webvisor: true,
+        clickmap: true,
+        ecommerce: 'dataLayer',
+        referrer: document.referrer,
+        url: location.href,
+        accurateTrackBounce: true,
+        trackLinks: true
+      });
+    </script><!-- /Yandex.Metrika counter --><script>
+      (() => {
+        const key = 'theme-preference';
+        const value = localStorage.getItem(key) || 'system';
+        if (value === 'light' || value === 'dark') {
+          document.documentElement.setAttribute('data-theme', value);
+        }
+      })();
+    </script><link rel="stylesheet" href="/_astro/_page_.BOlKRXuh.css"></head> <body> <noscript> <div><img src="https://mc.yandex.ru/watch/106989967" style="position:absolute; left:-9999px;" alt=""></div> </noscript> <header class="site-header"> <div class="site-header-inner"> <a class="brand" href="/en/">PhysMath Hub</a> <nav class="site-nav" aria-label="Primary"> <a href="/en/">Home</a> <a href="/en/archive/1/">Archive</a> </nav> <div class="site-tools"> <nav class="lang-switch" aria-label="Language switch"> <a href="/en/archive/1/" class="active" hreflang="en">
+EN
+</a> <a href="/ru/archive/1/" class hreflang="ru">
+RU
+</a> </nav> <button class="theme-toggle" id="theme-toggle" aria-label="Switch theme" title="Switch theme"> <span aria-hidden="true">◐</span> </button> </div> </div> <p class="locale-chip" data-locale="en">EN / RU</p> </header> <main>  <section class="archive-head"> <h1>Archive · page 1</h1> </section> <div class="posts-grid"> <article class="post-card"> <a class="post-link" href="/en/post/149-reality-check/"> <div class="post-card-top"> <h2>Reality check</h2> <time datetime="2026-02-25T13:07:37.000Z">February 25, 2026</time> </div> <p>Reality check Yesterday I posted a hand-drawn sketch of the metro station. But I totally forgot that you can just take a photo of the place. Today, on the way to the office, I took this shot. Now you can compare the sket</p> </a>  <div class="post-meta-row"> <a class="source-link" href="https://t.me/phys_math_dev/149" target="_blank" rel="noopener noreferrer"> Original Telegram post </a>  </div> </article><article class="post-card"> <a class="post-link" href="/en/post/148-baghramyan-mystery-revealed/"> <div class="post-card-top"> <h2>Baghramyan mystery revealed</h2> <time datetime="2026-02-24T17:39:51.000Z">February 24, 2026</time> </div> <p>Baghramyan mystery revealed Previously, I posted three mysterious photos. Today, let&#39;s solve the puzzle. These triangles are the result of a strange coincidence. Shadows of handrails intersect in the middle of the step. </p> </a>  <div class="post-meta-row"> <a class="source-link" href="https://t.me/phys_math_dev/148" target="_blank" rel="noopener noreferrer"> Original Telegram post </a>  </div> </article><article class="post-card"> <a class="post-link" href="/en/post/147-web-mirror-of-phys-math-dev-is-alive/"> <div class="post-card-top"> <h2>Web mirror of phys_math_dev is alive!</h2> <time datetime="2026-02-22T16:32:54.000Z">February 22, 2026</time> </div> <p>Web mirror of phys_math_dev is alive! It was… kinda terrible. Not when Codex wrote the code. Not when I deployed it to GitHub. It started when I logged into Cloudflare and began clicking around in the GUI. The real pain </p> </a>  <div class="post-meta-row"> <a class="source-link" href="https://t.me/phys_math_dev/147" target="_blank" rel="noopener noreferrer"> Original Telegram post </a>  </div> </article><article class="post-card"> <a class="post-link" href="/en/post/146-baghramyan-mystery/"> <div class="post-card-top"> <h2>Baghramyan mystery</h2> <time datetime="2026-02-21T10:14:32.000Z">February 21, 2026</time> </div> <p>Baghramyan mystery I made these three photos of an escalator steps of Baghramyan metro station in Yerevan. These black and white triangles in the middle of the step intrigue me. After the third attempt ChatGPT gave me cl</p> </a>  <div class="post-meta-row"> <a class="source-link" href="https://t.me/phys_math_dev/146" target="_blank" rel="noopener noreferrer"> Original Telegram post </a>  </div> </article><article class="post-card"> <a class="post-link" href="/en/post/145-rag-is-dead-long-live-agentic-retrieval/"> <div class="post-card-top"> <h2>RAG is dead, long live agentic retrieval</h2> <time datetime="2026-02-20T07:08:20.000Z">February 20, 2026</time> </div> <p>RAG is dead, long live agentic retrieval Video touches a question I keep bumping into lately: do I actually need to learn RAG? Very roughly: RAG is a way to preprocess your data into embeddings — high-dimensional vectors</p> </a>  <div class="post-meta-row"> <a class="source-link" href="https://t.me/phys_math_dev/145" target="_blank" rel="noopener noreferrer"> Original Telegram post </a>  </div> </article><article class="post-card"> <a class="post-link" href="/en/post/144-post-144/"> <div class="post-card-top"> <h2>Post 144</h2> <time datetime="2026-02-19T07:05:31.000Z">February 19, 2026</time> </div>  </a>  <div class="post-meta-row"> <a class="source-link" href="https://t.me/phys_math_dev/144" target="_blank" rel="noopener noreferrer"> Original Telegram post </a> <div class="reactions" aria-label="Reactions"> <span>👍 3</span> </div> </div> </article><article class="post-card"> <a class="post-link" href="/en/post/143-how-codex-is-built/"> <div class="post-card-top"> <h2>How Codex is built</h2> <time datetime="2026-02-18T08:49:56.000Z">February 18, 2026</time> </div> <p>How Codex is built I&#39;m actively using the &quot;Codex&quot; agent in my work and it has always intrigued me how it works. I even wanted to find a repository with the source code and read it. Fortunately, today I stumbled upon a li</p> </a>  <div class="post-meta-row"> <a class="source-link" href="https://t.me/phys_math_dev/143" target="_blank" rel="noopener noreferrer"> Original Telegram post </a> <div class="reactions" aria-label="Reactions"> <span>🔥 1</span> </div> </div> </article><article class="post-card"> <a class="post-link" href="/en/post/142-element-of-2d-sort/"> <div class="post-card-top"> <h2>Element of 2D sort</h2> <time datetime="2026-02-17T17:59:20.000Z">February 17, 2026</time> </div> <p>Element of 2D sort I don&#39;t have a fully cooked idea today, so let&#39;s discuss half-baked. In The Farmer Was Replaced game there is a subgame where you plant cacti. Quite a complex description of game rules boils down to qu</p> </a>  <div class="post-meta-row"> <a class="source-link" href="https://t.me/phys_math_dev/142" target="_blank" rel="noopener noreferrer"> Original Telegram post </a>  </div> </article><article class="post-card"> <a class="post-link" href="/en/post/141-table-with-leaves/"> <div class="post-card-top"> <h2>Table with leaves</h2> <time datetime="2026-02-15T12:32:16.000Z">February 15, 2026</time> </div> <p>Table with leaves Who would guess that these wooden foldable panels on the sides of a table are &quot;leaves&quot;? Not only decision trees and bushes have them.</p> </a>  <div class="post-meta-row"> <a class="source-link" href="https://t.me/phys_math_dev/141" target="_blank" rel="noopener noreferrer"> Original Telegram post </a>  </div> </article><article class="post-card"> <a class="post-link" href="/en/post/140-periods-in-digits-and-remainders/"> <div class="post-card-top"> <h2>Periods in digits and remainders</h2> <time datetime="2026-02-14T17:41:13.000Z">February 14, 2026</time> </div> <p>Periods in digits and remainders I&#39;m preparing a post with a solution for the first problem in the post . And there is a small question which has irked me for a while. When we calculate digits of 1/n, there is a function</p> </a>  <div class="post-meta-row"> <a class="source-link" href="https://t.me/phys_math_dev/140" target="_blank" rel="noopener noreferrer"> Original Telegram post </a> <div class="reactions" aria-label="Reactions"> <span>👍 1</span> </div> </div> </article><article class="post-card"> <a class="post-link" href="/en/post/139-the-deleted-photo/"> <div class="post-card-top"> <h2>The Deleted Photo</h2> <time datetime="2026-02-13T09:25:26.000Z">February 13, 2026</time> </div> <p>The Deleted Photo A long long time ago my colleague lent me a short-focused lens for my camera. I tested it for a week and this is my favorite shot from that week. Just after I took this shot, it turned out the place was</p> </a>  <div class="post-meta-row"> <a class="source-link" href="https://t.me/phys_math_dev/139" target="_blank" rel="noopener noreferrer"> Original Telegram post </a> <div class="reactions" aria-label="Reactions"> <span>❤ 3</span><span>🔥 3</span> </div> </div> </article><article class="post-card"> <a class="post-link" href="/en/post/138-old-but-gold/"> <div class="post-card-top"> <h2>Old but gold</h2> <time datetime="2026-02-12T06:52:53.000Z">February 12, 2026</time> </div> <p>Old but gold There seems to be two different problems. But really, it&#39;s the same problem. 1. Find the repeating and non-repeating parts of the decimal expansion of 1/n. 1/3 = 0.(3) 1/6 = 0.1(6) 2. For a singly linked lis</p> </a>  <div class="post-meta-row"> <a class="source-link" href="https://t.me/phys_math_dev/138" target="_blank" rel="noopener noreferrer"> Original Telegram post </a> <div class="reactions" aria-label="Reactions"> <span>👀 2</span> </div> </div> </article><article class="post-card"> <a class="post-link" href="/en/post/137-how-to-vibecode-chizhik-pyzchic-app/"> <div class="post-card-top"> <h2>How to vibecode Chizhik-Pyzchic app</h2> <time datetime="2026-02-11T06:03:23.000Z">February 11, 2026</time> </div> <p>How to vibecode Chizhik-Pyzchic app In the alternative channel there is step-by-step instruction how to create a small, but fully functional web application. Post language is Russian.</p> </a>  <div class="post-meta-row"> <a class="source-link" href="https://t.me/phys_math_dev/137" target="_blank" rel="noopener noreferrer"> Original Telegram post </a> <div class="reactions" aria-label="Reactions"> <span>❤ 1</span><span>👍 1</span> </div> </div> </article><article class="post-card"> <a class="post-link" href="/en/post/136-old-but-gold/"> <div class="post-card-top"> <h2>Old but gold</h2> <time datetime="2026-02-10T08:19:25.000Z">February 10, 2026</time> </div> <p>Old but gold Let&#39;s discuss a programming task. You have a bunch of numeric pairs like 5, 5, 7, 7, 2, 2 and one unique number, like 13. You mix everything into one array and shuffle it. Now you have something like [7, 2, </p> </a>  <div class="post-meta-row"> <a class="source-link" href="https://t.me/phys_math_dev/136" target="_blank" rel="noopener noreferrer"> Original Telegram post </a> <div class="reactions" aria-label="Reactions"> <span>🤷‍♂ 1</span> </div> </div> </article><article class="post-card"> <a class="post-link" href="/en/post/135-titanic-maching-learning-from-disaster/"> <div class="post-card-top"> <h2>Titanic - Maching Learning from Disaster</h2> <time datetime="2026-02-09T06:05:07.000Z">February 9, 2026</time> </div> <p>Titanic - Maching Learning from Disaster I want to close my gestalt. I invented a new ML method, I&#39;m working as ML engineer for 9 years, I taught ML in GoTo school and in Russian Armenian University. But I have never sub</p> </a>  <div class="post-meta-row"> <a class="source-link" href="https://t.me/phys_math_dev/135" target="_blank" rel="noopener noreferrer"> Original Telegram post </a> <div class="reactions" aria-label="Reactions"> <span>🔥 5</span> </div> </div> </article><article class="post-card"> <a class="post-link" href="/en/post/134-from-uplift-to-logit/"> <div class="post-card-top"> <h2>From uplift to logit</h2> <time datetime="2026-02-08T11:27:57.000Z">February 8, 2026</time> </div> <p>From uplift to logit Where we are In the previous post we started to build a bridge from uplift to a score, which lets us solve binary classification problem. What we achieved: ⚗️ calculated probabilities for all combina</p> </a>  <div class="post-meta-row"> <a class="source-link" href="https://t.me/phys_math_dev/134" target="_blank" rel="noopener noreferrer"> Original Telegram post </a>  </div> </article><article class="post-card"> <a class="post-link" href="/en/post/133-to-those-who-want-to-understand-agents-properly/"> <div class="post-card-top"> <h2>To those, who want to understand agents properly</h2> <time datetime="2026-02-06T06:51:33.000Z">February 6, 2026</time> </div> <p>To those, who want to understand agents properly There is a post (in Russian) from a guy I really respect. Formally, it’s an advertisement for Yet Another Agent’s channel — but this time it’s not about news or hype. It’s</p> </a>  <div class="post-meta-row"> <a class="source-link" href="https://t.me/phys_math_dev/133" target="_blank" rel="noopener noreferrer"> Original Telegram post </a>  </div> </article><article class="post-card"> <a class="post-link" href="/en/post/132-slightly-improved-mapreduce-sunflowers/"> <div class="post-card-top"> <h2>Slightly improved MapReduce sunflowers</h2> <time datetime="2026-02-05T11:09:16.000Z">February 5, 2026</time> </div> <p>Slightly improved MapReduce sunflowers I just realized that in the post I promised to share a new version of map-reduce sunflowers with a small improvement for watering cells with tall sunflowers. There are no 10 fire fl</p> </a>  <div class="post-meta-row"> <a class="source-link" href="https://t.me/phys_math_dev/132" target="_blank" rel="noopener noreferrer"> Original Telegram post </a>  </div> </article><article class="post-card"> <a class="post-link" href="/en/post/131-vibe-coding-guide/"> <div class="post-card-top"> <h2>Vibe Coding Guide</h2> <time datetime="2026-02-02T07:20:04.000Z">February 2, 2026</time> </div> <p>Vibe Coding Guide I’m monitoring a few resources with good vibe-coding and agentic programming practices, and I try to apply this stuff in my everyday work. There’s a manual with some best vibe-coding practices. I’m goin</p> </a>  <div class="post-meta-row"> <a class="source-link" href="https://t.me/phys_math_dev/131" target="_blank" rel="noopener noreferrer"> Original Telegram post </a> <div class="reactions" aria-label="Reactions"> <span>🔥 3</span><span>❤ 2</span> </div> </div> </article><article class="post-card"> <a class="post-link" href="/en/post/128-levels-of-liquid-in-a-markov-process-pagerank/"> <div class="post-card-top"> <h2>Levels of liquid in a Markov process = PageRank</h2> <time datetime="2026-02-01T14:58:00.000Z">February 1, 2026</time> </div> <p>Levels of liquid in a Markov process = PageRank This post is a compact version of what happened in a neighboring chat. Sorry to newcomers who already read it — and welcome! The first two pictures are from a student who w</p> </a>  <div class="post-meta-row"> <a class="source-link" href="https://t.me/phys_math_dev/128" target="_blank" rel="noopener noreferrer"> Original Telegram post </a>  </div> </article> </div> <nav class="pagination" aria-label="Pagination"> <span class="disabled">Previous</span> <span>Page 1 / 7</span> <a href="/en/archive/2/">Next</a> </nav>  </main> <footer class="site-footer"> <p>PhysMath Hub · Physics · Mathematics · Programming</p> </footer> <script>
+      (() => {
+        const key = 'theme-preference';
+        const cycle = ['system', 'light', 'dark'];
+        const button = document.getElementById('theme-toggle');
+
+        const apply = (mode) => {
+          if (mode === 'light' || mode === 'dark') {
+            document.documentElement.setAttribute('data-theme', mode);
+          } else {
+            document.documentElement.removeAttribute('data-theme');
+          }
+          if (button) {
+            button.textContent = mode === 'light' ? '☀' : mode === 'dark' ? '☾' : '◐';
+          }
+        };
+
+        let current = localStorage.getItem(key) || 'system';
+        if (!cycle.includes(current)) {
+          current = 'system';
+        }
+        apply(current);
+
+        button?.addEventListener('click', () => {
+          const idx = cycle.indexOf(current);
+          current = cycle[(idx + 1) % cycle.length];
+          localStorage.setItem(key, current);
+          apply(current);
+        });
+      })();
+    </script>  </body> </html>
+
+---- URL: https://phys-math.dev/en/post/149-reality-check/ ----
+$ curl -I -A 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 Chrome/120 Safari/537.36' 'https://phys-math.dev/en/post/149-reality-check/'
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+HTTP/2 200 
+date: Thu, 26 Feb 2026 08:10:37 GMT
+content-type: text/html; charset=utf-8
+access-control-allow-origin: *
+cache-control: public, max-age=0, must-revalidate
+cf-cache-status: DYNAMIC
+referrer-policy: strict-origin-when-cross-origin
+x-content-type-options: nosniff
+report-to: {"group":"cf-nel","max_age":604800,"endpoints":[{"url":"https://a.nel.cloudflare.com/report/v4?s=VORhf2qtzCdPFhzJZE8%2FhYgsFW0hb9NYcSnoyHUtb5AATiLXA0CecYH3a7dceL78lAEyMQlzFdGGEjUTVP6ylhHYuW1jmVLtD%2BzgUWAlcWlIwK9y5YkK"}]}
+nel: {"report_to":"cf-nel","success_fraction":0.0,"max_age":604800}
+server: cloudflare
+cf-ray: 9d3df78cfaf9ec45-DME
+alt-svc: h3=":443"; ma=86400
+
+
+$ curl -sS -L -D - -o /dev/null -A 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 Chrome/120 Safari/537.36' 'https://phys-math.dev/en/post/149-reality-check/'
+HTTP/2 200 
+date: Thu, 26 Feb 2026 08:10:37 GMT
+content-type: text/html; charset=utf-8
+access-control-allow-origin: *
+cache-control: public, max-age=0, must-revalidate
+referrer-policy: strict-origin-when-cross-origin
+x-content-type-options: nosniff
+report-to: {"group":"cf-nel","max_age":604800,"endpoints":[{"url":"https://a.nel.cloudflare.com/report/v4?s=5y3Zx%2FEVM863hZFaixdI3ipZP%2BAdYGKZP7gUs0kRXlzLG1rgB%2BvrBw%2F3GAbC6dILZ0KWV50cIWW5GnQfLaqLDLJirIEtjE08cWh9ebzHJznhGy2NdOXyshc%3D"}]}
+nel: {"report_to":"cf-nel","success_fraction":0.0,"max_age":604800}
+server: cloudflare
+cf-cache-status: DYNAMIC
+cf-ray: 9d3df7910dc40d92-ARN
+alt-svc: h3=":443"; ma=86400
+
+
+$ curl -sS -L -A 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 Chrome/120 Safari/537.36' 'https://phys-math.dev/en/post/149-reality-check/' | sed -n '1,120p'
+<!DOCTYPE html><html lang="en"> <head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="icon" type="image/jpeg" href="/favicon.jpg"><title>Reality check · PhysMath Hub</title><meta name="description" content="Reality check Yesterday I posted a hand-drawn sketch of the metro station. But I totally forgot that you can just take a photo of the place. Today, on the way to the office, I took this shot. Now you can compare the sket"><link rel="canonical" href="https://phys-math.dev/en/post/149-reality-check/"><link rel="alternate" hreflang="en" href="https://phys-math.dev/en/post/149-reality-check/"><link rel="alternate" hreflang="ru" href="https://phys-math.dev/en/post/149-reality-check/"><link rel="alternate" hreflang="x-default" href="https://phys-math.dev/en/post/149-reality-check/"><meta property="og:type" content="website"><meta property="og:title" content="Reality check · PhysMath Hub"><meta property="og:description" content="Reality check Yesterday I posted a hand-drawn sketch of the metro station. But I totally forgot that you can just take a photo of the place. Today, on the way to the office, I took this shot. Now you can compare the sket"><meta property="og:url" content="https://phys-math.dev/en/post/149-reality-check/"><meta property="og:site_name" content="PhysMath Hub"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="Reality check · PhysMath Hub"><meta name="twitter:description" content="Reality check Yesterday I posted a hand-drawn sketch of the metro station. But I totally forgot that you can just take a photo of the place. Today, on the way to the office, I took this shot. Now you can compare the sket"><!-- Google tag (gtag.js) --><script async src="https://www.googletagmanager.com/gtag/js?id=G-KW8VXVXW7N"></script><script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag('js', new Date());
+
+      gtag('config', 'G-KW8VXVXW7N');
+    </script><!-- Yandex.Metrika counter --><script type="text/javascript">
+      (function(m,e,t,r,i,k,a){
+          m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+          m[i].l=1*new Date();
+          for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+          k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a);
+      })(window, document, 'script', 'https://mc.yandex.ru/metrika/tag.js?id=106989967', 'ym');
+
+      ym(106989967, 'init', {
+        ssr: true,
+        webvisor: true,
+        clickmap: true,
+        ecommerce: 'dataLayer',
+        referrer: document.referrer,
+        url: location.href,
+        accurateTrackBounce: true,
+        trackLinks: true
+      });
+    </script><!-- /Yandex.Metrika counter --><script>
+      (() => {
+        const key = 'theme-preference';
+        const value = localStorage.getItem(key) || 'system';
+        if (value === 'light' || value === 'dark') {
+          document.documentElement.setAttribute('data-theme', value);
+        }
+      })();
+    </script><link rel="stylesheet" href="/_astro/_page_.BOlKRXuh.css"></head> <body> <noscript> <div><img src="https://mc.yandex.ru/watch/106989967" style="position:absolute; left:-9999px;" alt=""></div> </noscript> <header class="site-header"> <div class="site-header-inner"> <a class="brand" href="/en/">PhysMath Hub</a> <nav class="site-nav" aria-label="Primary"> <a href="/en/">Home</a> <a href="/en/archive/1/">Archive</a> </nav> <div class="site-tools"> <nav class="lang-switch" aria-label="Language switch"> <a href="/en/post/149-reality-check/" class="active" hreflang="en">
+EN
+</a> <a href="/en/post/149-reality-check/" class hreflang="ru">
+RU
+</a> </nav> <button class="theme-toggle" id="theme-toggle" aria-label="Switch theme" title="Switch theme"> <span aria-hidden="true">◐</span> </button> </div> </div> <p class="locale-chip" data-locale="en">EN / RU</p> </header> <main> <script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","headline":"Reality check","inLanguage":"en","datePublished":"2026-02-25T13:07:37.000Z","dateModified":"2026-02-25T13:07:40+00:00","mainEntityOfPage":"https://phys-math.dev/en/post/149-reality-check/","url":"https://phys-math.dev/en/post/149-reality-check/","description":"Reality check Yesterday I posted a hand-drawn sketch of the metro station. But I totally forgot that you can just take a photo of the place. Today, on the way to the office, I took this shot. Now you can compare the sket","image":"https://pub-df8eda899f364205ba20a32dc3740d46.r2.dev/telegram/phys_math_dev/08e3c79bf7fa27c8701844964d2e4451b551501a6736ec94e20285d2db52016a.jpg","publisher":{"@type":"Organization","name":"PhysMath Hub","url":"https://phys-math.dev"},"author":{"@type":"Organization","name":"PhysMath Hub"}}</script><article class="post-page"><h1>Reality check</h1><p class="post-date">February 25, 2026</p><section class="media-grid" aria-label="Post media"><figure class="media-card"><img src="https://pub-df8eda899f364205ba20a32dc3740d46.r2.dev/telegram/phys_math_dev/08e3c79bf7fa27c8701844964d2e4451b551501a6736ec94e20285d2db52016a.jpg" alt="" loading="lazy"></figure><figure class="media-card"><img src="https://pub-df8eda899f364205ba20a32dc3740d46.r2.dev/telegram/phys_math_dev/da3b9b6bb818a19473177d5948474cf97e0c97c8c014313cc19a75156d216d28.jpg" alt="" loading="lazy"></figure></section><section class="post-content"><p>Reality check</p>
+<p>Yesterday I posted a hand-drawn sketch of the metro station. But I totally forgot that you can just take a photo of the place. Today, on the way to the office, I took this shot. Now you can compare the sketch and the photo and see whether my sketch was accurate.</p>
+</section><footer class="post-footer"><p><a href="https://t.me/phys_math_dev/149" target="_blank" rel="noopener noreferrer">Original Telegram post</a></p></footer></article> </main> <footer class="site-footer"> <p>PhysMath Hub · Physics · Mathematics · Programming</p> </footer> <script>
+      (() => {
+        const key = 'theme-preference';
+        const cycle = ['system', 'light', 'dark'];
+        const button = document.getElementById('theme-toggle');
+
+        const apply = (mode) => {
+          if (mode === 'light' || mode === 'dark') {
+            document.documentElement.setAttribute('data-theme', mode);
+          } else {
+            document.documentElement.removeAttribute('data-theme');
+          }
+          if (button) {
+            button.textContent = mode === 'light' ? '☀' : mode === 'dark' ? '☾' : '◐';
+          }
+        };
+
+        let current = localStorage.getItem(key) || 'system';
+        if (!cycle.includes(current)) {
+          current = 'system';
+        }
+        apply(current);
+
+        button?.addEventListener('click', () => {
+          const idx = cycle.indexOf(current);
+          current = cycle[(idx + 1) % cycle.length];
+          localStorage.setItem(key, current);
+          apply(current);
+        });
+      })();
+    </script>  </body> </html>
+
+---- URL: https://phys-math.dev/robots.txt ----
+$ curl -I -A 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 Chrome/120 Safari/537.36' 'https://phys-math.dev/robots.txt'
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0    95    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+HTTP/2 200 
+date: Thu, 26 Feb 2026 08:10:40 GMT
+content-type: text/plain; charset=utf-8
+content-length: 95
+access-control-allow-origin: *
+cache-control: public, max-age=14400, must-revalidate
+etag: "b2d6263fcbf068289b786db1193748c2"
+referrer-policy: strict-origin-when-cross-origin
+x-content-type-options: nosniff
+report-to: {"group":"cf-nel","max_age":604800,"endpoints":[{"url":"https://a.nel.cloudflare.com/report/v4?s=tkPncUo23NE%2FwUDPnhTtYnw2STr%2FlBhVvroiywDFhkEvoqUVEaApd0a6UsDjA4UGkbDasLB5SyWEFMBKMjXvfoFJnbUTY38xsj56O48%3D"}]}
+nel: {"report_to":"cf-nel","success_fraction":0.0,"max_age":604800}
+server: cloudflare
+accept-ranges: bytes
+cf-cache-status: REVALIDATED
+cf-ray: 9d3df7a02c90aa04-ARN
+alt-svc: h3=":443"; ma=86400
+
+
+$ curl -sS -L -D - -o /dev/null -A 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 Chrome/120 Safari/537.36' 'https://phys-math.dev/robots.txt'
+HTTP/2 200 
+date: Thu, 26 Feb 2026 08:10:40 GMT
+content-type: text/plain; charset=utf-8
+content-length: 95
+access-control-allow-origin: *
+cache-control: public, max-age=14400, must-revalidate
+etag: "b2d6263fcbf068289b786db1193748c2"
+referrer-policy: strict-origin-when-cross-origin
+x-content-type-options: nosniff
+report-to: {"group":"cf-nel","max_age":604800,"endpoints":[{"url":"https://a.nel.cloudflare.com/report/v4?s=tkPncUo23NE%2FwUDPnhTtYnw2STr%2FlBhVvroiywDFhkEvoqUVEaApd0a6UsDjA4UGkbDasLB5SyWEFMBKMjXvfoFJnbUTY38xsj56O48%3D"}]}
+nel: {"report_to":"cf-nel","success_fraction":0.0,"max_age":604800}
+server: cloudflare
+cf-cache-status: REVALIDATED
+accept-ranges: bytes
+cf-ray: 9d3df7a3acfd2f72-ARN
+alt-svc: h3=":443"; ma=86400
+
+
+$ curl -sS -L -A 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 Chrome/120 Safari/537.36' 'https://phys-math.dev/robots.txt' | sed -n '1,120p'
+User-agent: *
+Allow: /
+
+Host: https://phys-math.dev
+Sitemap: https://phys-math.dev/sitemap.xml
+
+
+---- URL: https://phys-math.dev/sitemap.xml ----
+$ curl -I -A 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 Chrome/120 Safari/537.36' 'https://phys-math.dev/sitemap.xml'
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:01 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:01 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:02 --:--:--     0
+HTTP/2 200 
+date: Thu, 26 Feb 2026 08:10:42 GMT
+content-type: application/xml
+access-control-allow-origin: *
+cache-control: public, max-age=0, must-revalidate
+etag: "55de2129e54aa61f18df91526c5d05c6"
+referrer-policy: strict-origin-when-cross-origin
+x-content-type-options: nosniff
+report-to: {"group":"cf-nel","max_age":604800,"endpoints":[{"url":"https://a.nel.cloudflare.com/report/v4?s=sOxFBIIVH6XsoofKL5gkZ7u2WNzPrmWXTOVB0aqqQe5T7LOfGSDtRXXg0nZsghrkxhqQR%2Babcdo9%2FG1JRgq22RHVnKqM%2FgyvoNE3u0t70QEo%2Fqzqq5kgdaI%3D"}]}
+nel: {"report_to":"cf-nel","success_fraction":0.0,"max_age":604800}
+server: cloudflare
+cf-cache-status: DYNAMIC
+cf-ray: 9d3df7b1ef909082-ARN
+alt-svc: h3=":443"; ma=86400
+
+
+$ curl -sS -L -D - -o /dev/null -A 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 Chrome/120 Safari/537.36' 'https://phys-math.dev/sitemap.xml'
+HTTP/2 200 
+date: Thu, 26 Feb 2026 08:10:43 GMT
+content-type: application/xml
+content-length: 52354
+access-control-allow-origin: *
+cache-control: public, max-age=0, must-revalidate
+etag: "55de2129e54aa61f18df91526c5d05c6"
+referrer-policy: strict-origin-when-cross-origin
+x-content-type-options: nosniff
+report-to: {"group":"cf-nel","max_age":604800,"endpoints":[{"url":"https://a.nel.cloudflare.com/report/v4?s=6DA%2BHG%2BG676tc1OOBG5Q1X0ZOLrpM8uTKvlc%2FjPEz3U4dWK%2BTyCcXsllrEBQoK%2F8SHECuCxMeizd5CaLWT3bDD%2FdY7maTeW98B1RFICFpi6fIpdM7Azg1fA%3D"}]}
+nel: {"report_to":"cf-nel","success_fraction":0.0,"max_age":604800}
+server: cloudflare
+cf-cache-status: DYNAMIC
+cf-ray: 9d3df7b6deda3ccd-ARN
+alt-svc: h3=":443"; ma=86400
+
+
+$ curl -sS -L -A 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 Chrome/120 Safari/537.36' 'https://phys-math.dev/sitemap.xml' | sed -n '1,120p'
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>https://phys-math.dev/en/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://phys-math.dev/en/" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://phys-math.dev/ru/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://phys-math.dev/en/" />
+  </url>
+  <url>
+    <loc>https://phys-math.dev/ru/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://phys-math.dev/en/" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://phys-math.dev/ru/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://phys-math.dev/en/" />
+  </url>
+  <url>
+    <loc>https://phys-math.dev/en/archive/1/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://phys-math.dev/en/archive/1/" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://phys-math.dev/ru/archive/1/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://phys-math.dev/en/archive/1/" />
+  </url>
+  <url>
+    <loc>https://phys-math.dev/en/archive/2/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://phys-math.dev/en/archive/2/" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://phys-math.dev/ru/archive/1/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://phys-math.dev/en/archive/2/" />
+  </url>
+  <url>
+    <loc>https://phys-math.dev/en/archive/3/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://phys-math.dev/en/archive/3/" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://phys-math.dev/ru/archive/1/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://phys-math.dev/en/archive/3/" />
+  </url>
+  <url>
+    <loc>https://phys-math.dev/en/archive/4/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://phys-math.dev/en/archive/4/" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://phys-math.dev/ru/archive/1/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://phys-math.dev/en/archive/4/" />
+  </url>
+  <url>
+    <loc>https://phys-math.dev/en/archive/5/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://phys-math.dev/en/archive/5/" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://phys-math.dev/ru/archive/1/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://phys-math.dev/en/archive/5/" />
+  </url>
+  <url>
+    <loc>https://phys-math.dev/en/archive/6/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://phys-math.dev/en/archive/6/" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://phys-math.dev/ru/archive/1/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://phys-math.dev/en/archive/6/" />
+  </url>
+  <url>
+    <loc>https://phys-math.dev/en/archive/7/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://phys-math.dev/en/archive/7/" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://phys-math.dev/ru/archive/1/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://phys-math.dev/en/archive/7/" />
+  </url>
+  <url>
+    <loc>https://phys-math.dev/ru/archive/1/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://phys-math.dev/en/archive/1/" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://phys-math.dev/ru/archive/1/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://phys-math.dev/en/archive/1/" />
+  </url>
+  <url>
+    <loc>https://phys-math.dev/en/post/149-reality-check/</loc>
+    <lastmod>2026-02-25T13:07:40.000Z</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://phys-math.dev/en/post/149-reality-check/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://phys-math.dev/en/post/149-reality-check/" />
+  </url>
+  <url>
+    <loc>https://phys-math.dev/en/post/148-baghramyan-mystery-revealed/</loc>
+    <lastmod>2026-02-24T17:42:12.000Z</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://phys-math.dev/en/post/148-baghramyan-mystery-revealed/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://phys-math.dev/en/post/148-baghramyan-mystery-revealed/" />
+  </url>
+  <url>
+    <loc>https://phys-math.dev/en/post/147-web-mirror-of-phys-math-dev-is-alive/</loc>
+    <lastmod>2026-02-22T16:32:57.000Z</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://phys-math.dev/en/post/147-web-mirror-of-phys-math-dev-is-alive/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://phys-math.dev/en/post/147-web-mirror-of-phys-math-dev-is-alive/" />
+  </url>
+  <url>
+    <loc>https://phys-math.dev/en/post/146-baghramyan-mystery/</loc>
+    <lastmod>2026-02-21T10:14:35.000Z</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://phys-math.dev/en/post/146-baghramyan-mystery/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://phys-math.dev/en/post/146-baghramyan-mystery/" />
+  </url>
+  <url>
+    <loc>https://phys-math.dev/en/post/145-rag-is-dead-long-live-agentic-retrieval/</loc>
+    <lastmod>2026-02-20T07:10:27.000Z</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://phys-math.dev/en/post/145-rag-is-dead-long-live-agentic-retrieval/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://phys-math.dev/en/post/145-rag-is-dead-long-live-agentic-retrieval/" />
+  </url>
+  <url>
+    <loc>https://phys-math.dev/en/post/144-post-144/</loc>
+    <lastmod>2026-02-19T09:46:23.000Z</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://phys-math.dev/en/post/144-post-144/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://phys-math.dev/en/post/144-post-144/" />
+  </url>
+  <url>
+    <loc>https://phys-math.dev/en/post/143-how-codex-is-built/</loc>
+    <lastmod>2026-02-23T03:59:05.000Z</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://phys-math.dev/en/post/143-how-codex-is-built/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://phys-math.dev/en/post/143-how-codex-is-built/" />
+  </url>
+  <url>
+    <loc>https://phys-math.dev/en/post/142-element-of-2d-sort/</loc>
+    <lastmod>2026-02-17T18:03:32.000Z</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://phys-math.dev/en/post/142-element-of-2d-sort/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://phys-math.dev/en/post/142-element-of-2d-sort/" />
+  </url>
+  <url>
+    <loc>https://phys-math.dev/en/post/141-table-with-leaves/</loc>
+    <lastmod>2026-02-15T12:32:19.000Z</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://phys-math.dev/en/post/141-table-with-leaves/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://phys-math.dev/en/post/141-table-with-leaves/" />
+  </url>
+  <url>
+    <loc>https://phys-math.dev/en/post/140-periods-in-digits-and-remainders/</loc>
+    <lastmod>2026-02-14T18:12:16.000Z</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://phys-math.dev/en/post/140-periods-in-digits-and-remainders/" />
+
+
+---- URL: https://phys-math.dev/sitemap_index.xml ----
+$ curl -I -A 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 Chrome/120 Safari/537.36' 'https://phys-math.dev/sitemap_index.xml'
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+HTTP/2 404 
+date: Thu, 26 Feb 2026 08:10:44 GMT
+content-type: text/html; charset=utf-8
+access-control-allow-origin: *
+cache-control: no-store
+referrer-policy: strict-origin-when-cross-origin
+x-content-type-options: nosniff
+report-to: {"group":"cf-nel","max_age":604800,"endpoints":[{"url":"https://a.nel.cloudflare.com/report/v4?s=68PtpfE%2Bn9S0pKtfgv52QCuassR6n157gFTfB0h8OfpD3IKE7de2iH3Y%2F0lKSVgYXWbvArLhyQ1KFQyxu5m7QkVKwNTBlh251FizJu9ZEnNAsV8hnaEaYiU%3D"}]}
+nel: {"report_to":"cf-nel","success_fraction":0.0,"max_age":604800}
+server: cloudflare
+cf-cache-status: DYNAMIC
+cf-ray: 9d3df7beae817656-ARN
+alt-svc: h3=":443"; ma=86400
+
+
+$ curl -sS -L -D - -o /dev/null -A 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 Chrome/120 Safari/537.36' 'https://phys-math.dev/sitemap_index.xml'
+HTTP/2 404 
+date: Thu, 26 Feb 2026 08:10:45 GMT
+content-type: text/html; charset=utf-8
+access-control-allow-origin: *
+cache-control: no-store
+referrer-policy: strict-origin-when-cross-origin
+x-content-type-options: nosniff
+report-to: {"group":"cf-nel","max_age":604800,"endpoints":[{"url":"https://a.nel.cloudflare.com/report/v4?s=8qcLZxfRLd%2FKLpPnwQS9F4qV%2F0b5LSRMeVfdsKQGBJBaxESe3fj2MeszUFtKIt%2Bsc99mmPnKuhMqQ3wMrb62p44sCEOtocwX99TudBcrz9OMLAZzOfFoOaQ%3D"}]}
+nel: {"report_to":"cf-nel","success_fraction":0.0,"max_age":604800}
+server: cloudflare
+cf-cache-status: DYNAMIC
+cf-ray: 9d3df7c27b3911c5-ARN
+alt-svc: h3=":443"; ma=86400
+
+
+$ curl -sS -L -A 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 Chrome/120 Safari/537.36' 'https://phys-math.dev/sitemap_index.xml' | sed -n '1,120p'
+<!DOCTYPE html><html lang="en"> <head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="icon" type="image/jpeg" href="/favicon.jpg"><title>404 · PhysMath Hub</title><meta name="description" content="Page not found"><link rel="canonical" href="https://phys-math.dev/404/"><link rel="alternate" hreflang="en" href="https://phys-math.dev/en/"><link rel="alternate" hreflang="ru" href="https://phys-math.dev/ru/"><link rel="alternate" hreflang="x-default" href="https://phys-math.dev/en/"><meta property="og:type" content="website"><meta property="og:title" content="404 · PhysMath Hub"><meta property="og:description" content="Page not found"><meta property="og:url" content="https://phys-math.dev/404/"><meta property="og:site_name" content="PhysMath Hub"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="404 · PhysMath Hub"><meta name="twitter:description" content="Page not found"><meta name="robots" content="noindex,nofollow"><!-- Google tag (gtag.js) --><script async src="https://www.googletagmanager.com/gtag/js?id=G-KW8VXVXW7N"></script><script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag('js', new Date());
+
+      gtag('config', 'G-KW8VXVXW7N');
+    </script><!-- Yandex.Metrika counter --><script type="text/javascript">
+      (function(m,e,t,r,i,k,a){
+          m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+          m[i].l=1*new Date();
+          for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+          k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a);
+      })(window, document, 'script', 'https://mc.yandex.ru/metrika/tag.js?id=106989967', 'ym');
+
+      ym(106989967, 'init', {
+        ssr: true,
+        webvisor: true,
+        clickmap: true,
+        ecommerce: 'dataLayer',
+        referrer: document.referrer,
+        url: location.href,
+        accurateTrackBounce: true,
+        trackLinks: true
+      });
+    </script><!-- /Yandex.Metrika counter --><script>
+      (() => {
+        const key = 'theme-preference';
+        const value = localStorage.getItem(key) || 'system';
+        if (value === 'light' || value === 'dark') {
+          document.documentElement.setAttribute('data-theme', value);
+        }
+      })();
+    </script><link rel="stylesheet" href="/_astro/_page_.BOlKRXuh.css"></head> <body> <noscript> <div><img src="https://mc.yandex.ru/watch/106989967" style="position:absolute; left:-9999px;" alt=""></div> </noscript> <header class="site-header"> <div class="site-header-inner"> <a class="brand" href="/en/">PhysMath Hub</a> <nav class="site-nav" aria-label="Primary"> <a href="/en/">Home</a> <a href="/en/archive/1/">Archive</a> </nav> <div class="site-tools"> <nav class="lang-switch" aria-label="Language switch"> <a href="/en/" class="active" hreflang="en">
+EN
+</a> <a href="/ru/" class hreflang="ru">
+RU
+</a> </nav> <button class="theme-toggle" id="theme-toggle" aria-label="Switch theme" title="Switch theme"> <span aria-hidden="true">◐</span> </button> </div> </div> <p class="locale-chip" data-locale="en">EN / RU</p> </header> <main>  <section class="not-found"> <h1>Page not found</h1> <p> <a href="/en/">Go to homepage</a> </p> </section>  </main> <footer class="site-footer"> <p>PhysMath Hub · Physics · Mathematics · Programming</p> </footer> <script>
+      (() => {
+        const key = 'theme-preference';
+        const cycle = ['system', 'light', 'dark'];
+        const button = document.getElementById('theme-toggle');
+
+        const apply = (mode) => {
+          if (mode === 'light' || mode === 'dark') {
+            document.documentElement.setAttribute('data-theme', mode);
+          } else {
+            document.documentElement.removeAttribute('data-theme');
+          }
+          if (button) {
+            button.textContent = mode === 'light' ? '☀' : mode === 'dark' ? '☾' : '◐';
+          }
+        };
+
+        let current = localStorage.getItem(key) || 'system';
+        if (!cycle.includes(current)) {
+          current = 'system';
+        }
+        apply(current);
+
+        button?.addEventListener('click', () => {
+          const idx = cycle.indexOf(current);
+          current = cycle[(idx + 1) % cycle.length];
+          localStorage.setItem(key, current);
+          apply(current);
+        });
+      })();
+    </script>  </body> </html>
+
+---- URL: https://phys-math.dev/yandex_b2fb10ca15940053.html ----
+$ curl -I -A 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 Chrome/120 Safari/537.36' 'https://phys-math.dev/yandex_b2fb10ca15940053.html'
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+HTTP/2 308 
+date: Thu, 26 Feb 2026 08:10:46 GMT
+location: /yandex_b2fb10ca15940053
+access-control-allow-origin: *
+referrer-policy: strict-origin-when-cross-origin
+report-to: {"group":"cf-nel","max_age":604800,"endpoints":[{"url":"https://a.nel.cloudflare.com/report/v4?s=YoZpz3qsIdrTSpUxvsysdW21zIyvlcNKK7Oml0xvR4uoEXT90uSjz95MjborqR%2Bj2aa7yKtwTqI6eXOpe6QiIQk%2FxC4aA4UWM8xpZcIg5iXvei2%2FtPEpmOk%3D"}]}
+nel: {"report_to":"cf-nel","success_fraction":0.0,"max_age":604800}
+server: cloudflare
+cf-cache-status: DYNAMIC
+cf-ray: 9d3df7ca7fc30d92-ARN
+alt-svc: h3=":443"; ma=86400
+
+
+$ curl -sS -L -D - -o /dev/null -A 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 Chrome/120 Safari/537.36' 'https://phys-math.dev/yandex_b2fb10ca15940053.html'
+HTTP/2 200 
+date: Thu, 26 Feb 2026 08:10:49 GMT
+content-type: text/html; charset=UTF-8
+cache-control: public, max-age=300
+report-to: {"group":"cf-nel","max_age":604800,"endpoints":[{"url":"https://a.nel.cloudflare.com/report/v4?s=1Hv1BBbaTJkyEFZXWS3jr9WzHDYib43GnKHTGCgieuwg5tbhztdyWlWetyFeW8JiM9I%2F3rsKM%2BZhjgk3IBDfumAblAeZ2jzAAebrLc70Kafi62uVxUnXjRo%3D"}]}
+nel: {"report_to":"cf-nel","success_fraction":0.0,"max_age":604800}
+server: cloudflare
+cf-cache-status: DYNAMIC
+cf-ray: 9d3df7d83d7f21e9-ARN
+alt-svc: h3=":443"; ma=86400
+
+
+$ curl -sS -L -A 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 Chrome/120 Safari/537.36' 'https://phys-math.dev/yandex_b2fb10ca15940053.html' | sed -n '1,120p'
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    </head>
+    <body>Verification: b2fb10ca15940053</body>
+</html>
+
+---- URL: https://phys-math.dev/yandex_b2fb10ca15940053 ----
+$ curl -I -A 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 Chrome/120 Safari/537.36' 'https://phys-math.dev/yandex_b2fb10ca15940053'
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+HTTP/2 200 
+date: Thu, 26 Feb 2026 08:10:52 GMT
+content-type: text/html; charset=utf-8
+access-control-allow-origin: *
+cache-control: public, max-age=0, must-revalidate
+cf-cache-status: DYNAMIC
+referrer-policy: strict-origin-when-cross-origin
+x-content-type-options: nosniff
+report-to: {"group":"cf-nel","max_age":604800,"endpoints":[{"url":"https://a.nel.cloudflare.com/report/v4?s=69C%2Bk3tow79W70XCa01B7oPBJC3pQwNZW%2BUoGQYrWC2TUjJU5exw8Z0WmNegwvm73dhejauOlVUALfu2ibnl6vvyNtWIlsxDPJSUIfNCvoQkdROzNZgy"}]}
+nel: {"report_to":"cf-nel","success_fraction":0.0,"max_age":604800}
+server: cloudflare
+cf-ray: 9d3df7eeef93e961-DME
+alt-svc: h3=":443"; ma=86400
+
+
+$ curl -sS -L -D - -o /dev/null -A 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 Chrome/120 Safari/537.36' 'https://phys-math.dev/yandex_b2fb10ca15940053'
+HTTP/2 200 
+date: Thu, 26 Feb 2026 08:10:53 GMT
+content-type: text/html; charset=utf-8
+access-control-allow-origin: *
+cache-control: public, max-age=0, must-revalidate
+referrer-policy: strict-origin-when-cross-origin
+x-content-type-options: nosniff
+report-to: {"group":"cf-nel","max_age":604800,"endpoints":[{"url":"https://a.nel.cloudflare.com/report/v4?s=uBiomXRlidrl1c%2BeD84ObdnT2dJKhiX8O7%2BkRqeZra%2FVEAR8%2Fk32ulnSXvX7PA%2F0ZzRGKf0heuH53aYzOK7JbgtxKBg6%2F7NgvnRuPHAHDkWyVLRJoPDPtEU%3D"}]}
+nel: {"report_to":"cf-nel","success_fraction":0.0,"max_age":604800}
+server: cloudflare
+cf-cache-status: DYNAMIC
+cf-ray: 9d3df7f46c4e1243-ARN
+alt-svc: h3=":443"; ma=86400
+
+
+$ curl -sS -L -A 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 Chrome/120 Safari/537.36' 'https://phys-math.dev/yandex_b2fb10ca15940053' | sed -n '1,120p'
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    </head>
+    <body>Verification: b2fb10ca15940053</body>
+</html>
+
+==============================
+USER_AGENT: YANDEX
+UA_VALUE: Mozilla/5.0 (compatible; YandexBot/3.0; +http://yandex.com/bots)
+==============================
+
+---- URL: https://phys-math.dev/ ----
+$ curl -I -A 'Mozilla/5.0 (compatible; YandexBot/3.0; +http://yandex.com/bots)' 'https://phys-math.dev/'
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:01 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:01 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:01 --:--:--     0
+HTTP/2 302 
+date: Thu, 26 Feb 2026 08:10:57 GMT
+content-type: text/plain;charset=UTF-8
+location: /en/
+access-control-allow-origin: *
+referrer-policy: strict-origin-when-cross-origin
+x-content-type-options: nosniff
+report-to: {"group":"cf-nel","max_age":604800,"endpoints":[{"url":"https://a.nel.cloudflare.com/report/v4?s=Cyirvf8bhOXXvR0RNuDtyZmCuLPPrN0MAwIOfBvJjBHaqsxbNvV30DvKE1qcL9Lrv1tiOE4Q2Pcly1nzi%2B5Posl0wzT%2FQ%2FFJki6ZMIxwTIQsyKnasjTz9yY%3D"}]}
+nel: {"report_to":"cf-nel","success_fraction":0.0,"max_age":604800}
+server: cloudflare
+cf-cache-status: DYNAMIC
+cf-ray: 9d3df80dbf9c37b3-ARN
+alt-svc: h3=":443"; ma=86400
+
+
+$ curl -sS -L -D - -o /dev/null -A 'Mozilla/5.0 (compatible; YandexBot/3.0; +http://yandex.com/bots)' 'https://phys-math.dev/'
+HTTP/2 302 
+date: Thu, 26 Feb 2026 08:10:58 GMT
+content-type: text/plain;charset=UTF-8
+content-length: 19
+location: /en/
+access-control-allow-origin: *
+referrer-policy: strict-origin-when-cross-origin
+x-content-type-options: nosniff
+report-to: {"group":"cf-nel","max_age":604800,"endpoints":[{"url":"https://a.nel.cloudflare.com/report/v4?s=JQVObR2Vo3g0pVJTjvemmRZiBJ6VTEKRvjVy6YmXyadvjc6%2BF8REkNAQ0Fz%2FTBS85lIZDb9VZCgFHMJjY86L5kZeZlpZDrUggyWuJRSf3IfF6wKQ9khr"}]}
+nel: {"report_to":"cf-nel","success_fraction":0.0,"max_age":604800}
+server: cloudflare
+cf-cache-status: DYNAMIC
+cf-ray: 9d3df811cb9ee840-DME
+alt-svc: h3=":443"; ma=86400
+
+HTTP/2 200 
+date: Thu, 26 Feb 2026 08:10:58 GMT
+content-type: text/html; charset=utf-8
+access-control-allow-origin: *
+cache-control: public, max-age=0, must-revalidate
+referrer-policy: strict-origin-when-cross-origin
+x-content-type-options: nosniff
+report-to: {"group":"cf-nel","max_age":604800,"endpoints":[{"url":"https://a.nel.cloudflare.com/report/v4?s=rkQVOPneAmz5yzGqUcDkhL%2FBwox8OJAZ7i9BAYzivJHRKxazK9lo0hEKJ9m%2BWLxFBGhxPV%2FV2azPnWM0%2F%2FYala9pTd9hVtH3CJFHip8T1xen6ii%2F9QZg"}]}
+nel: {"report_to":"cf-nel","success_fraction":0.0,"max_age":604800}
+server: cloudflare
+cf-cache-status: DYNAMIC
+cf-ray: 9d3df812fdb7e840-DME
+alt-svc: h3=":443"; ma=86400
+
+
+$ curl -sS -L -A 'Mozilla/5.0 (compatible; YandexBot/3.0; +http://yandex.com/bots)' 'https://phys-math.dev/' | sed -n '1,120p'
+<!DOCTYPE html><html lang="en"> <head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="icon" type="image/jpeg" href="/favicon.jpg"><title>PhysMath Hub · PhysMath Hub</title><meta name="description" content="A shared space for people who love physics, mathematics, and programming."><link rel="canonical" href="https://phys-math.dev/en/"><link rel="alternate" hreflang="en" href="https://phys-math.dev/en/"><link rel="alternate" hreflang="ru" href="https://phys-math.dev/ru/"><link rel="alternate" hreflang="x-default" href="https://phys-math.dev/en/"><meta property="og:type" content="website"><meta property="og:title" content="PhysMath Hub · PhysMath Hub"><meta property="og:description" content="A shared space for people who love physics, mathematics, and programming."><meta property="og:url" content="https://phys-math.dev/en/"><meta property="og:site_name" content="PhysMath Hub"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="PhysMath Hub · PhysMath Hub"><meta name="twitter:description" content="A shared space for people who love physics, mathematics, and programming."><!-- Google tag (gtag.js) --><script async src="https://www.googletagmanager.com/gtag/js?id=G-KW8VXVXW7N"></script><script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag('js', new Date());
+
+      gtag('config', 'G-KW8VXVXW7N');
+    </script><!-- Yandex.Metrika counter --><script type="text/javascript">
+      (function(m,e,t,r,i,k,a){
+          m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+          m[i].l=1*new Date();
+          for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+          k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a);
+      })(window, document, 'script', 'https://mc.yandex.ru/metrika/tag.js?id=106989967', 'ym');
+
+      ym(106989967, 'init', {
+        ssr: true,
+        webvisor: true,
+        clickmap: true,
+        ecommerce: 'dataLayer',
+        referrer: document.referrer,
+        url: location.href,
+        accurateTrackBounce: true,
+        trackLinks: true
+      });
+    </script><!-- /Yandex.Metrika counter --><script>
+      (() => {
+        const key = 'theme-preference';
+        const value = localStorage.getItem(key) || 'system';
+        if (value === 'light' || value === 'dark') {
+          document.documentElement.setAttribute('data-theme', value);
+        }
+      })();
+    </script><link rel="stylesheet" href="/_astro/_page_.BOlKRXuh.css"></head> <body> <noscript> <div><img src="https://mc.yandex.ru/watch/106989967" style="position:absolute; left:-9999px;" alt=""></div> </noscript> <header class="site-header"> <div class="site-header-inner"> <a class="brand" href="/en/">PhysMath Hub</a> <nav class="site-nav" aria-label="Primary"> <a href="/en/">Home</a> <a href="/en/archive/1/">Archive</a> </nav> <div class="site-tools"> <nav class="lang-switch" aria-label="Language switch"> <a href="/en/" class="active" hreflang="en">
+EN
+</a> <a href="/ru/" class hreflang="ru">
+RU
+</a> </nav> <button class="theme-toggle" id="theme-toggle" aria-label="Switch theme" title="Switch theme"> <span aria-hidden="true">◐</span> </button> </div> </div> <p class="locale-chip" data-locale="en">EN / RU</p> </header> <main>  <section class="hero"> <h1>PhysMath Hub</h1> <p>A shared space for people who love physics, mathematics, and programming.</p> <div><p>This project mirrors <strong>phys_math_dev</strong> and turns daily channel knowledge into a durable, searchable archive.</p>
+<p>The goal is simple: share useful ideas, keep them accessible, and help curious people connect across disciplines.</p>
+<p>If you enjoy learning how theory meets engineering practice, this hub is for you.</p>
+</div> </section> <section> <h2>Latest posts</h2> <div class="posts-grid"> <article class="post-card"> <a class="post-link" href="/en/post/149-reality-check/"> <div class="post-card-top"> <h2>Reality check</h2> <time datetime="2026-02-25T13:07:37.000Z">February 25, 2026</time> </div> <p>Reality check Yesterday I posted a hand-drawn sketch of the metro station. But I totally forgot that you can just take a photo of the place. Today, on the way to the office, I took this shot. Now you can compare the sket</p> </a>  <div class="post-meta-row"> <a class="source-link" href="https://t.me/phys_math_dev/149" target="_blank" rel="noopener noreferrer"> Original Telegram post </a>  </div> </article><article class="post-card"> <a class="post-link" href="/en/post/148-baghramyan-mystery-revealed/"> <div class="post-card-top"> <h2>Baghramyan mystery revealed</h2> <time datetime="2026-02-24T17:39:51.000Z">February 24, 2026</time> </div> <p>Baghramyan mystery revealed Previously, I posted three mysterious photos. Today, let&#39;s solve the puzzle. These triangles are the result of a strange coincidence. Shadows of handrails intersect in the middle of the step. </p> </a>  <div class="post-meta-row"> <a class="source-link" href="https://t.me/phys_math_dev/148" target="_blank" rel="noopener noreferrer"> Original Telegram post </a>  </div> </article><article class="post-card"> <a class="post-link" href="/en/post/147-web-mirror-of-phys-math-dev-is-alive/"> <div class="post-card-top"> <h2>Web mirror of phys_math_dev is alive!</h2> <time datetime="2026-02-22T16:32:54.000Z">February 22, 2026</time> </div> <p>Web mirror of phys_math_dev is alive! It was… kinda terrible. Not when Codex wrote the code. Not when I deployed it to GitHub. It started when I logged into Cloudflare and began clicking around in the GUI. The real pain </p> </a>  <div class="post-meta-row"> <a class="source-link" href="https://t.me/phys_math_dev/147" target="_blank" rel="noopener noreferrer"> Original Telegram post </a>  </div> </article><article class="post-card"> <a class="post-link" href="/en/post/146-baghramyan-mystery/"> <div class="post-card-top"> <h2>Baghramyan mystery</h2> <time datetime="2026-02-21T10:14:32.000Z">February 21, 2026</time> </div> <p>Baghramyan mystery I made these three photos of an escalator steps of Baghramyan metro station in Yerevan. These black and white triangles in the middle of the step intrigue me. After the third attempt ChatGPT gave me cl</p> </a>  <div class="post-meta-row"> <a class="source-link" href="https://t.me/phys_math_dev/146" target="_blank" rel="noopener noreferrer"> Original Telegram post </a>  </div> </article><article class="post-card"> <a class="post-link" href="/en/post/145-rag-is-dead-long-live-agentic-retrieval/"> <div class="post-card-top"> <h2>RAG is dead, long live agentic retrieval</h2> <time datetime="2026-02-20T07:08:20.000Z">February 20, 2026</time> </div> <p>RAG is dead, long live agentic retrieval Video touches a question I keep bumping into lately: do I actually need to learn RAG? Very roughly: RAG is a way to preprocess your data into embeddings — high-dimensional vectors</p> </a>  <div class="post-meta-row"> <a class="source-link" href="https://t.me/phys_math_dev/145" target="_blank" rel="noopener noreferrer"> Original Telegram post </a>  </div> </article><article class="post-card"> <a class="post-link" href="/en/post/144-post-144/"> <div class="post-card-top"> <h2>Post 144</h2> <time datetime="2026-02-19T07:05:31.000Z">February 19, 2026</time> </div>  </a>  <div class="post-meta-row"> <a class="source-link" href="https://t.me/phys_math_dev/144" target="_blank" rel="noopener noreferrer"> Original Telegram post </a> <div class="reactions" aria-label="Reactions"> <span>👍 3</span> </div> </div> </article><article class="post-card"> <a class="post-link" href="/en/post/143-how-codex-is-built/"> <div class="post-card-top"> <h2>How Codex is built</h2> <time datetime="2026-02-18T08:49:56.000Z">February 18, 2026</time> </div> <p>How Codex is built I&#39;m actively using the &quot;Codex&quot; agent in my work and it has always intrigued me how it works. I even wanted to find a repository with the source code and read it. Fortunately, today I stumbled upon a li</p> </a>  <div class="post-meta-row"> <a class="source-link" href="https://t.me/phys_math_dev/143" target="_blank" rel="noopener noreferrer"> Original Telegram post </a> <div class="reactions" aria-label="Reactions"> <span>🔥 1</span> </div> </div> </article><article class="post-card"> <a class="post-link" href="/en/post/142-element-of-2d-sort/"> <div class="post-card-top"> <h2>Element of 2D sort</h2> <time datetime="2026-02-17T17:59:20.000Z">February 17, 2026</time> </div> <p>Element of 2D sort I don&#39;t have a fully cooked idea today, so let&#39;s discuss half-baked. In The Farmer Was Replaced game there is a subgame where you plant cacti. Quite a complex description of game rules boils down to qu</p> </a>  <div class="post-meta-row"> <a class="source-link" href="https://t.me/phys_math_dev/142" target="_blank" rel="noopener noreferrer"> Original Telegram post </a>  </div> </article><article class="post-card"> <a class="post-link" href="/en/post/141-table-with-leaves/"> <div class="post-card-top"> <h2>Table with leaves</h2> <time datetime="2026-02-15T12:32:16.000Z">February 15, 2026</time> </div> <p>Table with leaves Who would guess that these wooden foldable panels on the sides of a table are &quot;leaves&quot;? Not only decision trees and bushes have them.</p> </a>  <div class="post-meta-row"> <a class="source-link" href="https://t.me/phys_math_dev/141" target="_blank" rel="noopener noreferrer"> Original Telegram post </a>  </div> </article><article class="post-card"> <a class="post-link" href="/en/post/140-periods-in-digits-and-remainders/"> <div class="post-card-top"> <h2>Periods in digits and remainders</h2> <time datetime="2026-02-14T17:41:13.000Z">February 14, 2026</time> </div> <p>Periods in digits and remainders I&#39;m preparing a post with a solution for the first problem in the post . And there is a small question which has irked me for a while. When we calculate digits of 1/n, there is a function</p> </a>  <div class="post-meta-row"> <a class="source-link" href="https://t.me/phys_math_dev/140" target="_blank" rel="noopener noreferrer"> Original Telegram post </a> <div class="reactions" aria-label="Reactions"> <span>👍 1</span> </div> </div> </article><article class="post-card"> <a class="post-link" href="/en/post/139-the-deleted-photo/"> <div class="post-card-top"> <h2>The Deleted Photo</h2> <time datetime="2026-02-13T09:25:26.000Z">February 13, 2026</time> </div> <p>The Deleted Photo A long long time ago my colleague lent me a short-focused lens for my camera. I tested it for a week and this is my favorite shot from that week. Just after I took this shot, it turned out the place was</p> </a>  <div class="post-meta-row"> <a class="source-link" href="https://t.me/phys_math_dev/139" target="_blank" rel="noopener noreferrer"> Original Telegram post </a> <div class="reactions" aria-label="Reactions"> <span>❤ 3</span><span>🔥 3</span> </div> </div> </article><article class="post-card"> <a class="post-link" href="/en/post/138-old-but-gold/"> <div class="post-card-top"> <h2>Old but gold</h2> <time datetime="2026-02-12T06:52:53.000Z">February 12, 2026</time> </div> <p>Old but gold There seems to be two different problems. But really, it&#39;s the same problem. 1. Find the repeating and non-repeating parts of the decimal expansion of 1/n. 1/3 = 0.(3) 1/6 = 0.1(6) 2. For a singly linked lis</p> </a>  <div class="post-meta-row"> <a class="source-link" href="https://t.me/phys_math_dev/138" target="_blank" rel="noopener noreferrer"> Original Telegram post </a> <div class="reactions" aria-label="Reactions"> <span>👀 2</span> </div> </div> </article> </div> <p> <a href="/en/archive/1/">Browse all posts</a> </p> </section>  </main> <footer class="site-footer"> <p>PhysMath Hub · Physics · Mathematics · Programming</p> </footer> <script>
+      (() => {
+        const key = 'theme-preference';
+        const cycle = ['system', 'light', 'dark'];
+        const button = document.getElementById('theme-toggle');
+
+        const apply = (mode) => {
+          if (mode === 'light' || mode === 'dark') {
+            document.documentElement.setAttribute('data-theme', mode);
+          } else {
+            document.documentElement.removeAttribute('data-theme');
+          }
+          if (button) {
+            button.textContent = mode === 'light' ? '☀' : mode === 'dark' ? '☾' : '◐';
+          }
+        };
+
+        let current = localStorage.getItem(key) || 'system';
+        if (!cycle.includes(current)) {
+          current = 'system';
+        }
+        apply(current);
+
+        button?.addEventListener('click', () => {
+          const idx = cycle.indexOf(current);
+          current = cycle[(idx + 1) % cycle.length];
+          localStorage.setItem(key, current);
+          apply(current);
+        });
+      })();
+    </script>  </body> </html>
+
+---- URL: https://phys-math.dev/en/ ----
+$ curl -I -A 'Mozilla/5.0 (compatible; YandexBot/3.0; +http://yandex.com/bots)' 'https://phys-math.dev/en/'
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:01 --:--:--     0
+HTTP/2 200 
+date: Thu, 26 Feb 2026 08:10:59 GMT
+content-type: text/html; charset=utf-8
+access-control-allow-origin: *
+cache-control: public, max-age=0, must-revalidate
+cf-cache-status: DYNAMIC
+referrer-policy: strict-origin-when-cross-origin
+x-content-type-options: nosniff
+report-to: {"group":"cf-nel","max_age":604800,"endpoints":[{"url":"https://a.nel.cloudflare.com/report/v4?s=MpMy2PUx4pvtz%2Frwd%2B8GBoCJTaTIUTkz0HIHGIME6D2UnyrgBe9ZT6elrShktz9CuFxcjyLnlhU8%2FJ5%2BzcaEYN7AYW%2FoPqGthOTAobeT7baz4DXaQ%2Fgfxuo%3D"}]}
+nel: {"report_to":"cf-nel","success_fraction":0.0,"max_age":604800}
+server: cloudflare
+cf-ray: 9d3df81bb946f9e2-ARN
+alt-svc: h3=":443"; ma=86400
+
+
+$ curl -sS -L -D - -o /dev/null -A 'Mozilla/5.0 (compatible; YandexBot/3.0; +http://yandex.com/bots)' 'https://phys-math.dev/en/'
+HTTP/2 200 
+date: Thu, 26 Feb 2026 08:11:00 GMT
+content-type: text/html; charset=utf-8
+access-control-allow-origin: *
+cache-control: public, max-age=0, must-revalidate
+referrer-policy: strict-origin-when-cross-origin
+x-content-type-options: nosniff
+report-to: {"group":"cf-nel","max_age":604800,"endpoints":[{"url":"https://a.nel.cloudflare.com/report/v4?s=PFf7SxMxpX5Hh05qgxL6r77KuyOY06QbdfQasv0ukwEgTywEfb%2B7Ya%2Bg%2FejXw97C6HTnmt9DGU%2FlfVHcJKmEXiDE5mt5hjKhqnHkr9hv1Atzkf5vPp6%2FkqU%3D"}]}
+nel: {"report_to":"cf-nel","success_fraction":0.0,"max_age":604800}
+server: cloudflare
+cf-cache-status: DYNAMIC
+cf-ray: 9d3df8228de53ccd-ARN
+alt-svc: h3=":443"; ma=86400
+
+
+$ curl -sS -L -A 'Mozilla/5.0 (compatible; YandexBot/3.0; +http://yandex.com/bots)' 'https://phys-math.dev/en/' | sed -n '1,120p'
+<!DOCTYPE html><html lang="en"> <head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="icon" type="image/jpeg" href="/favicon.jpg"><title>PhysMath Hub · PhysMath Hub</title><meta name="description" content="A shared space for people who love physics, mathematics, and programming."><link rel="canonical" href="https://phys-math.dev/en/"><link rel="alternate" hreflang="en" href="https://phys-math.dev/en/"><link rel="alternate" hreflang="ru" href="https://phys-math.dev/ru/"><link rel="alternate" hreflang="x-default" href="https://phys-math.dev/en/"><meta property="og:type" content="website"><meta property="og:title" content="PhysMath Hub · PhysMath Hub"><meta property="og:description" content="A shared space for people who love physics, mathematics, and programming."><meta property="og:url" content="https://phys-math.dev/en/"><meta property="og:site_name" content="PhysMath Hub"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="PhysMath Hub · PhysMath Hub"><meta name="twitter:description" content="A shared space for people who love physics, mathematics, and programming."><!-- Google tag (gtag.js) --><script async src="https://www.googletagmanager.com/gtag/js?id=G-KW8VXVXW7N"></script><script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag('js', new Date());
+
+      gtag('config', 'G-KW8VXVXW7N');
+    </script><!-- Yandex.Metrika counter --><script type="text/javascript">
+      (function(m,e,t,r,i,k,a){
+          m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+          m[i].l=1*new Date();
+          for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+          k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a);
+      })(window, document, 'script', 'https://mc.yandex.ru/metrika/tag.js?id=106989967', 'ym');
+
+      ym(106989967, 'init', {
+        ssr: true,
+        webvisor: true,
+        clickmap: true,
+        ecommerce: 'dataLayer',
+        referrer: document.referrer,
+        url: location.href,
+        accurateTrackBounce: true,
+        trackLinks: true
+      });
+    </script><!-- /Yandex.Metrika counter --><script>
+      (() => {
+        const key = 'theme-preference';
+        const value = localStorage.getItem(key) || 'system';
+        if (value === 'light' || value === 'dark') {
+          document.documentElement.setAttribute('data-theme', value);
+        }
+      })();
+    </script><link rel="stylesheet" href="/_astro/_page_.BOlKRXuh.css"></head> <body> <noscript> <div><img src="https://mc.yandex.ru/watch/106989967" style="position:absolute; left:-9999px;" alt=""></div> </noscript> <header class="site-header"> <div class="site-header-inner"> <a class="brand" href="/en/">PhysMath Hub</a> <nav class="site-nav" aria-label="Primary"> <a href="/en/">Home</a> <a href="/en/archive/1/">Archive</a> </nav> <div class="site-tools"> <nav class="lang-switch" aria-label="Language switch"> <a href="/en/" class="active" hreflang="en">
+EN
+</a> <a href="/ru/" class hreflang="ru">
+RU
+</a> </nav> <button class="theme-toggle" id="theme-toggle" aria-label="Switch theme" title="Switch theme"> <span aria-hidden="true">◐</span> </button> </div> </div> <p class="locale-chip" data-locale="en">EN / RU</p> </header> <main>  <section class="hero"> <h1>PhysMath Hub</h1> <p>A shared space for people who love physics, mathematics, and programming.</p> <div><p>This project mirrors <strong>phys_math_dev</strong> and turns daily channel knowledge into a durable, searchable archive.</p>
+<p>The goal is simple: share useful ideas, keep them accessible, and help curious people connect across disciplines.</p>
+<p>If you enjoy learning how theory meets engineering practice, this hub is for you.</p>
+</div> </section> <section> <h2>Latest posts</h2> <div class="posts-grid"> <article class="post-card"> <a class="post-link" href="/en/post/149-reality-check/"> <div class="post-card-top"> <h2>Reality check</h2> <time datetime="2026-02-25T13:07:37.000Z">February 25, 2026</time> </div> <p>Reality check Yesterday I posted a hand-drawn sketch of the metro station. But I totally forgot that you can just take a photo of the place. Today, on the way to the office, I took this shot. Now you can compare the sket</p> </a>  <div class="post-meta-row"> <a class="source-link" href="https://t.me/phys_math_dev/149" target="_blank" rel="noopener noreferrer"> Original Telegram post </a>  </div> </article><article class="post-card"> <a class="post-link" href="/en/post/148-baghramyan-mystery-revealed/"> <div class="post-card-top"> <h2>Baghramyan mystery revealed</h2> <time datetime="2026-02-24T17:39:51.000Z">February 24, 2026</time> </div> <p>Baghramyan mystery revealed Previously, I posted three mysterious photos. Today, let&#39;s solve the puzzle. These triangles are the result of a strange coincidence. Shadows of handrails intersect in the middle of the step. </p> </a>  <div class="post-meta-row"> <a class="source-link" href="https://t.me/phys_math_dev/148" target="_blank" rel="noopener noreferrer"> Original Telegram post </a>  </div> </article><article class="post-card"> <a class="post-link" href="/en/post/147-web-mirror-of-phys-math-dev-is-alive/"> <div class="post-card-top"> <h2>Web mirror of phys_math_dev is alive!</h2> <time datetime="2026-02-22T16:32:54.000Z">February 22, 2026</time> </div> <p>Web mirror of phys_math_dev is alive! It was… kinda terrible. Not when Codex wrote the code. Not when I deployed it to GitHub. It started when I logged into Cloudflare and began clicking around in the GUI. The real pain </p> </a>  <div class="post-meta-row"> <a class="source-link" href="https://t.me/phys_math_dev/147" target="_blank" rel="noopener noreferrer"> Original Telegram post </a>  </div> </article><article class="post-card"> <a class="post-link" href="/en/post/146-baghramyan-mystery/"> <div class="post-card-top"> <h2>Baghramyan mystery</h2> <time datetime="2026-02-21T10:14:32.000Z">February 21, 2026</time> </div> <p>Baghramyan mystery I made these three photos of an escalator steps of Baghramyan metro station in Yerevan. These black and white triangles in the middle of the step intrigue me. After the third attempt ChatGPT gave me cl</p> </a>  <div class="post-meta-row"> <a class="source-link" href="https://t.me/phys_math_dev/146" target="_blank" rel="noopener noreferrer"> Original Telegram post </a>  </div> </article><article class="post-card"> <a class="post-link" href="/en/post/145-rag-is-dead-long-live-agentic-retrieval/"> <div class="post-card-top"> <h2>RAG is dead, long live agentic retrieval</h2> <time datetime="2026-02-20T07:08:20.000Z">February 20, 2026</time> </div> <p>RAG is dead, long live agentic retrieval Video touches a question I keep bumping into lately: do I actually need to learn RAG? Very roughly: RAG is a way to preprocess your data into embeddings — high-dimensional vectors</p> </a>  <div class="post-meta-row"> <a class="source-link" href="https://t.me/phys_math_dev/145" target="_blank" rel="noopener noreferrer"> Original Telegram post </a>  </div> </article><article class="post-card"> <a class="post-link" href="/en/post/144-post-144/"> <div class="post-card-top"> <h2>Post 144</h2> <time datetime="2026-02-19T07:05:31.000Z">February 19, 2026</time> </div>  </a>  <div class="post-meta-row"> <a class="source-link" href="https://t.me/phys_math_dev/144" target="_blank" rel="noopener noreferrer"> Original Telegram post </a> <div class="reactions" aria-label="Reactions"> <span>👍 3</span> </div> </div> </article><article class="post-card"> <a class="post-link" href="/en/post/143-how-codex-is-built/"> <div class="post-card-top"> <h2>How Codex is built</h2> <time datetime="2026-02-18T08:49:56.000Z">February 18, 2026</time> </div> <p>How Codex is built I&#39;m actively using the &quot;Codex&quot; agent in my work and it has always intrigued me how it works. I even wanted to find a repository with the source code and read it. Fortunately, today I stumbled upon a li</p> </a>  <div class="post-meta-row"> <a class="source-link" href="https://t.me/phys_math_dev/143" target="_blank" rel="noopener noreferrer"> Original Telegram post </a> <div class="reactions" aria-label="Reactions"> <span>🔥 1</span> </div> </div> </article><article class="post-card"> <a class="post-link" href="/en/post/142-element-of-2d-sort/"> <div class="post-card-top"> <h2>Element of 2D sort</h2> <time datetime="2026-02-17T17:59:20.000Z">February 17, 2026</time> </div> <p>Element of 2D sort I don&#39;t have a fully cooked idea today, so let&#39;s discuss half-baked. In The Farmer Was Replaced game there is a subgame where you plant cacti. Quite a complex description of game rules boils down to qu</p> </a>  <div class="post-meta-row"> <a class="source-link" href="https://t.me/phys_math_dev/142" target="_blank" rel="noopener noreferrer"> Original Telegram post </a>  </div> </article><article class="post-card"> <a class="post-link" href="/en/post/141-table-with-leaves/"> <div class="post-card-top"> <h2>Table with leaves</h2> <time datetime="2026-02-15T12:32:16.000Z">February 15, 2026</time> </div> <p>Table with leaves Who would guess that these wooden foldable panels on the sides of a table are &quot;leaves&quot;? Not only decision trees and bushes have them.</p> </a>  <div class="post-meta-row"> <a class="source-link" href="https://t.me/phys_math_dev/141" target="_blank" rel="noopener noreferrer"> Original Telegram post </a>  </div> </article><article class="post-card"> <a class="post-link" href="/en/post/140-periods-in-digits-and-remainders/"> <div class="post-card-top"> <h2>Periods in digits and remainders</h2> <time datetime="2026-02-14T17:41:13.000Z">February 14, 2026</time> </div> <p>Periods in digits and remainders I&#39;m preparing a post with a solution for the first problem in the post . And there is a small question which has irked me for a while. When we calculate digits of 1/n, there is a function</p> </a>  <div class="post-meta-row"> <a class="source-link" href="https://t.me/phys_math_dev/140" target="_blank" rel="noopener noreferrer"> Original Telegram post </a> <div class="reactions" aria-label="Reactions"> <span>👍 1</span> </div> </div> </article><article class="post-card"> <a class="post-link" href="/en/post/139-the-deleted-photo/"> <div class="post-card-top"> <h2>The Deleted Photo</h2> <time datetime="2026-02-13T09:25:26.000Z">February 13, 2026</time> </div> <p>The Deleted Photo A long long time ago my colleague lent me a short-focused lens for my camera. I tested it for a week and this is my favorite shot from that week. Just after I took this shot, it turned out the place was</p> </a>  <div class="post-meta-row"> <a class="source-link" href="https://t.me/phys_math_dev/139" target="_blank" rel="noopener noreferrer"> Original Telegram post </a> <div class="reactions" aria-label="Reactions"> <span>❤ 3</span><span>🔥 3</span> </div> </div> </article><article class="post-card"> <a class="post-link" href="/en/post/138-old-but-gold/"> <div class="post-card-top"> <h2>Old but gold</h2> <time datetime="2026-02-12T06:52:53.000Z">February 12, 2026</time> </div> <p>Old but gold There seems to be two different problems. But really, it&#39;s the same problem. 1. Find the repeating and non-repeating parts of the decimal expansion of 1/n. 1/3 = 0.(3) 1/6 = 0.1(6) 2. For a singly linked lis</p> </a>  <div class="post-meta-row"> <a class="source-link" href="https://t.me/phys_math_dev/138" target="_blank" rel="noopener noreferrer"> Original Telegram post </a> <div class="reactions" aria-label="Reactions"> <span>👀 2</span> </div> </div> </article> </div> <p> <a href="/en/archive/1/">Browse all posts</a> </p> </section>  </main> <footer class="site-footer"> <p>PhysMath Hub · Physics · Mathematics · Programming</p> </footer> <script>
+      (() => {
+        const key = 'theme-preference';
+        const cycle = ['system', 'light', 'dark'];
+        const button = document.getElementById('theme-toggle');
+
+        const apply = (mode) => {
+          if (mode === 'light' || mode === 'dark') {
+            document.documentElement.setAttribute('data-theme', mode);
+          } else {
+            document.documentElement.removeAttribute('data-theme');
+          }
+          if (button) {
+            button.textContent = mode === 'light' ? '☀' : mode === 'dark' ? '☾' : '◐';
+          }
+        };
+
+        let current = localStorage.getItem(key) || 'system';
+        if (!cycle.includes(current)) {
+          current = 'system';
+        }
+        apply(current);
+
+        button?.addEventListener('click', () => {
+          const idx = cycle.indexOf(current);
+          current = cycle[(idx + 1) % cycle.length];
+          localStorage.setItem(key, current);
+          apply(current);
+        });
+      })();
+    </script>  </body> </html>
+
+---- URL: https://phys-math.dev/en/archive/1/ ----
+$ curl -I -A 'Mozilla/5.0 (compatible; YandexBot/3.0; +http://yandex.com/bots)' 'https://phys-math.dev/en/archive/1/'
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:01 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:01 --:--:--     0
+HTTP/2 200 
+date: Thu, 26 Feb 2026 08:11:02 GMT
+content-type: text/html; charset=utf-8
+access-control-allow-origin: *
+cache-control: public, max-age=0, must-revalidate
+cf-cache-status: DYNAMIC
+referrer-policy: strict-origin-when-cross-origin
+x-content-type-options: nosniff
+report-to: {"group":"cf-nel","max_age":604800,"endpoints":[{"url":"https://a.nel.cloudflare.com/report/v4?s=i8vsF6j74u9YoxZlSpt0mdgKKWsKCUg9QjFAePFa4cDPrkX3HoNdFM8GAXayvztqxZEkq8Qr9HS4yoGHKgCRZqitZEKTrSc30PW%2B0uIDI1Wh4K%2BxlGUoD8s%3D"}]}
+nel: {"report_to":"cf-nel","success_fraction":0.0,"max_age":604800}
+server: cloudflare
+cf-ray: 9d3df82a2eeb5fc4-ARN
+alt-svc: h3=":443"; ma=86400
+
+
+$ curl -sS -L -D - -o /dev/null -A 'Mozilla/5.0 (compatible; YandexBot/3.0; +http://yandex.com/bots)' 'https://phys-math.dev/en/archive/1/'
+HTTP/2 200 
+date: Thu, 26 Feb 2026 08:11:04 GMT
+content-type: text/html; charset=utf-8
+access-control-allow-origin: *
+cache-control: public, max-age=0, must-revalidate
+referrer-policy: strict-origin-when-cross-origin
+x-content-type-options: nosniff
+report-to: {"group":"cf-nel","max_age":604800,"endpoints":[{"url":"https://a.nel.cloudflare.com/report/v4?s=9A4UiWvkQA4hkx1AjnFyb%2B%2FTow2NDT5uu1tzpjUVIY6h3HgxgpkS4Sa%2BWC2q0%2BpYynSGXjmfbMeNdAaULIVosWFRWkZt9YL7C5C4VbiyhSno%2BN0FjmZy3rs%3D"}]}
+nel: {"report_to":"cf-nel","success_fraction":0.0,"max_age":604800}
+server: cloudflare
+cf-cache-status: DYNAMIC
+cf-ray: 9d3df8398c8423a0-ARN
+alt-svc: h3=":443"; ma=86400
+
+
+$ curl -sS -L -A 'Mozilla/5.0 (compatible; YandexBot/3.0; +http://yandex.com/bots)' 'https://phys-math.dev/en/archive/1/' | sed -n '1,120p'
+<!DOCTYPE html><html lang="en"> <head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="icon" type="image/jpeg" href="/favicon.jpg"><title>Archive, page 1 · PhysMath Hub</title><meta name="description" content="Archive page 1."><link rel="canonical" href="https://phys-math.dev/en/archive/1/"><link rel="alternate" hreflang="en" href="https://phys-math.dev/en/archive/1/"><link rel="alternate" hreflang="ru" href="https://phys-math.dev/ru/archive/1/"><link rel="alternate" hreflang="x-default" href="https://phys-math.dev/en/archive/1/"><meta property="og:type" content="website"><meta property="og:title" content="Archive, page 1 · PhysMath Hub"><meta property="og:description" content="Archive page 1."><meta property="og:url" content="https://phys-math.dev/en/archive/1/"><meta property="og:site_name" content="PhysMath Hub"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="Archive, page 1 · PhysMath Hub"><meta name="twitter:description" content="Archive page 1."><!-- Google tag (gtag.js) --><script async src="https://www.googletagmanager.com/gtag/js?id=G-KW8VXVXW7N"></script><script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag('js', new Date());
+
+      gtag('config', 'G-KW8VXVXW7N');
+    </script><!-- Yandex.Metrika counter --><script type="text/javascript">
+      (function(m,e,t,r,i,k,a){
+          m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+          m[i].l=1*new Date();
+          for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+          k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a);
+      })(window, document, 'script', 'https://mc.yandex.ru/metrika/tag.js?id=106989967', 'ym');
+
+      ym(106989967, 'init', {
+        ssr: true,
+        webvisor: true,
+        clickmap: true,
+        ecommerce: 'dataLayer',
+        referrer: document.referrer,
+        url: location.href,
+        accurateTrackBounce: true,
+        trackLinks: true
+      });
+    </script><!-- /Yandex.Metrika counter --><script>
+      (() => {
+        const key = 'theme-preference';
+        const value = localStorage.getItem(key) || 'system';
+        if (value === 'light' || value === 'dark') {
+          document.documentElement.setAttribute('data-theme', value);
+        }
+      })();
+    </script><link rel="stylesheet" href="/_astro/_page_.BOlKRXuh.css"></head> <body> <noscript> <div><img src="https://mc.yandex.ru/watch/106989967" style="position:absolute; left:-9999px;" alt=""></div> </noscript> <header class="site-header"> <div class="site-header-inner"> <a class="brand" href="/en/">PhysMath Hub</a> <nav class="site-nav" aria-label="Primary"> <a href="/en/">Home</a> <a href="/en/archive/1/">Archive</a> </nav> <div class="site-tools"> <nav class="lang-switch" aria-label="Language switch"> <a href="/en/archive/1/" class="active" hreflang="en">
+EN
+</a> <a href="/ru/archive/1/" class hreflang="ru">
+RU
+</a> </nav> <button class="theme-toggle" id="theme-toggle" aria-label="Switch theme" title="Switch theme"> <span aria-hidden="true">◐</span> </button> </div> </div> <p class="locale-chip" data-locale="en">EN / RU</p> </header> <main>  <section class="archive-head"> <h1>Archive · page 1</h1> </section> <div class="posts-grid"> <article class="post-card"> <a class="post-link" href="/en/post/149-reality-check/"> <div class="post-card-top"> <h2>Reality check</h2> <time datetime="2026-02-25T13:07:37.000Z">February 25, 2026</time> </div> <p>Reality check Yesterday I posted a hand-drawn sketch of the metro station. But I totally forgot that you can just take a photo of the place. Today, on the way to the office, I took this shot. Now you can compare the sket</p> </a>  <div class="post-meta-row"> <a class="source-link" href="https://t.me/phys_math_dev/149" target="_blank" rel="noopener noreferrer"> Original Telegram post </a>  </div> </article><article class="post-card"> <a class="post-link" href="/en/post/148-baghramyan-mystery-revealed/"> <div class="post-card-top"> <h2>Baghramyan mystery revealed</h2> <time datetime="2026-02-24T17:39:51.000Z">February 24, 2026</time> </div> <p>Baghramyan mystery revealed Previously, I posted three mysterious photos. Today, let&#39;s solve the puzzle. These triangles are the result of a strange coincidence. Shadows of handrails intersect in the middle of the step. </p> </a>  <div class="post-meta-row"> <a class="source-link" href="https://t.me/phys_math_dev/148" target="_blank" rel="noopener noreferrer"> Original Telegram post </a>  </div> </article><article class="post-card"> <a class="post-link" href="/en/post/147-web-mirror-of-phys-math-dev-is-alive/"> <div class="post-card-top"> <h2>Web mirror of phys_math_dev is alive!</h2> <time datetime="2026-02-22T16:32:54.000Z">February 22, 2026</time> </div> <p>Web mirror of phys_math_dev is alive! It was… kinda terrible. Not when Codex wrote the code. Not when I deployed it to GitHub. It started when I logged into Cloudflare and began clicking around in the GUI. The real pain </p> </a>  <div class="post-meta-row"> <a class="source-link" href="https://t.me/phys_math_dev/147" target="_blank" rel="noopener noreferrer"> Original Telegram post </a>  </div> </article><article class="post-card"> <a class="post-link" href="/en/post/146-baghramyan-mystery/"> <div class="post-card-top"> <h2>Baghramyan mystery</h2> <time datetime="2026-02-21T10:14:32.000Z">February 21, 2026</time> </div> <p>Baghramyan mystery I made these three photos of an escalator steps of Baghramyan metro station in Yerevan. These black and white triangles in the middle of the step intrigue me. After the third attempt ChatGPT gave me cl</p> </a>  <div class="post-meta-row"> <a class="source-link" href="https://t.me/phys_math_dev/146" target="_blank" rel="noopener noreferrer"> Original Telegram post </a>  </div> </article><article class="post-card"> <a class="post-link" href="/en/post/145-rag-is-dead-long-live-agentic-retrieval/"> <div class="post-card-top"> <h2>RAG is dead, long live agentic retrieval</h2> <time datetime="2026-02-20T07:08:20.000Z">February 20, 2026</time> </div> <p>RAG is dead, long live agentic retrieval Video touches a question I keep bumping into lately: do I actually need to learn RAG? Very roughly: RAG is a way to preprocess your data into embeddings — high-dimensional vectors</p> </a>  <div class="post-meta-row"> <a class="source-link" href="https://t.me/phys_math_dev/145" target="_blank" rel="noopener noreferrer"> Original Telegram post </a>  </div> </article><article class="post-card"> <a class="post-link" href="/en/post/144-post-144/"> <div class="post-card-top"> <h2>Post 144</h2> <time datetime="2026-02-19T07:05:31.000Z">February 19, 2026</time> </div>  </a>  <div class="post-meta-row"> <a class="source-link" href="https://t.me/phys_math_dev/144" target="_blank" rel="noopener noreferrer"> Original Telegram post </a> <div class="reactions" aria-label="Reactions"> <span>👍 3</span> </div> </div> </article><article class="post-card"> <a class="post-link" href="/en/post/143-how-codex-is-built/"> <div class="post-card-top"> <h2>How Codex is built</h2> <time datetime="2026-02-18T08:49:56.000Z">February 18, 2026</time> </div> <p>How Codex is built I&#39;m actively using the &quot;Codex&quot; agent in my work and it has always intrigued me how it works. I even wanted to find a repository with the source code and read it. Fortunately, today I stumbled upon a li</p> </a>  <div class="post-meta-row"> <a class="source-link" href="https://t.me/phys_math_dev/143" target="_blank" rel="noopener noreferrer"> Original Telegram post </a> <div class="reactions" aria-label="Reactions"> <span>🔥 1</span> </div> </div> </article><article class="post-card"> <a class="post-link" href="/en/post/142-element-of-2d-sort/"> <div class="post-card-top"> <h2>Element of 2D sort</h2> <time datetime="2026-02-17T17:59:20.000Z">February 17, 2026</time> </div> <p>Element of 2D sort I don&#39;t have a fully cooked idea today, so let&#39;s discuss half-baked. In The Farmer Was Replaced game there is a subgame where you plant cacti. Quite a complex description of game rules boils down to qu</p> </a>  <div class="post-meta-row"> <a class="source-link" href="https://t.me/phys_math_dev/142" target="_blank" rel="noopener noreferrer"> Original Telegram post </a>  </div> </article><article class="post-card"> <a class="post-link" href="/en/post/141-table-with-leaves/"> <div class="post-card-top"> <h2>Table with leaves</h2> <time datetime="2026-02-15T12:32:16.000Z">February 15, 2026</time> </div> <p>Table with leaves Who would guess that these wooden foldable panels on the sides of a table are &quot;leaves&quot;? Not only decision trees and bushes have them.</p> </a>  <div class="post-meta-row"> <a class="source-link" href="https://t.me/phys_math_dev/141" target="_blank" rel="noopener noreferrer"> Original Telegram post </a>  </div> </article><article class="post-card"> <a class="post-link" href="/en/post/140-periods-in-digits-and-remainders/"> <div class="post-card-top"> <h2>Periods in digits and remainders</h2> <time datetime="2026-02-14T17:41:13.000Z">February 14, 2026</time> </div> <p>Periods in digits and remainders I&#39;m preparing a post with a solution for the first problem in the post . And there is a small question which has irked me for a while. When we calculate digits of 1/n, there is a function</p> </a>  <div class="post-meta-row"> <a class="source-link" href="https://t.me/phys_math_dev/140" target="_blank" rel="noopener noreferrer"> Original Telegram post </a> <div class="reactions" aria-label="Reactions"> <span>👍 1</span> </div> </div> </article><article class="post-card"> <a class="post-link" href="/en/post/139-the-deleted-photo/"> <div class="post-card-top"> <h2>The Deleted Photo</h2> <time datetime="2026-02-13T09:25:26.000Z">February 13, 2026</time> </div> <p>The Deleted Photo A long long time ago my colleague lent me a short-focused lens for my camera. I tested it for a week and this is my favorite shot from that week. Just after I took this shot, it turned out the place was</p> </a>  <div class="post-meta-row"> <a class="source-link" href="https://t.me/phys_math_dev/139" target="_blank" rel="noopener noreferrer"> Original Telegram post </a> <div class="reactions" aria-label="Reactions"> <span>❤ 3</span><span>🔥 3</span> </div> </div> </article><article class="post-card"> <a class="post-link" href="/en/post/138-old-but-gold/"> <div class="post-card-top"> <h2>Old but gold</h2> <time datetime="2026-02-12T06:52:53.000Z">February 12, 2026</time> </div> <p>Old but gold There seems to be two different problems. But really, it&#39;s the same problem. 1. Find the repeating and non-repeating parts of the decimal expansion of 1/n. 1/3 = 0.(3) 1/6 = 0.1(6) 2. For a singly linked lis</p> </a>  <div class="post-meta-row"> <a class="source-link" href="https://t.me/phys_math_dev/138" target="_blank" rel="noopener noreferrer"> Original Telegram post </a> <div class="reactions" aria-label="Reactions"> <span>👀 2</span> </div> </div> </article><article class="post-card"> <a class="post-link" href="/en/post/137-how-to-vibecode-chizhik-pyzchic-app/"> <div class="post-card-top"> <h2>How to vibecode Chizhik-Pyzchic app</h2> <time datetime="2026-02-11T06:03:23.000Z">February 11, 2026</time> </div> <p>How to vibecode Chizhik-Pyzchic app In the alternative channel there is step-by-step instruction how to create a small, but fully functional web application. Post language is Russian.</p> </a>  <div class="post-meta-row"> <a class="source-link" href="https://t.me/phys_math_dev/137" target="_blank" rel="noopener noreferrer"> Original Telegram post </a> <div class="reactions" aria-label="Reactions"> <span>❤ 1</span><span>👍 1</span> </div> </div> </article><article class="post-card"> <a class="post-link" href="/en/post/136-old-but-gold/"> <div class="post-card-top"> <h2>Old but gold</h2> <time datetime="2026-02-10T08:19:25.000Z">February 10, 2026</time> </div> <p>Old but gold Let&#39;s discuss a programming task. You have a bunch of numeric pairs like 5, 5, 7, 7, 2, 2 and one unique number, like 13. You mix everything into one array and shuffle it. Now you have something like [7, 2, </p> </a>  <div class="post-meta-row"> <a class="source-link" href="https://t.me/phys_math_dev/136" target="_blank" rel="noopener noreferrer"> Original Telegram post </a> <div class="reactions" aria-label="Reactions"> <span>🤷‍♂ 1</span> </div> </div> </article><article class="post-card"> <a class="post-link" href="/en/post/135-titanic-maching-learning-from-disaster/"> <div class="post-card-top"> <h2>Titanic - Maching Learning from Disaster</h2> <time datetime="2026-02-09T06:05:07.000Z">February 9, 2026</time> </div> <p>Titanic - Maching Learning from Disaster I want to close my gestalt. I invented a new ML method, I&#39;m working as ML engineer for 9 years, I taught ML in GoTo school and in Russian Armenian University. But I have never sub</p> </a>  <div class="post-meta-row"> <a class="source-link" href="https://t.me/phys_math_dev/135" target="_blank" rel="noopener noreferrer"> Original Telegram post </a> <div class="reactions" aria-label="Reactions"> <span>🔥 5</span> </div> </div> </article><article class="post-card"> <a class="post-link" href="/en/post/134-from-uplift-to-logit/"> <div class="post-card-top"> <h2>From uplift to logit</h2> <time datetime="2026-02-08T11:27:57.000Z">February 8, 2026</time> </div> <p>From uplift to logit Where we are In the previous post we started to build a bridge from uplift to a score, which lets us solve binary classification problem. What we achieved: ⚗️ calculated probabilities for all combina</p> </a>  <div class="post-meta-row"> <a class="source-link" href="https://t.me/phys_math_dev/134" target="_blank" rel="noopener noreferrer"> Original Telegram post </a>  </div> </article><article class="post-card"> <a class="post-link" href="/en/post/133-to-those-who-want-to-understand-agents-properly/"> <div class="post-card-top"> <h2>To those, who want to understand agents properly</h2> <time datetime="2026-02-06T06:51:33.000Z">February 6, 2026</time> </div> <p>To those, who want to understand agents properly There is a post (in Russian) from a guy I really respect. Formally, it’s an advertisement for Yet Another Agent’s channel — but this time it’s not about news or hype. It’s</p> </a>  <div class="post-meta-row"> <a class="source-link" href="https://t.me/phys_math_dev/133" target="_blank" rel="noopener noreferrer"> Original Telegram post </a>  </div> </article><article class="post-card"> <a class="post-link" href="/en/post/132-slightly-improved-mapreduce-sunflowers/"> <div class="post-card-top"> <h2>Slightly improved MapReduce sunflowers</h2> <time datetime="2026-02-05T11:09:16.000Z">February 5, 2026</time> </div> <p>Slightly improved MapReduce sunflowers I just realized that in the post I promised to share a new version of map-reduce sunflowers with a small improvement for watering cells with tall sunflowers. There are no 10 fire fl</p> </a>  <div class="post-meta-row"> <a class="source-link" href="https://t.me/phys_math_dev/132" target="_blank" rel="noopener noreferrer"> Original Telegram post </a>  </div> </article><article class="post-card"> <a class="post-link" href="/en/post/131-vibe-coding-guide/"> <div class="post-card-top"> <h2>Vibe Coding Guide</h2> <time datetime="2026-02-02T07:20:04.000Z">February 2, 2026</time> </div> <p>Vibe Coding Guide I’m monitoring a few resources with good vibe-coding and agentic programming practices, and I try to apply this stuff in my everyday work. There’s a manual with some best vibe-coding practices. I’m goin</p> </a>  <div class="post-meta-row"> <a class="source-link" href="https://t.me/phys_math_dev/131" target="_blank" rel="noopener noreferrer"> Original Telegram post </a> <div class="reactions" aria-label="Reactions"> <span>🔥 3</span><span>❤ 2</span> </div> </div> </article><article class="post-card"> <a class="post-link" href="/en/post/128-levels-of-liquid-in-a-markov-process-pagerank/"> <div class="post-card-top"> <h2>Levels of liquid in a Markov process = PageRank</h2> <time datetime="2026-02-01T14:58:00.000Z">February 1, 2026</time> </div> <p>Levels of liquid in a Markov process = PageRank This post is a compact version of what happened in a neighboring chat. Sorry to newcomers who already read it — and welcome! The first two pictures are from a student who w</p> </a>  <div class="post-meta-row"> <a class="source-link" href="https://t.me/phys_math_dev/128" target="_blank" rel="noopener noreferrer"> Original Telegram post </a>  </div> </article> </div> <nav class="pagination" aria-label="Pagination"> <span class="disabled">Previous</span> <span>Page 1 / 7</span> <a href="/en/archive/2/">Next</a> </nav>  </main> <footer class="site-footer"> <p>PhysMath Hub · Physics · Mathematics · Programming</p> </footer> <script>
+      (() => {
+        const key = 'theme-preference';
+        const cycle = ['system', 'light', 'dark'];
+        const button = document.getElementById('theme-toggle');
+
+        const apply = (mode) => {
+          if (mode === 'light' || mode === 'dark') {
+            document.documentElement.setAttribute('data-theme', mode);
+          } else {
+            document.documentElement.removeAttribute('data-theme');
+          }
+          if (button) {
+            button.textContent = mode === 'light' ? '☀' : mode === 'dark' ? '☾' : '◐';
+          }
+        };
+
+        let current = localStorage.getItem(key) || 'system';
+        if (!cycle.includes(current)) {
+          current = 'system';
+        }
+        apply(current);
+
+        button?.addEventListener('click', () => {
+          const idx = cycle.indexOf(current);
+          current = cycle[(idx + 1) % cycle.length];
+          localStorage.setItem(key, current);
+          apply(current);
+        });
+      })();
+    </script>  </body> </html>
+
+---- URL: https://phys-math.dev/en/post/149-reality-check/ ----
+$ curl -I -A 'Mozilla/5.0 (compatible; YandexBot/3.0; +http://yandex.com/bots)' 'https://phys-math.dev/en/post/149-reality-check/'
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:01 --:--:--     0
+HTTP/2 200 
+date: Thu, 26 Feb 2026 08:11:06 GMT
+content-type: text/html; charset=utf-8
+access-control-allow-origin: *
+cache-control: public, max-age=0, must-revalidate
+cf-cache-status: DYNAMIC
+referrer-policy: strict-origin-when-cross-origin
+x-content-type-options: nosniff
+report-to: {"group":"cf-nel","max_age":604800,"endpoints":[{"url":"https://a.nel.cloudflare.com/report/v4?s=Dy%2BkIPfRRIqyFrm8mNOHHw6TIqSdpvS4Evk3LW4aANmb6h7Fvuk2fXRGWx2rl1d3dzC1PxbOhMt%2FKUpk5fcTVmvJwh%2BEjfUNJFowXb4Em%2BVDxVlzteOWAFk%3D"}]}
+nel: {"report_to":"cf-nel","success_fraction":0.0,"max_age":604800}
+server: cloudflare
+cf-ray: 9d3df84499f2c63f-ARN
+alt-svc: h3=":443"; ma=86400
+
+
+$ curl -sS -L -D - -o /dev/null -A 'Mozilla/5.0 (compatible; YandexBot/3.0; +http://yandex.com/bots)' 'https://phys-math.dev/en/post/149-reality-check/'
+HTTP/2 200 
+date: Thu, 26 Feb 2026 08:11:06 GMT
+content-type: text/html; charset=utf-8
+access-control-allow-origin: *
+cache-control: public, max-age=0, must-revalidate
+referrer-policy: strict-origin-when-cross-origin
+x-content-type-options: nosniff
+report-to: {"group":"cf-nel","max_age":604800,"endpoints":[{"url":"https://a.nel.cloudflare.com/report/v4?s=E%2FiWFHrE27AYYya26JUx4w9vcfL%2BQWsDTtYQWTWmSJCbgbtAGOGSpTWcTHxvDKopgakWcD%2FTR9e0pR%2FxX%2BD1qn9TRXhmOKNJgoQN8KObQ%2Bg1Dy2bTVtj"}]}
+nel: {"report_to":"cf-nel","success_fraction":0.0,"max_age":604800}
+server: cloudflare
+cf-cache-status: DYNAMIC
+cf-ray: 9d3df8482f39ec31-DME
+alt-svc: h3=":443"; ma=86400
+
+
+$ curl -sS -L -A 'Mozilla/5.0 (compatible; YandexBot/3.0; +http://yandex.com/bots)' 'https://phys-math.dev/en/post/149-reality-check/' | sed -n '1,120p'
+<!DOCTYPE html><html lang="en"> <head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="icon" type="image/jpeg" href="/favicon.jpg"><title>Reality check · PhysMath Hub</title><meta name="description" content="Reality check Yesterday I posted a hand-drawn sketch of the metro station. But I totally forgot that you can just take a photo of the place. Today, on the way to the office, I took this shot. Now you can compare the sket"><link rel="canonical" href="https://phys-math.dev/en/post/149-reality-check/"><link rel="alternate" hreflang="en" href="https://phys-math.dev/en/post/149-reality-check/"><link rel="alternate" hreflang="ru" href="https://phys-math.dev/en/post/149-reality-check/"><link rel="alternate" hreflang="x-default" href="https://phys-math.dev/en/post/149-reality-check/"><meta property="og:type" content="website"><meta property="og:title" content="Reality check · PhysMath Hub"><meta property="og:description" content="Reality check Yesterday I posted a hand-drawn sketch of the metro station. But I totally forgot that you can just take a photo of the place. Today, on the way to the office, I took this shot. Now you can compare the sket"><meta property="og:url" content="https://phys-math.dev/en/post/149-reality-check/"><meta property="og:site_name" content="PhysMath Hub"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="Reality check · PhysMath Hub"><meta name="twitter:description" content="Reality check Yesterday I posted a hand-drawn sketch of the metro station. But I totally forgot that you can just take a photo of the place. Today, on the way to the office, I took this shot. Now you can compare the sket"><!-- Google tag (gtag.js) --><script async src="https://www.googletagmanager.com/gtag/js?id=G-KW8VXVXW7N"></script><script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag('js', new Date());
+
+      gtag('config', 'G-KW8VXVXW7N');
+    </script><!-- Yandex.Metrika counter --><script type="text/javascript">
+      (function(m,e,t,r,i,k,a){
+          m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+          m[i].l=1*new Date();
+          for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+          k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a);
+      })(window, document, 'script', 'https://mc.yandex.ru/metrika/tag.js?id=106989967', 'ym');
+
+      ym(106989967, 'init', {
+        ssr: true,
+        webvisor: true,
+        clickmap: true,
+        ecommerce: 'dataLayer',
+        referrer: document.referrer,
+        url: location.href,
+        accurateTrackBounce: true,
+        trackLinks: true
+      });
+    </script><!-- /Yandex.Metrika counter --><script>
+      (() => {
+        const key = 'theme-preference';
+        const value = localStorage.getItem(key) || 'system';
+        if (value === 'light' || value === 'dark') {
+          document.documentElement.setAttribute('data-theme', value);
+        }
+      })();
+    </script><link rel="stylesheet" href="/_astro/_page_.BOlKRXuh.css"></head> <body> <noscript> <div><img src="https://mc.yandex.ru/watch/106989967" style="position:absolute; left:-9999px;" alt=""></div> </noscript> <header class="site-header"> <div class="site-header-inner"> <a class="brand" href="/en/">PhysMath Hub</a> <nav class="site-nav" aria-label="Primary"> <a href="/en/">Home</a> <a href="/en/archive/1/">Archive</a> </nav> <div class="site-tools"> <nav class="lang-switch" aria-label="Language switch"> <a href="/en/post/149-reality-check/" class="active" hreflang="en">
+EN
+</a> <a href="/en/post/149-reality-check/" class hreflang="ru">
+RU
+</a> </nav> <button class="theme-toggle" id="theme-toggle" aria-label="Switch theme" title="Switch theme"> <span aria-hidden="true">◐</span> </button> </div> </div> <p class="locale-chip" data-locale="en">EN / RU</p> </header> <main> <script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","headline":"Reality check","inLanguage":"en","datePublished":"2026-02-25T13:07:37.000Z","dateModified":"2026-02-25T13:07:40+00:00","mainEntityOfPage":"https://phys-math.dev/en/post/149-reality-check/","url":"https://phys-math.dev/en/post/149-reality-check/","description":"Reality check Yesterday I posted a hand-drawn sketch of the metro station. But I totally forgot that you can just take a photo of the place. Today, on the way to the office, I took this shot. Now you can compare the sket","image":"https://pub-df8eda899f364205ba20a32dc3740d46.r2.dev/telegram/phys_math_dev/08e3c79bf7fa27c8701844964d2e4451b551501a6736ec94e20285d2db52016a.jpg","publisher":{"@type":"Organization","name":"PhysMath Hub","url":"https://phys-math.dev"},"author":{"@type":"Organization","name":"PhysMath Hub"}}</script><article class="post-page"><h1>Reality check</h1><p class="post-date">February 25, 2026</p><section class="media-grid" aria-label="Post media"><figure class="media-card"><img src="https://pub-df8eda899f364205ba20a32dc3740d46.r2.dev/telegram/phys_math_dev/08e3c79bf7fa27c8701844964d2e4451b551501a6736ec94e20285d2db52016a.jpg" alt="" loading="lazy"></figure><figure class="media-card"><img src="https://pub-df8eda899f364205ba20a32dc3740d46.r2.dev/telegram/phys_math_dev/da3b9b6bb818a19473177d5948474cf97e0c97c8c014313cc19a75156d216d28.jpg" alt="" loading="lazy"></figure></section><section class="post-content"><p>Reality check</p>
+<p>Yesterday I posted a hand-drawn sketch of the metro station. But I totally forgot that you can just take a photo of the place. Today, on the way to the office, I took this shot. Now you can compare the sketch and the photo and see whether my sketch was accurate.</p>
+</section><footer class="post-footer"><p><a href="https://t.me/phys_math_dev/149" target="_blank" rel="noopener noreferrer">Original Telegram post</a></p></footer></article> </main> <footer class="site-footer"> <p>PhysMath Hub · Physics · Mathematics · Programming</p> </footer> <script>
+      (() => {
+        const key = 'theme-preference';
+        const cycle = ['system', 'light', 'dark'];
+        const button = document.getElementById('theme-toggle');
+
+        const apply = (mode) => {
+          if (mode === 'light' || mode === 'dark') {
+            document.documentElement.setAttribute('data-theme', mode);
+          } else {
+            document.documentElement.removeAttribute('data-theme');
+          }
+          if (button) {
+            button.textContent = mode === 'light' ? '☀' : mode === 'dark' ? '☾' : '◐';
+          }
+        };
+
+        let current = localStorage.getItem(key) || 'system';
+        if (!cycle.includes(current)) {
+          current = 'system';
+        }
+        apply(current);
+
+        button?.addEventListener('click', () => {
+          const idx = cycle.indexOf(current);
+          current = cycle[(idx + 1) % cycle.length];
+          localStorage.setItem(key, current);
+          apply(current);
+        });
+      })();
+    </script>  </body> </html>
+
+---- URL: https://phys-math.dev/robots.txt ----
+$ curl -I -A 'Mozilla/5.0 (compatible; YandexBot/3.0; +http://yandex.com/bots)' 'https://phys-math.dev/robots.txt'
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:01 --:--:--     0
+HTTP/2 200 
+date: Thu, 26 Feb 2026 08:11:08 GMT
+content-type: text/plain; charset=utf-8
+access-control-allow-origin: *
+cache-control: public, max-age=14400, must-revalidate
+nel: {"report_to":"cf-nel","success_fraction":0.0,"max_age":604800}
+referrer-policy: strict-origin-when-cross-origin
+x-content-type-options: nosniff
+report-to: {"group":"cf-nel","max_age":604800,"endpoints":[{"url":"https://a.nel.cloudflare.com/report/v4?s=fRkan14xEKvFB6xBSVWNzY%2BakYjJmNvvBrGPok6FuL2D2F4Tl6WVPpo7I9EUf79Gzg05TcHdkjMVyVTn0pHAqK3E0QL%2FktpbHBvOKcw%3D"}]}
+etag: W/"b2d6263fcbf068289b786db1193748c2"
+cf-cache-status: REVALIDATED
+server: cloudflare
+vary: accept-encoding
+cf-ray: 9d3df8530db69d3a-DME
+alt-svc: h3=":443"; ma=86400
+
+
+$ curl -sS -L -D - -o /dev/null -A 'Mozilla/5.0 (compatible; YandexBot/3.0; +http://yandex.com/bots)' 'https://phys-math.dev/robots.txt'
+HTTP/2 200 
+date: Thu, 26 Feb 2026 08:11:09 GMT
+content-type: text/plain; charset=utf-8
+content-length: 95
+access-control-allow-origin: *
+cache-control: public, max-age=14400, must-revalidate
+etag: "b2d6263fcbf068289b786db1193748c2"
+referrer-policy: strict-origin-when-cross-origin
+x-content-type-options: nosniff
+report-to: {"group":"cf-nel","max_age":604800,"endpoints":[{"url":"https://a.nel.cloudflare.com/report/v4?s=tkPncUo23NE%2FwUDPnhTtYnw2STr%2FlBhVvroiywDFhkEvoqUVEaApd0a6UsDjA4UGkbDasLB5SyWEFMBKMjXvfoFJnbUTY38xsj56O48%3D"}]}
+nel: {"report_to":"cf-nel","success_fraction":0.0,"max_age":604800}
+server: cloudflare
+cf-cache-status: REVALIDATED
+accept-ranges: bytes
+cf-ray: 9d3df85709063a56-ARN
+alt-svc: h3=":443"; ma=86400
+
+
+$ curl -sS -L -A 'Mozilla/5.0 (compatible; YandexBot/3.0; +http://yandex.com/bots)' 'https://phys-math.dev/robots.txt' | sed -n '1,120p'
+User-agent: *
+Allow: /
+
+Host: https://phys-math.dev
+Sitemap: https://phys-math.dev/sitemap.xml
+
+
+---- URL: https://phys-math.dev/sitemap.xml ----
+$ curl -I -A 'Mozilla/5.0 (compatible; YandexBot/3.0; +http://yandex.com/bots)' 'https://phys-math.dev/sitemap.xml'
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+HTTP/2 200 
+date: Thu, 26 Feb 2026 08:11:10 GMT
+content-type: application/xml
+access-control-allow-origin: *
+cache-control: public, max-age=0, must-revalidate
+etag: "55de2129e54aa61f18df91526c5d05c6"
+referrer-policy: strict-origin-when-cross-origin
+x-content-type-options: nosniff
+report-to: {"group":"cf-nel","max_age":604800,"endpoints":[{"url":"https://a.nel.cloudflare.com/report/v4?s=ge9kn%2BxA0xSs5V3WI9oYxpcsVhIUnOjf3IpJOA8nID94Rf1VODDumgScVnFYrZoQRO2049PHsOr3MYKTRszUO%2BJlnJKLPAHrQIC%2BN9MKEXEKYejimjLZkxI%3D"}]}
+nel: {"report_to":"cf-nel","success_fraction":0.0,"max_age":604800}
+server: cloudflare
+cf-cache-status: DYNAMIC
+cf-ray: 9d3df85e8dd82aea-ARN
+alt-svc: h3=":443"; ma=86400
+
+
+$ curl -sS -L -D - -o /dev/null -A 'Mozilla/5.0 (compatible; YandexBot/3.0; +http://yandex.com/bots)' 'https://phys-math.dev/sitemap.xml'
+HTTP/2 200 
+date: Thu, 26 Feb 2026 08:11:11 GMT
+content-type: application/xml
+content-length: 52354
+access-control-allow-origin: *
+cache-control: public, max-age=0, must-revalidate
+etag: "55de2129e54aa61f18df91526c5d05c6"
+referrer-policy: strict-origin-when-cross-origin
+x-content-type-options: nosniff
+report-to: {"group":"cf-nel","max_age":604800,"endpoints":[{"url":"https://a.nel.cloudflare.com/report/v4?s=GybF1sz8WEfOtdwylxai2Nku7VtVBnohVpLY1t0aZS7%2FNcXKC20IZPeahg4QFO7oegH3PSy94KrqzcnpWJtOYozEc%2F4YcBNiLUWvT9KF5dBTfXo9wJXu0WU%3D"}]}
+nel: {"report_to":"cf-nel","success_fraction":0.0,"max_age":604800}
+server: cloudflare
+cf-cache-status: DYNAMIC
+cf-ray: 9d3df861ec6eeff3-ARN
+alt-svc: h3=":443"; ma=86400
+
+
+$ curl -sS -L -A 'Mozilla/5.0 (compatible; YandexBot/3.0; +http://yandex.com/bots)' 'https://phys-math.dev/sitemap.xml' | sed -n '1,120p'
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>https://phys-math.dev/en/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://phys-math.dev/en/" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://phys-math.dev/ru/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://phys-math.dev/en/" />
+  </url>
+  <url>
+    <loc>https://phys-math.dev/ru/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://phys-math.dev/en/" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://phys-math.dev/ru/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://phys-math.dev/en/" />
+  </url>
+  <url>
+    <loc>https://phys-math.dev/en/archive/1/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://phys-math.dev/en/archive/1/" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://phys-math.dev/ru/archive/1/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://phys-math.dev/en/archive/1/" />
+  </url>
+  <url>
+    <loc>https://phys-math.dev/en/archive/2/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://phys-math.dev/en/archive/2/" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://phys-math.dev/ru/archive/1/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://phys-math.dev/en/archive/2/" />
+  </url>
+  <url>
+    <loc>https://phys-math.dev/en/archive/3/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://phys-math.dev/en/archive/3/" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://phys-math.dev/ru/archive/1/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://phys-math.dev/en/archive/3/" />
+  </url>
+  <url>
+    <loc>https://phys-math.dev/en/archive/4/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://phys-math.dev/en/archive/4/" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://phys-math.dev/ru/archive/1/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://phys-math.dev/en/archive/4/" />
+  </url>
+  <url>
+    <loc>https://phys-math.dev/en/archive/5/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://phys-math.dev/en/archive/5/" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://phys-math.dev/ru/archive/1/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://phys-math.dev/en/archive/5/" />
+  </url>
+  <url>
+    <loc>https://phys-math.dev/en/archive/6/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://phys-math.dev/en/archive/6/" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://phys-math.dev/ru/archive/1/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://phys-math.dev/en/archive/6/" />
+  </url>
+  <url>
+    <loc>https://phys-math.dev/en/archive/7/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://phys-math.dev/en/archive/7/" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://phys-math.dev/ru/archive/1/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://phys-math.dev/en/archive/7/" />
+  </url>
+  <url>
+    <loc>https://phys-math.dev/ru/archive/1/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://phys-math.dev/en/archive/1/" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://phys-math.dev/ru/archive/1/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://phys-math.dev/en/archive/1/" />
+  </url>
+  <url>
+    <loc>https://phys-math.dev/en/post/149-reality-check/</loc>
+    <lastmod>2026-02-25T13:07:40.000Z</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://phys-math.dev/en/post/149-reality-check/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://phys-math.dev/en/post/149-reality-check/" />
+  </url>
+  <url>
+    <loc>https://phys-math.dev/en/post/148-baghramyan-mystery-revealed/</loc>
+    <lastmod>2026-02-24T17:42:12.000Z</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://phys-math.dev/en/post/148-baghramyan-mystery-revealed/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://phys-math.dev/en/post/148-baghramyan-mystery-revealed/" />
+  </url>
+  <url>
+    <loc>https://phys-math.dev/en/post/147-web-mirror-of-phys-math-dev-is-alive/</loc>
+    <lastmod>2026-02-22T16:32:57.000Z</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://phys-math.dev/en/post/147-web-mirror-of-phys-math-dev-is-alive/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://phys-math.dev/en/post/147-web-mirror-of-phys-math-dev-is-alive/" />
+  </url>
+  <url>
+    <loc>https://phys-math.dev/en/post/146-baghramyan-mystery/</loc>
+    <lastmod>2026-02-21T10:14:35.000Z</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://phys-math.dev/en/post/146-baghramyan-mystery/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://phys-math.dev/en/post/146-baghramyan-mystery/" />
+  </url>
+  <url>
+    <loc>https://phys-math.dev/en/post/145-rag-is-dead-long-live-agentic-retrieval/</loc>
+    <lastmod>2026-02-20T07:10:27.000Z</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://phys-math.dev/en/post/145-rag-is-dead-long-live-agentic-retrieval/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://phys-math.dev/en/post/145-rag-is-dead-long-live-agentic-retrieval/" />
+  </url>
+  <url>
+    <loc>https://phys-math.dev/en/post/144-post-144/</loc>
+    <lastmod>2026-02-19T09:46:23.000Z</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://phys-math.dev/en/post/144-post-144/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://phys-math.dev/en/post/144-post-144/" />
+  </url>
+  <url>
+    <loc>https://phys-math.dev/en/post/143-how-codex-is-built/</loc>
+    <lastmod>2026-02-23T03:59:05.000Z</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://phys-math.dev/en/post/143-how-codex-is-built/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://phys-math.dev/en/post/143-how-codex-is-built/" />
+  </url>
+  <url>
+    <loc>https://phys-math.dev/en/post/142-element-of-2d-sort/</loc>
+    <lastmod>2026-02-17T18:03:32.000Z</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://phys-math.dev/en/post/142-element-of-2d-sort/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://phys-math.dev/en/post/142-element-of-2d-sort/" />
+  </url>
+  <url>
+    <loc>https://phys-math.dev/en/post/141-table-with-leaves/</loc>
+    <lastmod>2026-02-15T12:32:19.000Z</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://phys-math.dev/en/post/141-table-with-leaves/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://phys-math.dev/en/post/141-table-with-leaves/" />
+  </url>
+  <url>
+    <loc>https://phys-math.dev/en/post/140-periods-in-digits-and-remainders/</loc>
+    <lastmod>2026-02-14T18:12:16.000Z</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://phys-math.dev/en/post/140-periods-in-digits-and-remainders/" />
+
+
+---- URL: https://phys-math.dev/sitemap_index.xml ----
+$ curl -I -A 'Mozilla/5.0 (compatible; YandexBot/3.0; +http://yandex.com/bots)' 'https://phys-math.dev/sitemap_index.xml'
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+HTTP/2 404 
+date: Thu, 26 Feb 2026 08:11:12 GMT
+content-type: text/html; charset=utf-8
+access-control-allow-origin: *
+cache-control: no-store
+referrer-policy: strict-origin-when-cross-origin
+x-content-type-options: nosniff
+report-to: {"group":"cf-nel","max_age":604800,"endpoints":[{"url":"https://a.nel.cloudflare.com/report/v4?s=VGYqbu5OS7uncjUkmHtutdIjIOpULWp4QKCoh6tI1GO7CYpI5JpMWY5BATyIO%2Bs9hVxoKV1gqqADX8feWu8%2B0QQp3bGOGVYijuGdvyY%3D"}]}
+nel: {"report_to":"cf-nel","success_fraction":0.0,"max_age":604800}
+server: cloudflare
+cf-cache-status: DYNAMIC
+cf-ray: 9d3df86acc37292c-EVN
+alt-svc: h3=":443"; ma=86400
+
+
+$ curl -sS -L -D - -o /dev/null -A 'Mozilla/5.0 (compatible; YandexBot/3.0; +http://yandex.com/bots)' 'https://phys-math.dev/sitemap_index.xml'
+HTTP/2 404 
+date: Thu, 26 Feb 2026 08:11:13 GMT
+content-type: text/html; charset=utf-8
+access-control-allow-origin: *
+cache-control: no-store
+referrer-policy: strict-origin-when-cross-origin
+x-content-type-options: nosniff
+report-to: {"group":"cf-nel","max_age":604800,"endpoints":[{"url":"https://a.nel.cloudflare.com/report/v4?s=OGTTyHdrEJMJe3uJh5R8p5W%2F7SwXMj4hRhQkReLqjtxTAiDnlnjJ32Jh%2FHybSSQBaPRW4WStlhEMhu6LnhoEI6JCe%2B6wVPXm0J%2B%2Fr%2BEjsHhdqbR9FA9Jxlw%3D"}]}
+nel: {"report_to":"cf-nel","success_fraction":0.0,"max_age":604800}
+server: cloudflare
+cf-cache-status: DYNAMIC
+cf-ray: 9d3df86f1bd407e7-ARN
+alt-svc: h3=":443"; ma=86400
+
+
+$ curl -sS -L -A 'Mozilla/5.0 (compatible; YandexBot/3.0; +http://yandex.com/bots)' 'https://phys-math.dev/sitemap_index.xml' | sed -n '1,120p'
+<!DOCTYPE html><html lang="en"> <head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="icon" type="image/jpeg" href="/favicon.jpg"><title>404 · PhysMath Hub</title><meta name="description" content="Page not found"><link rel="canonical" href="https://phys-math.dev/404/"><link rel="alternate" hreflang="en" href="https://phys-math.dev/en/"><link rel="alternate" hreflang="ru" href="https://phys-math.dev/ru/"><link rel="alternate" hreflang="x-default" href="https://phys-math.dev/en/"><meta property="og:type" content="website"><meta property="og:title" content="404 · PhysMath Hub"><meta property="og:description" content="Page not found"><meta property="og:url" content="https://phys-math.dev/404/"><meta property="og:site_name" content="PhysMath Hub"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="404 · PhysMath Hub"><meta name="twitter:description" content="Page not found"><meta name="robots" content="noindex,nofollow"><!-- Google tag (gtag.js) --><script async src="https://www.googletagmanager.com/gtag/js?id=G-KW8VXVXW7N"></script><script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag('js', new Date());
+
+      gtag('config', 'G-KW8VXVXW7N');
+    </script><!-- Yandex.Metrika counter --><script type="text/javascript">
+      (function(m,e,t,r,i,k,a){
+          m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+          m[i].l=1*new Date();
+          for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+          k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a);
+      })(window, document, 'script', 'https://mc.yandex.ru/metrika/tag.js?id=106989967', 'ym');
+
+      ym(106989967, 'init', {
+        ssr: true,
+        webvisor: true,
+        clickmap: true,
+        ecommerce: 'dataLayer',
+        referrer: document.referrer,
+        url: location.href,
+        accurateTrackBounce: true,
+        trackLinks: true
+      });
+    </script><!-- /Yandex.Metrika counter --><script>
+      (() => {
+        const key = 'theme-preference';
+        const value = localStorage.getItem(key) || 'system';
+        if (value === 'light' || value === 'dark') {
+          document.documentElement.setAttribute('data-theme', value);
+        }
+      })();
+    </script><link rel="stylesheet" href="/_astro/_page_.BOlKRXuh.css"></head> <body> <noscript> <div><img src="https://mc.yandex.ru/watch/106989967" style="position:absolute; left:-9999px;" alt=""></div> </noscript> <header class="site-header"> <div class="site-header-inner"> <a class="brand" href="/en/">PhysMath Hub</a> <nav class="site-nav" aria-label="Primary"> <a href="/en/">Home</a> <a href="/en/archive/1/">Archive</a> </nav> <div class="site-tools"> <nav class="lang-switch" aria-label="Language switch"> <a href="/en/" class="active" hreflang="en">
+EN
+</a> <a href="/ru/" class hreflang="ru">
+RU
+</a> </nav> <button class="theme-toggle" id="theme-toggle" aria-label="Switch theme" title="Switch theme"> <span aria-hidden="true">◐</span> </button> </div> </div> <p class="locale-chip" data-locale="en">EN / RU</p> </header> <main>  <section class="not-found"> <h1>Page not found</h1> <p> <a href="/en/">Go to homepage</a> </p> </section>  </main> <footer class="site-footer"> <p>PhysMath Hub · Physics · Mathematics · Programming</p> </footer> <script>
+      (() => {
+        const key = 'theme-preference';
+        const cycle = ['system', 'light', 'dark'];
+        const button = document.getElementById('theme-toggle');
+
+        const apply = (mode) => {
+          if (mode === 'light' || mode === 'dark') {
+            document.documentElement.setAttribute('data-theme', mode);
+          } else {
+            document.documentElement.removeAttribute('data-theme');
+          }
+          if (button) {
+            button.textContent = mode === 'light' ? '☀' : mode === 'dark' ? '☾' : '◐';
+          }
+        };
+
+        let current = localStorage.getItem(key) || 'system';
+        if (!cycle.includes(current)) {
+          current = 'system';
+        }
+        apply(current);
+
+        button?.addEventListener('click', () => {
+          const idx = cycle.indexOf(current);
+          current = cycle[(idx + 1) % cycle.length];
+          localStorage.setItem(key, current);
+          apply(current);
+        });
+      })();
+    </script>  </body> </html>
+
+---- URL: https://phys-math.dev/yandex_b2fb10ca15940053.html ----
+$ curl -I -A 'Mozilla/5.0 (compatible; YandexBot/3.0; +http://yandex.com/bots)' 'https://phys-math.dev/yandex_b2fb10ca15940053.html'
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:01 --:--:--     0
+HTTP/2 308 
+date: Thu, 26 Feb 2026 08:11:14 GMT
+location: /yandex_b2fb10ca15940053
+access-control-allow-origin: *
+referrer-policy: strict-origin-when-cross-origin
+report-to: {"group":"cf-nel","max_age":604800,"endpoints":[{"url":"https://a.nel.cloudflare.com/report/v4?s=sAjNY%2B8tEtTLbF1U6sqRSV7aaBY%2FHHBzSaF8v7AWBHjcrm0DbWqwXBksrQAMfEWqsQIi8EQYb6zAoGbNSaO%2BRWFGFHdvf8Da0xPC2580m8u%2FHQvXccMAJe4%3D"}]}
+nel: {"report_to":"cf-nel","success_fraction":0.0,"max_age":604800}
+server: cloudflare
+cf-cache-status: DYNAMIC
+cf-ray: 9d3df87799a45cc8-ARN
+alt-svc: h3=":443"; ma=86400
+
+
+$ curl -sS -L -D - -o /dev/null -A 'Mozilla/5.0 (compatible; YandexBot/3.0; +http://yandex.com/bots)' 'https://phys-math.dev/yandex_b2fb10ca15940053.html'
+HTTP/2 200 
+date: Thu, 26 Feb 2026 08:11:16 GMT
+content-type: text/html; charset=UTF-8
+cache-control: public, max-age=300
+report-to: {"group":"cf-nel","max_age":604800,"endpoints":[{"url":"https://a.nel.cloudflare.com/report/v4?s=sENgWDKmaM9zmgSOAU4uC%2BZ4y%2B0x2M%2BG0hq7hxY8QKlig7VHMOFxcH5MTGXLEnw3m%2F%2BPIs0kshTk3mdDv5QPCvLrg%2Bs2fU5jsnsUE5rDaOhx6ROd6zT46yY%3D"}]}
+nel: {"report_to":"cf-nel","success_fraction":0.0,"max_age":604800}
+server: cloudflare
+cf-cache-status: DYNAMIC
+cf-ray: 9d3df8847910f327-ARN
+alt-svc: h3=":443"; ma=86400
+
+
+$ curl -sS -L -A 'Mozilla/5.0 (compatible; YandexBot/3.0; +http://yandex.com/bots)' 'https://phys-math.dev/yandex_b2fb10ca15940053.html' | sed -n '1,120p'
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    </head>
+    <body>Verification: b2fb10ca15940053</body>
+</html>
+
+---- URL: https://phys-math.dev/yandex_b2fb10ca15940053 ----
+$ curl -I -A 'Mozilla/5.0 (compatible; YandexBot/3.0; +http://yandex.com/bots)' 'https://phys-math.dev/yandex_b2fb10ca15940053'
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:01 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:02 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:02 --:--:--     0
+HTTP/2 200 
+date: Thu, 26 Feb 2026 08:11:20 GMT
+content-type: text/html; charset=utf-8
+access-control-allow-origin: *
+cache-control: public, max-age=0, must-revalidate
+cf-cache-status: DYNAMIC
+referrer-policy: strict-origin-when-cross-origin
+x-content-type-options: nosniff
+report-to: {"group":"cf-nel","max_age":604800,"endpoints":[{"url":"https://a.nel.cloudflare.com/report/v4?s=%2Bu3IAuoEb55pT1i2D9zABtJ8HMaep0h12uFft8qZuh7Jwu2CtZ2fMLCrb8B66uJpust%2BCk5b1WryjW2QtL3uBFIbkGPdHI35vZX89OQl24q6QNjRNJZwVs4%3D"}]}
+nel: {"report_to":"cf-nel","success_fraction":0.0,"max_age":604800}
+server: cloudflare
+cf-ray: 9d3df89b7d9643fc-ARN
+alt-svc: h3=":443"; ma=86400
+
+
+$ curl -sS -L -D - -o /dev/null -A 'Mozilla/5.0 (compatible; YandexBot/3.0; +http://yandex.com/bots)' 'https://phys-math.dev/yandex_b2fb10ca15940053'
+HTTP/2 200 
+date: Thu, 26 Feb 2026 08:11:21 GMT
+content-type: text/html; charset=utf-8
+access-control-allow-origin: *
+cache-control: public, max-age=0, must-revalidate
+referrer-policy: strict-origin-when-cross-origin
+x-content-type-options: nosniff
+report-to: {"group":"cf-nel","max_age":604800,"endpoints":[{"url":"https://a.nel.cloudflare.com/report/v4?s=e3bT0elQN7SpeiQFSlr24eArtDyDmX4I1Q%2FhWGvHC%2FP1FD25lXM3ZeiiFLChkHElEGSoYqB5ocnZgqI7xkiEHo5VAMR%2Bl%2F%2Fq8wnXV24%2Bu8wGbwiEX9KhHp0%3D"}]}
+nel: {"report_to":"cf-nel","success_fraction":0.0,"max_age":604800}
+server: cloudflare
+cf-cache-status: DYNAMIC
+cf-ray: 9d3df8a15cd13e6a-ARN
+alt-svc: h3=":443"; ma=86400
+
+
+$ curl -sS -L -A 'Mozilla/5.0 (compatible; YandexBot/3.0; +http://yandex.com/bots)' 'https://phys-math.dev/yandex_b2fb10ca15940053' | sed -n '1,120p'
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    </head>
+    <body>Verification: b2fb10ca15940053</body>
+</html>
+
