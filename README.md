@@ -14,6 +14,24 @@ Bilingual static mirror for `https://t.me/s/phys_math_dev` with:
 - Python + Telethon (Telegram sync)
 - Cloudflare Pages + R2 + Web Analytics
 
+## Project policies
+
+- Keep analytics counters enabled on all HTML pages:
+  - Google tag ID: `G-KW8VXVXW7N`
+  - Yandex.Metrika counter ID: `106989967`
+- Source of truth for counters:
+  - `src/layouts/BaseLayout.astro` (all regular EN/RU content pages)
+  - `src/pages/index.astro` (root redirect page)
+- Any new standalone page that does not use `BaseLayout` must include both counters manually.
+- Do not remove or replace these counters without explicit approval from the project owner.
+- RU translation review must follow a manual checklist workflow:
+  - create a full list of target messages/files first
+  - process one message at a time (EN source + RU translation)
+  - fix translation only for the current item
+  - mark this item as done in the checklist
+  - repeat in an agent loop until all items are done
+- Do not implement programmable/batch loops for RU translation review or fixes.
+
 ## Local setup
 
 1. Install dependencies:
