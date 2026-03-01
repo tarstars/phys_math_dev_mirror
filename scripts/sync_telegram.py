@@ -32,7 +32,15 @@ from slugify import slugify
 from telethon import TelegramClient
 from telethon.helpers import add_surrogate, del_surrogate, within_surrogate
 from telethon.sessions import StringSession
-from telethon.tl.types import DocumentAttributeFilename, Message, MessageEmpty, MessageEntityCode, MessageEntityPre
+from telethon.tl.types import (
+    DocumentAttributeFilename,
+    Message,
+    MessageEmpty,
+    MessageEntityCode,
+    MessageEntityPre,
+    MessageEntityTextUrl,
+    MessageEntityUrl,
+)
 
 ROOT = Path(__file__).resolve().parents[1]
 EN_DIR = ROOT / 'content' / 'en' / 'posts'
@@ -351,6 +359,10 @@ def normalize_markdown(text: str) -> str:
     return '\n'.join(line.rstrip() for line in text.replace('\r\n', '\n').split('\n')).strip() + '\n'
 
 
+def _ranges_overlap(a_start: int, a_end: int, b_start: int, b_end: int) -> bool:
+    return a_start < b_end and b_start < a_end
+
+
 def message_to_markdown(msg: Message) -> str:
     raw_text = msg.message or ''
     if not raw_text:
@@ -358,11 +370,14 @@ def message_to_markdown(msg: Message) -> str:
 
     entities = getattr(msg, 'entities', None) or []
     code_entities = [entity for entity in entities if isinstance(entity, (MessageEntityCode, MessageEntityPre))]
-    if not code_entities:
+    link_entities = [entity for entity in entities if isinstance(entity, (MessageEntityTextUrl, MessageEntityUrl))]
+
+    if not code_entities and not link_entities:
         return raw_text
 
     surrogated_text = add_surrogate(raw_text)
     insertions: list[tuple[int, int, str]] = []
+    code_ranges: list[tuple[int, int]] = []
 
     for entity in code_entities:
         start = int(getattr(entity, 'offset', 0) or 0)
@@ -373,6 +388,7 @@ def message_to_markdown(msg: Message) -> str:
             continue
 
         entity_text = del_surrogate(surrogated_text[start:end])
+        code_ranges.append((start, end))
 
         if isinstance(entity, MessageEntityPre) or '\n' in entity_text:
             language = str(getattr(entity, 'language', '') or '').strip()
@@ -392,6 +408,34 @@ def message_to_markdown(msg: Message) -> str:
         delimiter = '``' if '`' in entity_text else '`'
         insertions.append((start, 1, delimiter))
         insertions.append((end, 0, delimiter))
+
+    for entity in link_entities:
+        start = int(getattr(entity, 'offset', 0) or 0)
+        length = int(getattr(entity, 'length', 0) or 0)
+        end = start + length
+
+        if length <= 0 or start < 0 or end > len(surrogated_text):
+            continue
+
+        if any(_ranges_overlap(start, end, c_start, c_end) for c_start, c_end in code_ranges):
+            continue
+
+        link_text = del_surrogate(surrogated_text[start:end])
+        if not link_text:
+            continue
+
+        if isinstance(entity, MessageEntityTextUrl):
+            url = str(getattr(entity, 'url', '') or '').strip()
+        else:
+            url = link_text.strip()
+
+        if not url:
+            continue
+
+        safe_url = url.replace('>', '%3E')
+
+        insertions.append((start, 1, '['))
+        insertions.append((end, 0, f'](<{safe_url}>)'))
 
     for position, _, token in sorted(insertions, key=lambda row: (row[0], row[1]), reverse=True):
         while within_surrogate(surrogated_text, position):
