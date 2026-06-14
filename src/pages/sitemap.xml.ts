@@ -15,6 +15,13 @@ function xmlEscape(input: string): string {
     .replaceAll("'", '&apos;');
 }
 
+function hasText(html: string): boolean {
+  // True only if the rendered body has real words — not just media, whitespace,
+  // or a bare link (URLs live in href attributes, which are stripped with the tags).
+  const text = html.replace(/<[^>]+>/g, ' ').trim();
+  return /[A-Za-z0-9Ѐ-ӿ]/.test(text);
+}
+
 export function GET() {
   const site = 'https://phys-math.dev';
   const urls: UrlNode[] = [];
@@ -51,11 +58,19 @@ export function GET() {
   }
 
   for (const enPost of enPosts) {
+    // Skip posts with no readable text (media-only / link-only): they only generate
+    // "Crawled - currently not indexed" and dilute the sitemap's quality signal.
+    if (!hasText(String(enPost.bodyHtml))) {
+      continue;
+    }
+
     const enLoc = `${site}${enPost.path}`;
     const ruPost = ruMap.get(enPost.id);
 
     if (ruPost) {
-      const ruLoc = `${site}${ruPost.path}`;
+      // The post route builds RU pages with the EN slug, so the sitemap must match it
+      // (EN/RU slug drift would otherwise advertise 404 URLs).
+      const ruLoc = `${site}/ru/post/${enPost.id}-${enPost.slug}/`;
       urls.push({
         loc: enLoc,
         lastmod: enPost.edited_at || enPost.updated_at || enPost.date,

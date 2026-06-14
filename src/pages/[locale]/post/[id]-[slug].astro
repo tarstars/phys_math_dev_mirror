@@ -62,7 +62,7 @@ const title = pageTitle(current?.title ?? 'Post', locale);
 const description = current?.summary || (locale === 'ru' ? 'Публикация PhysMath Hub.' : 'PhysMath Hub post.');
 
 const site = import.meta.env.PUBLIC_SITE_URL || 'https://phys-math.dev';
-const postUrl = current ? new URL(`/${locale === 'en' ? 'en' : 'ru'}/post/${current.id}-${current.slug}/`, site).toString() : new URL(enPath, site).toString();
+const postUrl = new URL(locale === 'en' ? enPath : ruPath, site).toString();
 const image = current?.media?.find((item) => item.kind === 'photo' || item.kind === 'video')?.url;
 
 const structuredData = current
@@ -132,7 +132,7 @@ const structuredData = current
     title={title}
     description={description}
     locale={locale}
-    canonicalPath={current?.path ?? enPath}
+    canonicalPath={locale === 'en' ? enPath : ruPath}
     enPath={enPath}
     ruPath={ruPath}
     noIndex={noIndex}
