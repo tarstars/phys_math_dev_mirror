@@ -70,6 +70,17 @@ jobs:
           if [[ "$FULL_BACKFILL" == "true" ]]; then args+=(--full-backfill); fi
           python scripts/sync_telegram.py "${args[@]}"
 
+      - name: Save recovered English source before translation
+        if: always() && inputs.recovery_only == true
+        uses: actions/upload-artifact@v4
+        with:
+          name: recovered-telegram-source
+          retention-days: 7
+          path: |
+            content/en/posts
+            data/state
+            data/recovery
+
       - name: Prepare unpublished Russian translation drafts
         if: inputs.prepare_ru_drafts == true
         env:

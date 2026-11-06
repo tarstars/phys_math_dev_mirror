@@ -19,6 +19,7 @@ import hashlib
 import json
 import mimetypes
 import os
+import re
 import shutil
 import tempfile
 from dataclasses import dataclass
@@ -213,10 +214,15 @@ def first_non_empty_line(text: str) -> str:
 
 
 def build_title_and_summary(text: str, post_id: int) -> tuple[str, str]:
-    lead = first_non_empty_line(text)
+    preview = re.sub(r'!\[[^\]]*\]\([^\n]*?\)', '', text)
+    preview = re.sub(r'<[^>]+>', '', preview)
+    preview = re.sub(r'\[([^\]]+)\]\(<([^>]+)>\)', r'\1', preview)
+    preview = re.sub(r'(?m)^#{1,6}\s+', '', preview)
+    preview = re.sub(r'\\([\\`*_\[\]<>])', r'\1', preview)
+    lead = first_non_empty_line(preview).strip('*` ')
     title = lead[:130] if lead else f'Post {post_id}'
 
-    plain = ' '.join(part.strip() for part in text.splitlines() if part.strip())
+    plain = ' '.join(part.strip() for part in preview.splitlines() if part.strip())
     summary = plain[:220]
     return title, summary
 
@@ -387,7 +393,8 @@ def resolve_embedded_media(text: str, media: list[dict[str, Any]], source_url: s
         if key:
             text = text.replace(key, item['url'])
     # Oversized videos may be skipped, but retain a working source link.
-    import re
+    text = re.sub(r'<(video|audio)\b[^>]*src="tg-media:(?:photo|document):\d+"[^>]*></\1>',
+                  lambda _: f'[View media on Telegram](<{source_url}>)', text)
     return re.sub(r'tg-media:(?:photo|document):\d+', lambda _: source_url, text)
 
 

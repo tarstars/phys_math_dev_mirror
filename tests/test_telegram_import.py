@@ -66,6 +66,17 @@ class TelegramImportTests(unittest.TestCase):
         self.assertIn('https://t.me/example/306', result)
         self.assertNotIn('tg-media:', result)
 
+    def test_rich_title_uses_heading_after_cover_photo(self):
+        title, summary = sync.build_title_and_summary('![Post image](<tg-media:photo:42>)\n\n# Pascal triangle\n\nAn explanation.', 306)
+        self.assertEqual(title, 'Pascal triangle')
+        self.assertNotIn('tg-media:', summary)
+
+    def test_skipped_embedded_video_becomes_source_link(self):
+        text = '<video controls src="tg-media:document:1"></video>'
+        result = sync.resolve_embedded_media(text, [], 'https://t.me/example/306')
+        self.assertNotIn('<video', result)
+        self.assertIn('[View media on Telegram]', result)
+
     def test_draft_metadata_preserves_russian_summary_and_locked_post(self):
         ru = frontmatter.Post('Русский текст', summary='Русское описание', translation_status='reviewed', en_source_hash='old')
         changed, marked = update_ru_metadata({'id': 1, 'summary': 'English', 'source_hash': 'new'}, ru)

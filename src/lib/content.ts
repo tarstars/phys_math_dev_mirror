@@ -2,12 +2,14 @@ import fs from 'node:fs';
 import path from 'node:path';
 import matter from 'gray-matter';
 import { marked } from 'marked';
+import markedKatex from 'marked-katex-extension';
 import type { Locale, PostFrontmatter, PostRecord, SiteText, TranslationStatus } from './types';
 
 marked.setOptions({
   gfm: true,
   breaks: true
 });
+marked.use(markedKatex({ throwOnError: false, trust: false }));
 
 const ROOT = process.cwd();
 
