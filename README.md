@@ -63,6 +63,38 @@ npm run translate:ru
 npm run dev
 ```
 
+## Import recovery and Russian translations
+
+The importer supports regular messages, polls, and Telegram rich messages,
+including formulas, code, links, captions, and embedded media. Rich messages that
+are only partially returned by Telegram are fetched in full before conversion.
+Unknown content types fail the sync instead of being committed as empty posts.
+Existing post slugs stay stable when Telegram text or titles change.
+
+Recheck the complete history with:
+
+```bash
+python3 scripts/sync_telegram.py --full-backfill
+python3 -m unittest discover -s tests -v
+```
+
+The daily workflow also has manual `full_backfill` and `recovery_only` inputs.
+Recovery mode saves content as downloadable artifacts and skips repository commits
+and deployment. `prepare_ru_drafts` optionally creates initial machine-translated
+drafts using Telegram. Drafts remain unpublished until individually reviewed.
+The same draft preparation can be run locally with:
+
+```bash
+python3 scripts/translate_ru_drafts.py
+```
+
+Follow the manual checklist policy above when reviewing translations. The completed
+2026 recovery is tracked in `data/state/ru_translation_recovery_checklist.md`.
+Code, formulas, link targets, and media must be preserved during review. Russian
+summaries and locked translations are retained during metadata synchronization.
+Russian page URLs use the canonical English slug so title changes cannot break
+archive links. Mathematical expressions are rendered with KaTeX in both languages.
+
 ## Content model
 
 - EN posts: `content/en/posts/{id}.md`

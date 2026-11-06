@@ -13,6 +13,16 @@ from telethon.tl import functions, types
 from sync_telegram import env
 
 
+def public_fields(value):
+    """Exclude the syncing account's votes and reactions from recovery artifacts."""
+    if isinstance(value, list):
+        return [public_fields(item) for item in value]
+    if isinstance(value, dict):
+        private = {'chosen', 'chosen_order', 'recent_voters', 'recent_reactions', 'top_reactors'}
+        return {key: public_fields(item) for key, item in value.items() if key not in private}
+    return value
+
+
 async def export(output: Path) -> None:
     messages = []
     async with TelegramClient(
@@ -28,7 +38,7 @@ async def export(output: Path) -> None:
             rich = getattr(message, 'rich_message', None)
             if rich and rich.part:
                 message.rich_message = await client(functions.messages.GetRichMessageRequest(entity, message.id))
-            data = json.loads(message.to_json())
+            data = public_fields(json.loads(message.to_json()))
             messages.append({key: data.get(key) for key in (
                 'id', 'date', 'edit_date', 'message', 'entities', 'media', 'rich_message',
                 'grouped_id', 'reactions',

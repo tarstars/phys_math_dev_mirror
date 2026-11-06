@@ -13,6 +13,7 @@ from telethon.tl import types
 import sync_telegram as sync
 from prepare_ru_drafts import update_ru_metadata
 from telegram_rich_text import blocks_markdown, fence
+from export_telegram import public_fields
 
 
 def message(**kwargs):
@@ -20,6 +21,10 @@ def message(**kwargs):
 
 
 class TelegramImportTests(unittest.TestCase):
+    def test_recovery_export_contains_counts_without_account_vote_choices(self):
+        result = public_fields({'media': {'results': [{'voters': 3, 'chosen': True}], 'recent_voters': [123]}, 'chosen_order': 0})
+        self.assertEqual(result, {'media': {'results': [{'voters': 3}]}})
+
     def test_rich_article_keeps_text_code_math_links_and_media_positions(self):
         rich = types.RichMessage(blocks=[
             types.PageBlockHeading1(types.TextPlain('Pascal triangle')),

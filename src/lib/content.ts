@@ -9,7 +9,7 @@ marked.setOptions({
   gfm: true,
   breaks: true
 });
-marked.use(markedKatex({ throwOnError: false, trust: false }));
+marked.use(markedKatex({ throwOnError: false, trust: false, nonStandard: true }));
 
 const ROOT = process.cwd();
 
