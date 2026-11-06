@@ -17,6 +17,7 @@ export interface MediaItem {
   size?: number;
   width?: number;
   height?: number;
+  embedded?: boolean;
 }
 
 export interface PostFrontmatter {

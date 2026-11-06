@@ -145,9 +145,9 @@ const structuredData = current
       <h1>{current?.title}</h1>
       <p class="post-date">{formatDate(current?.date ?? new Date().toISOString(), locale)}</p>
 
-      {current?.media && current.media.length > 0 && (
+      {current?.media?.some((media) => !media.embedded) && (
         <section class="media-grid" aria-label="Post media">
-          {current.media.map((media) => (
+          {current.media.filter((media) => !media.embedded).map((media) => (
             <figure class="media-card">
               {media.kind === 'photo' ? (
                 <img src={media.url} alt="" loading="lazy" />

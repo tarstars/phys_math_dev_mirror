@@ -21,7 +21,6 @@ SYNC_KEYS = [
     'edited_at',
     'channel',
     'source_url',
-    'summary',
     'album_id',
     'reactions',
     'media',
@@ -47,6 +46,8 @@ def update_ru_metadata(en_meta: dict[str, Any], ru_post: frontmatter.Post) -> tu
     needs_review_marked = False
 
     ru_meta = ru_post.metadata
+    if ru_meta.get('translation_status') == 'locked':
+        return False, False
 
     for key in SYNC_KEYS:
         if ru_meta.get(key) != en_meta.get(key):
@@ -71,7 +72,8 @@ def update_ru_metadata(en_meta: dict[str, Any], ru_post: frontmatter.Post) -> tu
         ru_meta['en_source_hash'] = new_en_hash
         changed = True
 
-    ru_meta['updated_at'] = now_iso()
+    if changed:
+        ru_meta['updated_at'] = now_iso()
     return changed, needs_review_marked
 
 
@@ -114,6 +116,7 @@ def main() -> None:
 
     created: list[tuple[int, str, str]] = []
     needs_review: list[tuple[int, str, str]] = []
+    new_drafts = 0
     touched = 0
 
     en_files = sorted(EN_DIR.glob('*.md'), key=lambda p: int(p.stem))
@@ -128,13 +131,16 @@ def main() -> None:
             draft_post = create_ru_draft(en_post)
             save_post(ru_path, draft_post)
             created.append((post_id, str(en_meta.get('title', f'Post {post_id}')), str(en_meta.get('source_url', ''))))
+            new_drafts += 1
             touched += 1
             continue
 
         ru_post = load_post(ru_path)
-        changed, marked = update_ru_metadata(en_meta, ru_post)
-        if marked:
+        changed, _ = update_ru_metadata(en_meta, ru_post)
+        if not ru_post.get('deleted') and ru_post.get('translation_status') == 'needs_review':
             needs_review.append((post_id, str(en_meta.get('title', f'Post {post_id}')), str(en_meta.get('source_url', ''))))
+        elif not ru_post.get('deleted') and ru_post.get('translation_status') == 'draft':
+            created.append((post_id, str(en_meta.get('title', f'Post {post_id}')), str(en_meta.get('source_url', ''))))
 
         if changed:
             save_post(ru_path, ru_post)
@@ -148,10 +154,10 @@ def main() -> None:
         '',
         f'Generated: {now_iso()}',
         '',
-        f'- New drafts: **{len(created)}**',
+        f'- Pending drafts: **{len(created)}**',
         f'- Needs review: **{len(needs_review)}**',
         '',
-        '## New Drafts',
+        '## Pending Drafts',
         ''
     ]
 
@@ -169,7 +175,7 @@ def main() -> None:
     queue_path.write_text('\n'.join(lines) + '\n', encoding='utf-8')
 
     print(f'RU draft prep completed. Files touched: {touched}')
-    print(f'New drafts: {len(created)} | Needs review: {len(needs_review)}')
+    print(f'New drafts: {new_drafts} | Pending drafts: {len(created)} | Needs review: {len(needs_review)}')
     print(f'Queue file: {queue_path.relative_to(ROOT)}')
 
 

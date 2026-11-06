@@ -2,12 +2,14 @@ import fs from 'node:fs';
 import path from 'node:path';
 import matter from 'gray-matter';
 import { marked } from 'marked';
+import markedKatex from 'marked-katex-extension';
 import type { Locale, PostFrontmatter, PostRecord, SiteText, TranslationStatus } from './types';
 
 marked.setOptions({
   gfm: true,
   breaks: true
 });
+marked.use(markedKatex({ throwOnError: false, trust: false, nonStandard: true }));
 
 const ROOT = process.cwd();
 
@@ -33,7 +35,13 @@ function toPost(locale: Locale, filePath: string): PostRecord {
   const { data, content } = readMarkdownFile(filePath);
 
   const id = Number(data.id);
-  const slug = String(data.slug ?? `post-${id}`);
+  let slug = String(data.slug ?? `post-${id}`);
+  if (locale === 'ru') {
+    const enPath = path.join(ROOT, 'content', 'en', 'posts', `${id}.md`);
+    if (fs.existsSync(enPath)) {
+      slug = String(readMarkdownFile(enPath).data.slug ?? slug);
+    }
+  }
   const date = toDateString(data.date, fallbackDate);
 
   const fm: PostFrontmatter = {
