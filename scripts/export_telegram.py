@@ -22,6 +22,8 @@ async def export(output: Path) -> None:
         entity = await client.get_entity(env('TELEGRAM_CHANNEL', default='phys_math_dev'))
         async for message in client.iter_messages(entity, reverse=True):
             if not isinstance(message, types.Message):
+                if isinstance(message, types.MessageService):
+                    messages.append({'id': message.id, 'service_action': type(message.action).__name__})
                 continue
             rich = getattr(message, 'rich_message', None)
             if rich and rich.part:

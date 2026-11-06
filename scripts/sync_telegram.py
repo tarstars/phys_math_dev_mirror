@@ -423,7 +423,13 @@ def message_to_markdown(msg: Message) -> str:
         results = getattr(msg.media, 'results', None)
         total = getattr(results, 'total_voters', None)
         footer = f'\n\nVotes: {total}' if total is not None else ''
-        return question + '\n\n' + options + footer
+        body = question + '\n\n' + options + footer
+        introduction = message_text_to_markdown(msg)
+        return introduction + '\n\n' + body if introduction.strip() else body
+    return message_text_to_markdown(msg)
+
+
+def message_text_to_markdown(msg: Message) -> str:
     raw_text = msg.message or ''
     if not raw_text:
         return ''
@@ -553,6 +559,8 @@ def mark_deleted_in_locale(locale: str, post_id: int) -> bool:
     post = load_post(locale, post_id)
     if not post:
         return False
+    if locale == 'ru' and post.metadata.get('translation_status') == 'locked':
+        return False
 
     if post.metadata.get('deleted'):
         return False
@@ -633,7 +641,7 @@ async def audit_deletions(client: TelegramClient, entity: Any, known_ids: list[i
 
         for req_id in batch:
             item = fetched_map.get(req_id)
-            if item is None or isinstance(item, MessageEmpty):
+            if item is None or not isinstance(item, Message):
                 missing.append(req_id)
 
     return sorted(set(missing))

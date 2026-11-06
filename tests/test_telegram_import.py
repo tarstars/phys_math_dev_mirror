@@ -46,7 +46,8 @@ class TelegramImportTests(unittest.TestCase):
             types.PollAnswer(types.TextWithEntities('Down', []), b'b'),
         ])
         media = types.MessageMediaPoll(poll, types.PollResults(total_voters=7))
-        text = sync.message_to_markdown(message(message='', media=media))
+        text = sync.message_to_markdown(message(message='A caption explaining the poll.', media=media))
+        self.assertTrue(text.startswith('A caption explaining the poll.'))
         self.assertIn('Choose a path', text)
         self.assertIn('- Right\n- Down', text)
         self.assertIn('Votes: 7', text)
@@ -86,6 +87,11 @@ class TelegramImportTests(unittest.TestCase):
         before = frontmatter.dumps(locked)
         self.assertEqual(update_ru_metadata({'source_hash': 'new'}, locked), (False, False))
         self.assertEqual(frontmatter.dumps(locked), before)
+
+    def test_service_message_is_not_kept_as_an_empty_article(self):
+        service = types.MessageService(id=101, peer_id=types.PeerChannel(1), date=dt.datetime.now(dt.timezone.utc), action=types.MessageActionPinMessage())
+        client = type('Client', (), {'get_messages': AsyncMock(return_value=[service])})()
+        self.assertEqual(asyncio.run(sync.audit_deletions(client, 'example', [101])), [101])
 
     def test_dry_run_does_not_modify_content_translations_or_state(self):
         class Client:
