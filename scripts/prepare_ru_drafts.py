@@ -21,7 +21,6 @@ SYNC_KEYS = [
     'edited_at',
     'channel',
     'source_url',
-    'summary',
     'album_id',
     'reactions',
     'media',
@@ -47,6 +46,8 @@ def update_ru_metadata(en_meta: dict[str, Any], ru_post: frontmatter.Post) -> tu
     needs_review_marked = False
 
     ru_meta = ru_post.metadata
+    if ru_meta.get('translation_status') == 'locked':
+        return False, False
 
     for key in SYNC_KEYS:
         if ru_meta.get(key) != en_meta.get(key):
@@ -71,7 +72,8 @@ def update_ru_metadata(en_meta: dict[str, Any], ru_post: frontmatter.Post) -> tu
         ru_meta['en_source_hash'] = new_en_hash
         changed = True
 
-    ru_meta['updated_at'] = now_iso()
+    if changed:
+        ru_meta['updated_at'] = now_iso()
     return changed, needs_review_marked
 
 

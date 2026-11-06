@@ -33,7 +33,13 @@ function toPost(locale: Locale, filePath: string): PostRecord {
   const { data, content } = readMarkdownFile(filePath);
 
   const id = Number(data.id);
-  const slug = String(data.slug ?? `post-${id}`);
+  let slug = String(data.slug ?? `post-${id}`);
+  if (locale === 'ru') {
+    const enPath = path.join(ROOT, 'content', 'en', 'posts', `${id}.md`);
+    if (fs.existsSync(enPath)) {
+      slug = String(readMarkdownFile(enPath).data.slug ?? slug);
+    }
+  }
   const date = toDateString(data.date, fallbackDate);
 
   const fm: PostFrontmatter = {

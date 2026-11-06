@@ -32,6 +32,7 @@ from slugify import slugify
 from telethon import TelegramClient
 from telethon.helpers import add_surrogate, del_surrogate, within_surrogate
 from telethon.sessions import StringSession
+from telethon.tl import functions, types
 from telethon.tl.types import (
     DocumentAttributeFilename,
     Message,
@@ -41,6 +42,7 @@ from telethon.tl.types import (
     MessageEntityTextUrl,
     MessageEntityUrl,
 )
+from telegram_rich_text import blocks_markdown, rich_text
 
 ROOT = Path(__file__).resolve().parents[1]
 EN_DIR = ROOT / 'content' / 'en' / 'posts'
@@ -170,7 +172,6 @@ def save_state(state: dict[str, Any]) -> None:
 
 def post_path(locale: str, post_id: int) -> Path:
     target = EN_DIR if locale == 'en' else RU_DIR
-    target.mkdir(parents=True, exist_ok=True)
     return target / f'{post_id}.md'
 
 
@@ -183,6 +184,7 @@ def load_post(locale: str, post_id: int) -> frontmatter.Post | None:
 
 def save_post(locale: str, post_id: int, post: frontmatter.Post) -> None:
     path = post_path(locale, post_id)
+    path.parent.mkdir(parents=True, exist_ok=True)
     path.write_text(frontmatter.dumps(post), encoding='utf-8')
 
 
@@ -253,6 +255,12 @@ def extract_reactions(msg: Message) -> list[dict[str, Any]]:
 
 
 def message_media_signature(msg: Message) -> str:
+    rich = getattr(msg, 'rich_message', None)
+    if rich:
+        return json.dumps({
+            'photos': [photo.id for photo in rich.photos],
+            'documents': [document.id for document in rich.documents],
+        }, sort_keys=True)
     if msg.photo:
         return f'photo:{getattr(msg.photo, "id", "")}'
     if msg.document:
@@ -353,6 +361,36 @@ async def extract_media(
         ]
 
 
+async def extract_message_media(
+    msg: Message, store: MediaStore, channel: str, *, skip_media: bool, max_video_bytes: int,
+) -> list[dict[str, Any]]:
+    items = await extract_media(msg, store, channel, skip_media=skip_media, max_video_bytes=max_video_bytes)
+    rich = getattr(msg, 'rich_message', None)
+    if not rich:
+        return items
+    for resource in [*rich.photos, *rich.documents]:
+        is_photo = isinstance(resource, types.Photo)
+        media = types.MessageMediaPhoto(photo=resource) if is_photo else types.MessageMediaDocument(document=resource)
+        wrapped = Message(id=msg.id, peer_id=msg.peer_id, date=msg.date, message='', media=media)
+        wrapped._client = msg._client
+        downloaded = await extract_media(wrapped, store, channel, skip_media=skip_media, max_video_bytes=max_video_bytes)
+        for item in downloaded:
+            item['embedded'] = True
+            item['telegram_media_key'] = f'tg-media:{"photo" if is_photo else "document"}:{resource.id}'
+        items.extend(downloaded)
+    return items
+
+
+def resolve_embedded_media(text: str, media: list[dict[str, Any]], source_url: str) -> str:
+    for item in media:
+        key = item.get('telegram_media_key')
+        if key:
+            text = text.replace(key, item['url'])
+    # Oversized videos may be skipped, but retain a working source link.
+    import re
+    return re.sub(r'tg-media:(?:photo|document):\d+', lambda _: source_url, text)
+
+
 def normalize_markdown(text: str) -> str:
     if not text:
         return ''
@@ -364,6 +402,21 @@ def _ranges_overlap(a_start: int, a_end: int, b_start: int, b_end: int) -> bool:
 
 
 def message_to_markdown(msg: Message) -> str:
+    rich = getattr(msg, 'rich_message', None)
+    if rich:
+        if getattr(rich, 'part', False):
+            raise ValueError(f'Message {msg.id} contains a partial rich message; refusing to truncate it')
+        return blocks_markdown(rich.blocks)
+    if isinstance(msg.media, types.MessageMediaUnsupported):
+        raise ValueError(f'Message {msg.id} uses unsupported Telegram media; upgrade Telethon before syncing')
+    if msg.poll:
+        poll = msg.poll.poll
+        question = rich_text(poll.question.text)
+        options = '\n'.join(f'- {rich_text(answer.text.text)}' for answer in poll.answers)
+        results = getattr(msg.media, 'results', None)
+        total = getattr(results, 'total_voters', None)
+        footer = f'\n\nVotes: {total}' if total is not None else ''
+        return question + '\n\n' + options + footer
     raw_text = msg.message or ''
     if not raw_text:
         return ''
@@ -451,7 +504,7 @@ def channel_url(channel: str, post_id: int) -> str:
 
 
 def choose_album_primary(messages: list[Message]) -> Message:
-    with_caption = [msg for msg in messages if (msg.message or '').strip()]
+    with_caption = [msg for msg in messages if (msg.message or '').strip() or getattr(msg, 'rich_message', None)]
     if with_caption:
         with_caption.sort(key=lambda msg: msg.id)
         return with_caption[0]
@@ -506,6 +559,8 @@ def mark_deleted_in_locale(locale: str, post_id: int) -> bool:
 def sync_ru_state_from_en(post_id: int, en_hash: str, deleted: bool) -> bool:
     post = load_post('ru', post_id)
     if not post:
+        return False
+    if post.metadata.get('translation_status') == 'locked':
         return False
 
     changed = False
@@ -584,8 +639,9 @@ async def run_sync(
     dry_run: bool,
     skip_media: bool,
 ) -> None:
-    EN_DIR.mkdir(parents=True, exist_ok=True)
-    RU_DIR.mkdir(parents=True, exist_ok=True)
+    if not dry_run:
+        EN_DIR.mkdir(parents=True, exist_ok=True)
+        RU_DIR.mkdir(parents=True, exist_ok=True)
 
     state = load_state()
     store = MediaStore(cfg)
@@ -602,8 +658,11 @@ async def run_sync(
         canonical = build_canonical_posts(messages)
 
         for primary, group in canonical:
+            rich = getattr(primary, 'rich_message', None)
+            if rich and rich.part:
+                primary.rich_message = await client(functions.messages.GetRichMessageRequest(entity, primary.id))
             text = normalize_markdown(message_to_markdown(primary).strip())
-            if not text and not any(item.media for item in group):
+            if not text and not any(item.media or getattr(item, 'rich_message', None) for item in group):
                 continue
 
             reactions = extract_reactions(primary)
@@ -618,12 +677,12 @@ async def run_sync(
                 continue
 
             title, summary = build_title_and_summary(text, primary.id)
-            slug = slugify(title, max_length=90) or f'post-{primary.id}'
+            slug = str(existing.metadata.get('slug')) if existing and existing.metadata.get('slug') else slugify(title, max_length=90) or f'post-{primary.id}'
 
             media_items: list[dict[str, Any]] = []
             for item in group:
                 media_items.extend(
-                    await extract_media(
+                    await extract_message_media(
                         item,
                         store,
                         cfg.channel,
@@ -631,6 +690,10 @@ async def run_sync(
                         max_video_bytes=cfg.max_video_bytes,
                     )
                 )
+
+            rendered_text = resolve_embedded_media(text, media_items, channel_url(cfg.channel, primary.id))
+            if not dry_run and not rendered_text.strip() and not media_items:
+                raise ValueError(f'Message {primary.id} produced no publishable content; refusing to save an empty post')
 
             payload = {
                 'id': primary.id,
@@ -649,12 +712,12 @@ async def run_sync(
                 'updated_at': now_iso(),
             }
 
-            post = frontmatter.Post(text, **payload)
+            post = frontmatter.Post(rendered_text, **payload)
             if not dry_run:
                 save_post('en', primary.id, post)
             updated += 1
 
-            if sync_ru_state_from_en(primary.id, source_hash, deleted=False):
+            if not dry_run and sync_ru_state_from_en(primary.id, source_hash, deleted=False):
                 ru_touched += 1
 
         latest = await client.get_messages(entity, limit=1)
@@ -666,7 +729,7 @@ async def run_sync(
 
         known_ids = iter_existing_ids('en')
 
-        if not skip_delete_audit and known_ids:
+        if not dry_run and not skip_delete_audit and known_ids:
             missing_ids = await audit_deletions(client, entity, known_ids)
             for post_id in missing_ids:
                 marked = False
