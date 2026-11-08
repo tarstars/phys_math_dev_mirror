@@ -17,7 +17,7 @@ if (!LOCALES.includes(locale)) {
 const siteText = getSiteText(locale);
 const posts = getLocalePosts(locale, { includeDeleted: false, includeDraft: false }).slice(0, 12);
 
-const title = pageTitle(siteText.title, locale);
+const title = pageTitle(locale === 'ru' ? 'Физика, математика и программирование' : 'Physics, mathematics and programming', locale);
 const description = siteText.subtitle || (locale === 'ru' ? 'Хаб для любителей физики, математики и программирования.' : 'Hub for physics, mathematics, and programming enthusiasts.');
 ---
 

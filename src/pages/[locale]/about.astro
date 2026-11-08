@@ -1,0 +1,43 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import { pageTitle } from '@/lib/content';
+import { LOCALES } from '@/lib/i18n';
+import type { Locale } from '@/lib/types';
+
+export function getStaticPaths() {
+  return LOCALES.map((locale) => ({ params: { locale } }));
+}
+const locale = Astro.params.locale as Locale;
+const ru = locale === 'ru';
+const title = ru ? 'О проекте и источниках' : 'About the archive and its sources';
+const description = ru
+  ? 'Источники публикаций PhysMath Hub, русский перевод и связь с каналом phys_math_dev.'
+  : 'Where PhysMath Hub articles come from, how Russian translations are published, and links to the original channel.';
+---
+<BaseLayout title={pageTitle(title, locale)} description={description} locale={locale}
+  canonicalPath={`/${locale}/about/`} enPath="/en/about/" ruPath="/ru/about/">
+  <article class="post-page about-page">
+    <h1>{title}</h1>
+    {ru ? (
+      <>
+        <p>PhysMath Hub — двуязычный архив канала <a href="https://t.me/phys_math_dev">phys_math_dev</a> о физике, математике и программировании. Здесь собраны объяснения, примеры кода, задачи и заметки из канала.</p>
+        <h2>Оригиналы и авторство</h2>
+        <p>Источник каждой публикации — канал phys_math_dev. Ссылка «Оригинал в Telegram» под статьёй ведёт к исходной записи и обсуждению. Дата публикации относится к исходной записи, а не к дню её переноса на сайт. Архив сохраняет ссылки на материалы, которые упоминает автор.</p>
+        <h2>Русский перевод</h2>
+        <p>Английские публикации импортируются из канала. Русские версии размещаются отдельно после проверки; черновики не публикуются как готовые переводы. При изменении английского оригинала перевод может быть отмечен как требующий повторной проверки.</p>
+        <h2>Исправления и связь</h2>
+        <p>Вопросы по содержанию можно обсудить через <a href="https://t.me/phys_math_dev">исходный канал</a>. Ошибки сайта или перевода можно сообщить в <a href="https://github.com/tarstars/phys_math_dev_mirror/issues">репозитории проекта</a>, указав ссылку на статью и фрагмент, который нужно исправить.</p>
+      </>
+    ) : (
+      <>
+        <p>PhysMath Hub is a bilingual archive of <a href="https://t.me/phys_math_dev">phys_math_dev</a>, a Telegram channel about physics, mathematics and programming. It collects explanations, code examples, problems and notes published in the channel.</p>
+        <h2>Originals and attribution</h2>
+        <p>Each article comes from phys_math_dev. The “Original Telegram post” link below an article leads to the source message and its discussion. Publication dates refer to the original message, rather than the day it was imported. Links to material cited by the author are retained.</p>
+        <h2>Russian translations</h2>
+        <p>English posts are imported from the channel. Russian versions are published separately after review; drafts are not presented as finished translations. When the English source changes, its translation may be marked as needing another review.</p>
+        <h2>Corrections and contact</h2>
+        <p>For questions about an article, visit the <a href="https://t.me/phys_math_dev">original channel</a>. Site and translation errors can be reported in the <a href="https://github.com/tarstars/phys_math_dev_mirror/issues">project repository</a>; include the article URL and the passage that needs correcting.</p>
+      </>
+    )}
+  </article>
+</BaseLayout>

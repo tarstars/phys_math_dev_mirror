@@ -280,6 +280,7 @@ main {
 }
 
 .media-card {
+  margin: 0;
   border: 1px solid var(--line);
   border-radius: 10px;
   overflow: hidden;
@@ -289,6 +290,7 @@ main {
 .media-card img,
 .media-card video {
   width: 100%;
+  height: auto;
   display: block;
 }
 
@@ -305,6 +307,17 @@ main {
 
 .post-content p {
   margin: 0.9rem 0;
+}
+
+.post-content a,
+.about-page a {
+  text-decoration: underline;
+  text-underline-offset: 0.15em;
+}
+
+.post-byline {
+  color: var(--muted);
+  font-size: 0.85rem;
 }
 
 .post-content img,

@@ -124,12 +124,20 @@ jobs:
       - name: Install Node dependencies
         run: npm ci
 
+      - name: Cache processed public images
+        uses: actions/cache@v4
+        with:
+          path: node_modules/.astro/assets
+          key: ${{ runner.os }}-astro-images-${{ hashFiles('package-lock.json') }}-${{ github.sha }}
+          restore-keys: |
+            ${{ runner.os }}-astro-images-${{ hashFiles('package-lock.json') }}-
+
       - name: Build site
         env:
           PUBLIC_SITE_URL: https://phys-math.dev
           PUBLIC_MEDIA_BASE_URL: ${{ secrets.R2_PUBLIC_BASE_URL }}
           PUBLIC_CF_ANALYTICS_TOKEN: ${{ secrets.PUBLIC_CF_ANALYTICS_TOKEN }}
-        run: npm run build
+        run: npm run check
 
       - name: Deploy to Cloudflare Pages
         if: inputs.recovery_only != true

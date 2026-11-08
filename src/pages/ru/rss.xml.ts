@@ -7,7 +7,7 @@ export function GET(context: { site: URL | undefined }) {
   return rss({
     title: 'PhysMath Hub (RU)',
     description: 'Переводы и материалы про физику, математику и программирование.',
-    site: context.site,
+    site: context.site || 'https://phys-math.dev',
     customData: '<language>ru-ru</language>',
     items: posts.slice(0, 100).map((post) => ({
       title: post.title,

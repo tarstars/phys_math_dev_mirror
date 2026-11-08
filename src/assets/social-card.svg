@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <rect width="1200" height="630" fill="#f7f5ee"/>
+  <circle cx="1100" cy="80" r="320" fill="#d7eef2"/>
+  <circle cx="1080" cy="550" r="230" fill="#efe6d0"/>
+  <path d="M760 370 L900 190 L1060 340 L1150 180" fill="none" stroke="#1f6c7b" stroke-width="8"/>
+  <g fill="#1f6c7b"><circle cx="760" cy="370" r="12"/><circle cx="900" cy="190" r="12"/><circle cx="1060" cy="340" r="12"/><circle cx="1150" cy="180" r="12"/></g>
+  <text x="75" y="270" font-family="sans-serif" font-size="86" font-weight="700" fill="#12212b">PhysMath Hub</text>
+  <text x="80" y="350" font-family="sans-serif" font-size="32" fill="#1f6c7b">Physics · Mathematics · Programming</text>
+  <text x="80" y="540" font-family="sans-serif" font-size="28" fill="#5e6e77">phys-math.dev · English / Русский</text>
+</svg>
