@@ -9,7 +9,7 @@
     "preview": "astro preview",
     "sync:en": "python3 scripts/sync_telegram.py",
     "translate:ru": "python3 scripts/prepare_ru_drafts.py",
-    "check": "npm run test:seo && tsc --noEmit && npm run build && python3 scripts/check_site.py",
+    "check": "npm run test:seo && astro sync && tsc --noEmit && npm run build && python3 scripts/check_site.py",
     "test:seo": "node --experimental-strip-types --test tests/seo.test.mjs"
   },
   "dependencies": {
