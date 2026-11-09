@@ -40,11 +40,19 @@ jobs:
       - name: Install Node dependencies
         run: npm ci
 
+      - name: Cache processed public images
+        uses: actions/cache@v4
+        with:
+          path: node_modules/.astro/assets
+          key: ${{ runner.os }}-astro-images-${{ hashFiles('package-lock.json') }}-${{ github.sha }}
+          restore-keys: |
+            ${{ runner.os }}-astro-images-${{ hashFiles('package-lock.json') }}-
+
       - name: Build static site
         env:
           PUBLIC_SITE_URL: https://phys-math.dev
           PUBLIC_MEDIA_BASE_URL: https://media.phys-math.dev
-        run: npm run build
+        run: npm run check
 
       - name: Compile-check Python scripts
         run: python -m py_compile scripts/*.py

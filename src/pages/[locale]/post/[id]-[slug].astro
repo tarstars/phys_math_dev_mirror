@@ -3,6 +3,7 @@ import BaseLayout from '@/layouts/BaseLayout.astro';
 import { formatDate, getEnPostMap, getRuPostMap, pageTitle } from '@/lib/content';
 import { LOCALES, UI } from '@/lib/i18n';
 import type { Locale, PostRecord } from '@/lib/types';
+import { postImages } from '@/lib/post-images';
 
 export function getStaticPaths() {
   const enPosts = Array.from(getEnPostMap({ includeDeleted: false }).values());
@@ -58,14 +59,16 @@ if (!enPost || enPost.deleted) {
 }
 
 const current = post ?? enPost;
+const rendered = current && !redirectTarget ? await postImages(current) : null;
+noIndex ||= !current?.indexable;
 const title = pageTitle(current?.title ?? 'Post', locale);
 const description = current?.summary || (locale === 'ru' ? 'Публикация PhysMath Hub.' : 'PhysMath Hub post.');
 
 const site = import.meta.env.PUBLIC_SITE_URL || 'https://phys-math.dev';
 const postUrl = new URL(locale === 'en' ? enPath : ruPath, site).toString();
-const image = current?.media?.find((item) => item.kind === 'photo' || item.kind === 'video')?.url;
+const image = current?.media?.find((item) => item.kind === 'photo')?.url;
 
-const structuredData = current
+const structuredData = current && !noIndex
   ? {
       '@context': 'https://schema.org',
       '@type': 'BlogPosting',
@@ -80,11 +83,12 @@ const structuredData = current
       publisher: {
         '@type': 'Organization',
         name: 'PhysMath Hub',
-        url: site
+        url: new URL(`/${locale}/about/`, site).toString()
       },
       author: {
         '@type': 'Organization',
-        name: 'PhysMath Hub'
+        name: 'phys_math_dev',
+        url: 'https://t.me/phys_math_dev'
       }
     }
   : null;
@@ -123,8 +127,8 @@ const structuredData = current
         <a href={redirectTarget}>{locale === 'ru' ? 'Открыть EN версию' : 'Open EN version'}</a>
       </p>
     </section>
-    <script is:inline>
-      window.location.replace({JSON.stringify(redirectTarget)});
+    <script define:vars={{ redirectTarget }}>
+      window.location.replace(redirectTarget);
     </script>
   </BaseLayout>
 ) : (
@@ -136,23 +140,30 @@ const structuredData = current
     enPath={enPath}
     ruPath={ruPath}
     noIndex={noIndex}
+    image={image}
+    imageAlt={current?.title}
+    article={current ? { published: current.date, modified: current.edited_at || current.updated_at || current.date } : undefined}
   >
     {structuredData && (
       <script type="application/ld+json" set:html={JSON.stringify(structuredData)}></script>
     )}
 
     <article class="post-page">
-      <h1>{current?.title}</h1>
-      <p class="post-date">{formatDate(current?.date ?? new Date().toISOString(), locale)}</p>
+      <h1>{current?.heading}</h1>
+      <p class="post-date"><time datetime={current?.date}>{formatDate(current?.date ?? new Date().toISOString(), locale)}</time></p>
+      <p class="post-byline">
+        {locale === 'ru' ? 'Источник:' : 'Source:'}{' '}<a href="https://t.me/phys_math_dev">phys_math_dev</a>
+        {' · '}<a href={`/${locale}/about/`}>{locale === 'ru' ? 'Об архиве' : 'About this archive'}</a>
+      </p>
 
-      {current?.media?.some((media) => !media.embedded) && (
+      {rendered && rendered.media.length > 0 && (
         <section class="media-grid" aria-label="Post media">
-          {current.media.filter((media) => !media.embedded).map((media) => (
+          {rendered.media.map((media) => (
             <figure class="media-card">
               {media.kind === 'photo' ? (
-                <img src={media.url} alt="" loading="lazy" />
+                <img {...media.image} />
               ) : media.kind === 'video' ? (
-                <video controls preload="metadata" src={media.url}></video>
+                <video controls preload="metadata" src={media.url} width={media.width} height={media.height}></video>
               ) : (
                 <a class="file-link" href={media.url} target="_blank" rel="noopener noreferrer">
                   {media.fileName || media.url}
@@ -163,7 +174,7 @@ const structuredData = current
         </section>
       )}
 
-      <section class="post-content" set:html={current?.bodyHtml ?? ''}></section>
+      <section class="post-content" set:html={rendered?.html ?? ''}></section>
 
       <footer class="post-footer">
         <p>

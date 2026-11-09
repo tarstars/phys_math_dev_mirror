@@ -20,8 +20,8 @@ Bilingual static mirror for `https://t.me/s/phys_math_dev` with:
   - Google tag ID: `G-KW8VXVXW7N`
   - Yandex.Metrika counter ID: `106989967`
 - Source of truth for counters:
-  - `src/layouts/BaseLayout.astro` (all regular EN/RU content pages)
-  - `src/pages/index.astro` (root redirect page)
+  - `src/components/Analytics.astro`, included by `BaseLayout` and the root redirect
+  - Page metadata is queued immediately; vendor scripts load after the first paint during browser idle time.
 - Any new standalone page that does not use `BaseLayout` must include both counters manually.
 - Do not remove or replace these counters without explicit approval from the project owner.
 - RU translation review must follow a manual checklist workflow:
@@ -33,6 +33,8 @@ Bilingual static mirror for `https://t.me/s/phys_math_dev` with:
 - Do not implement programmable/batch loops for RU translation review or fixes.
 
 ## Local setup
+
+Use Node.js 22 for local builds and checks, matching CI.
 
 1. Install dependencies:
 
@@ -103,6 +105,21 @@ archive links. Mathematical expressions are rendered with KaTeX in both language
   - `content/site/en.md`
   - `content/site/ru.md`
 - Sync state: `data/state/en_sync_state.json`
+
+## Search and image checks
+
+`npm run check` runs SEO regression tests, TypeScript checks, the production build,
+and a complete check of generated links, canonicals, language alternates, indexing
+directives, image dimensions, responsive assets, and retained analytics counters.
+Builds download public source images and generate cached WebP sizes with Astro.
+The first image loads eagerly; subsequent images remain lazy. Content metadata can
+provide a specific `alt` value for a photo; otherwise the article context is used.
+
+Media/link-only posts remain available in the archive with `noindex,follow` and are
+omitted from the sitemap. Short posts with readable content remain eligible for
+search; no word-count cutoff is applied. Titles and links are normalized at render
+time so later Telegram syncs cannot restore malformed Markdown metadata or stale
+internal slugs. Historical URLs have permanent redirects in `public/_redirects`.
 
 RU status values:
 

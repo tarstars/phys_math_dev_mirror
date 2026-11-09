@@ -18,6 +18,7 @@ export interface MediaItem {
   width?: number;
   height?: number;
   embedded?: boolean;
+  alt?: string;
 }
 
 export interface PostFrontmatter {
@@ -45,6 +46,8 @@ export interface PostRecord extends PostFrontmatter {
   bodyHtml: string;
   pathSlug: string;
   path: string;
+  heading: string;
+  indexable: boolean;
 }
 
 export interface SiteText {

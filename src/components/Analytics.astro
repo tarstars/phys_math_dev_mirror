@@ -1,0 +1,46 @@
+<!-- Queue page metadata immediately; load vendor code after the first paint. -->
+<script is:inline>
+  (() => {
+    if (window.__physMathAnalytics) return;
+    window.__physMathAnalytics = true;
+    const page = { page_location: location.href, page_title: document.title, page_referrer: document.referrer };
+    window.dataLayer = window.dataLayer || [];
+    window.gtag = window.gtag || function () { window.dataLayer.push(arguments); };
+    window.gtag('js', new Date());
+    window.gtag('config', 'G-KW8VXVXW7N', page);
+    window.ym = window.ym || function () { (window.ym.a = window.ym.a || []).push(arguments); };
+    window.ym.l = Date.now();
+    window.ym(106989967, 'init', {
+      ssr: true, webvisor: true, clickmap: true, ecommerce: 'dataLayer',
+      referrer: page.page_referrer, url: page.page_location,
+      accurateTrackBounce: true, trackLinks: true
+    });
+
+    const urls = [
+      'https://www.googletagmanager.com/gtag/js?id=G-KW8VXVXW7N',
+      'https://mc.yandex.ru/metrika/tag.js?id=106989967'
+    ];
+    let started = false;
+    function load() {
+      if (started) return;
+      started = true;
+      for (const src of urls) {
+        if (Array.from(document.scripts).some((script) => script.src === src)) continue;
+        const script = document.createElement('script');
+        script.async = true;
+        script.src = src;
+        document.head.appendChild(script);
+      }
+    }
+    function afterPaint() {
+      requestAnimationFrame(() => requestAnimationFrame(() => {
+        if ('requestIdleCallback' in window) window.requestIdleCallback(load, { timeout: 1500 });
+        else setTimeout(load, 0);
+      }));
+    }
+    if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', afterPaint, { once: true });
+    else afterPaint();
+    // A quick navigation must not leave a queued visit waiting for idle time.
+    window.addEventListener('pagehide', load, { once: true });
+  })();
+</script>

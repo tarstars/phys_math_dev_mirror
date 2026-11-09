@@ -1,6 +1,7 @@
 ---
 import { LOCALES } from '@/lib/i18n';
 import type { Locale } from '@/lib/types';
+import Analytics from '@/components/Analytics.astro';
 
 export function getStaticPaths() {
   return LOCALES.map((locale) => ({ params: { locale } }));
@@ -17,12 +18,15 @@ const target = `/${locale}/archive/1/`;
 <html lang={locale}>
   <head>
     <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta http-equiv="refresh" content={`0; url=${target}`} />
-    <link rel="canonical" href={target} />
+    <link rel="canonical" href={`https://phys-math.dev${target}`} />
     <meta name="robots" content="noindex,follow" />
     <title>Redirecting…</title>
+    <Analytics />
   </head>
   <body>
+    <noscript><img src="https://mc.yandex.ru/watch/106989967" width="1" height="1" alt="" /></noscript>
     <p><a href={target}>Continue</a></p>
   </body>
 </html>

@@ -4,6 +4,7 @@ import matter from 'gray-matter';
 import { marked } from 'marked';
 import markedKatex from 'marked-katex-extension';
 import type { Locale, PostFrontmatter, PostRecord, SiteText, TranslationStatus } from './types';
+import { excerpt, hasReadableBody, markdownText, prepareBody } from './html';
 
 marked.setOptions({
   gfm: true,
@@ -12,6 +13,14 @@ marked.setOptions({
 marked.use(markedKatex({ throwOnError: false, trust: false, nonStandard: true }));
 
 const ROOT = process.cwd();
+const postCache = new Map<string, PostRecord[]>();
+
+function resolvePostPath(id: number, locale: string): string | undefined {
+  const file = path.join(ROOT, 'content', 'en', 'posts', `${id}.md`);
+  if (!fs.existsSync(file)) return undefined;
+  const { data } = readMarkdownFile(file);
+  return data.deleted ? undefined : `/${locale}/post/${id}-${data.slug}/`;
+}
 
 function readMarkdownFile(filePath: string): { data: Record<string, unknown>; content: string } {
   const raw = fs.readFileSync(filePath, 'utf8');
@@ -43,12 +52,24 @@ function toPost(locale: Locale, filePath: string): PostRecord {
     }
   }
   const date = toDateString(data.date, fallbackDate);
+  const rawHtml = marked.parse(content) as string;
+  const indexable = hasReadableBody(rawHtml);
+  const sharedOn = formatDate(date, locale);
+  const hasPhotos = (data.media as PostFrontmatter['media'])?.some((item) => item.kind === 'photo');
+  const photoOnly = hasPhotos && !rawHtml.includes('<a ');
+  const fallbackTitle = locale === 'ru'
+    ? `${photoOnly ? 'Фотография' : 'Внешняя публикация'} от ${sharedOn}`
+    : `${photoOnly ? 'Photo' : 'External article'} shared on ${sharedOn}`;
+  const rawTitle = markdownText(String(data.title ?? ''));
+  const title = !rawTitle || /^(Post|Пост|Публикация)\s+\d+$/i.test(rawTitle) ? fallbackTitle : rawTitle;
+  const prepared = prepareBody(rawHtml, title, resolvePostPath, locale);
+  const summary = markdownText(String(data.summary ?? '')) || markdownText(content) || fallbackTitle;
 
   const fm: PostFrontmatter = {
     id,
     slug,
-    title: String(data.title ?? `Post ${id}`),
-    summary: String(data.summary ?? ''),
+    title,
+    summary: excerpt(summary, 220),
     date,
     edited_at: data.edited_at ? String(data.edited_at) : null,
     channel: String(data.channel ?? 'phys_math_dev'),
@@ -69,7 +90,9 @@ function toPost(locale: Locale, filePath: string): PostRecord {
     ...fm,
     locale,
     bodyMarkdown: content,
-    bodyHtml: marked.parse(content),
+    bodyHtml: prepared.html,
+    heading: prepared.heading,
+    indexable,
     pathSlug,
     path: `/${locale}/post/${pathSlug}/`
   };
@@ -87,6 +110,8 @@ export function getLocalePosts(locale: Locale, options?: { includeDraft?: boolea
 
   const includeDraft = options?.includeDraft ?? false;
   const includeDeleted = options?.includeDeleted ?? false;
+  const cacheKey = `${locale}:${includeDraft}:${includeDeleted}`;
+  if (import.meta.env.PROD && postCache.has(cacheKey)) return postCache.get(cacheKey)!;
 
   const files = fs
     .readdirSync(dir)
@@ -113,6 +138,7 @@ export function getLocalePosts(locale: Locale, options?: { includeDraft?: boolea
       return b.id - a.id;
     });
 
+  if (import.meta.env.PROD) postCache.set(cacheKey, posts);
   return posts;
 }
 
@@ -146,7 +172,7 @@ export function getSiteText(locale: Locale): SiteText {
     title: String(data.title ?? 'PhysMath Hub'),
     subtitle: String(data.subtitle ?? ''),
     bodyMarkdown: content,
-    bodyHtml: marked.parse(content)
+    bodyHtml: marked.parse(content) as string
   };
 }
 
@@ -160,5 +186,6 @@ export function formatDate(dateIso: string, locale: Locale): string {
 }
 
 export function pageTitle(base: string, locale: Locale): string {
-  return locale === 'ru' ? `${base} · PhysMath Hub` : `${base} · PhysMath Hub`;
+  const clean = markdownText(base).replace(/(?:\s*·\s*PhysMath Hub)+$/, '').trim();
+  return `${excerpt(clean || (locale === 'ru' ? 'Физика, математика и программирование' : 'Physics, mathematics and programming'), 85)} · PhysMath Hub`;
 }

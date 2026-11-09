@@ -9,7 +9,8 @@
     "preview": "astro preview",
     "sync:en": "python3 scripts/sync_telegram.py",
     "translate:ru": "python3 scripts/prepare_ru_drafts.py",
-    "check": "npm run build"
+    "check": "npm run test:seo && astro sync && tsc --noEmit && npm run build && python3 scripts/check_site.py",
+    "test:seo": "node --experimental-strip-types --test tests/seo.test.mjs"
   },
   "dependencies": {
     "@astrojs/rss": "^4.0.11",
@@ -17,7 +18,8 @@
     "gray-matter": "^4.0.3",
     "katex": "^0.16.47",
     "marked": "^14.1.2",
-    "marked-katex-extension": "^5.1.13"
+    "marked-katex-extension": "^5.1.13",
+    "node-html-parser": "^9.0.7"
   },
   "devDependencies": {
     "@types/node": "^22.10.2",
