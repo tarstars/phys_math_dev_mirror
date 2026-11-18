@@ -3,6 +3,8 @@ from collections import Counter
 from html.parser import HTMLParser
 from pathlib import Path
 import sys
+import json
+import re
 from urllib.parse import unquote, urljoin, urlsplit
 import xml.etree.ElementTree as ET
 
@@ -13,6 +15,9 @@ ORIGIN = 'https://phys-math.dev'
 class Page(HTMLParser):
     def __init__(self, text):
         super().__init__(convert_charrefs=True)
+        self.fallbacks = []
+        self.scripts = []
+        self.in_script = False
         self.canonical = None
         self.alternates = {}
         self.robots = ''
@@ -27,6 +32,11 @@ class Page(HTMLParser):
 
     def handle_starttag(self, tag, attrs):
         attrs = dict(attrs)
+        if 'data-translation-fallback' in attrs:
+            self.fallbacks.append(attrs['data-translation-fallback'])
+        if tag == 'script':
+            self.in_script = True
+            self.scripts.append('')
         if tag == 'html':
             self.lang = attrs.get('lang')
         if tag == 'article' and 'post-page' in attrs.get('class', '').split():
@@ -49,12 +59,53 @@ class Page(HTMLParser):
         if tag == 'img' and self.article_depth:
             self.images.append(attrs)
 
+    def handle_data(self, data):
+        if self.in_script:
+            self.scripts[-1] += data
+
     def handle_endtag(self, tag):
+        if tag == 'script':
+            self.in_script = False
         if tag == 'article' and self.article_depth:
             self.article_depth -= 1
 
 
-def check():
+def check_translation_fallback(page, path, listed, target, require):
+    """Validate the narrow RU-to-EN fallback contract, never a generic noindex exemption."""
+    expected = '/en/' + path.removeprefix('/ru/')
+    require(bool(re.fullmatch(r'/ru/post/\d+-[^/]+/', path)), f'Invalid fallback route: {path}')
+    require(page.fallbacks == [expected], f'Invalid fallback target: {path}')
+    require(page.canonical == ORIGIN + expected, f'Fallback canonical mismatch: {path}')
+    directives = {part.strip() for part in page.robots.split(',')}
+    require('noindex' in directives and 'follow' in directives and 'nofollow' not in directives,
+            f'Fallback must be noindex,follow: {path}')
+    require(ORIGIN + path not in listed, f'Fallback in sitemap: {path}')
+    require(expected in page.links, f'Fallback link missing: {path}')
+    require(not page.article, f'Fallback contains article: {path}')
+    require(target(expected).is_file(), f'Fallback destination missing: {path}')
+    if target(expected).is_file():
+        destination = Page(target(expected).read_text())
+        require(destination.canonical == ORIGIN + expected and not destination.fallbacks,
+                f'Fallback destination is not canonical content: {path}')
+    # Astro define:vars must serialize a concrete destination and execute the replacement.
+    redirect_scripts = [script for script in page.scripts if 'window.location.replace' in script]
+    valid_script = False
+    if len(redirect_scripts) == 1:
+        script = redirect_scripts[0].strip()
+        # Astro wraps define:vars scripts in an IIFE.
+        wrapper = re.fullmatch(r'\(function\(\)\{(.*)\}\)\(\);', script, re.DOTALL)
+        if wrapper:
+            script = wrapper[1]
+        match = re.fullmatch(r'\s*(?:const|let|var) redirectTarget = ("[^"\n]*");\s*window\.location\.replace\(redirectTarget\);\s*', script)
+        if match:
+            try:
+                valid_script = json.loads(match[1]) == expected
+            except ValueError:
+                pass
+    require(valid_script, f'Invalid fallback JavaScript: {path}')
+
+
+def check(dist=DIST):
     errors = []
     def require(condition, message):
         if not condition:
@@ -62,18 +113,18 @@ def check():
 
     def target(url):
         path = unquote(urlsplit(url).path).lstrip('/')
-        file = DIST / path
+        file = dist / path
         return file / 'index.html' if not file.suffix or path.endswith('/') else file
 
     ns = {'s': 'http://www.sitemaps.org/schemas/sitemap/0.9', 'x': 'http://www.w3.org/1999/xhtml'}
-    sitemap = ET.parse(DIST / 'sitemap.xml')
+    sitemap = ET.parse(dist / 'sitemap.xml')
     listed = {}
     for node in sitemap.findall('s:url', ns):
         url = node.findtext('s:loc', namespaces=ns)
         require(url not in listed, f'Duplicate sitemap URL: {url}')
         listed[url] = {a.attrib['hreflang']: a.attrib['href'] for a in node.findall('x:link', ns)}
     redirects = {}
-    for line in (DIST / '_redirects').read_text().splitlines():
+    for line in (dist / '_redirects').read_text().splitlines():
         if line.strip() and not line.lstrip().startswith('#'):
             source, destination, status = line.split()
             redirects[source] = destination
@@ -82,8 +133,8 @@ def check():
 
     pages = {}
     counts = Counter()
-    for file in sorted(DIST.rglob('*.html')):
-        relative = file.relative_to(DIST).as_posix()
+    for file in sorted(dist.rglob('*.html')):
+        relative = file.relative_to(dist).as_posix()
         # Verification documents are not site content pages.
         if not (relative.startswith(('en/', 'ru/')) or relative in ('index.html', '404.html')):
             continue
@@ -96,10 +147,14 @@ def check():
         require('G-KW8VXVXW7N' in text and '106989967' in text, f'Analytics counter missing: {path}')
         if path in redirects:
             continue
-        require(page.h1 == 1, f'Expected one main heading: {path} ({page.h1})')
+        fallback = bool(page.fallbacks)
+        if fallback:
+            check_translation_fallback(page, path, listed, target, require)
+            counts['translation_fallbacks'] += 1
+        require(fallback or page.h1 == 1, f'Expected one main heading: {path} ({page.h1})')
         if relative == '404.html':
             continue
-        require(page.canonical == url, f'Canonical mismatch: {path}: {page.canonical}')
+        require(fallback or page.canonical == url, f'Canonical mismatch: {path}: {page.canonical}')
         require(page.lang == path.split('/')[1], f'HTML language mismatch: {path}')
         require(bool(page.social.get('og:image')), f'Social image missing: {path}')
         if '/post/' in path:

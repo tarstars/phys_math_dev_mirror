@@ -1,4 +1,5 @@
 ---
+import { postLanguages } from '@/lib/post-languages';
 import BaseLayout from '@/layouts/BaseLayout.astro';
 import { formatDate, getEnPostMap, getRuPostMap, pageTitle } from '@/lib/content';
 import { LOCALES, UI } from '@/lib/i18n';
@@ -35,8 +36,9 @@ const id = Number(Astro.params.id);
 const enPost = getEnPostMap({ includeDeleted: true }).get(id);
 const ruPost = getRuPostMap({ includeDeleted: true, includeDraft: true }).get(id);
 
-const enPath = enPost ? `/en/post/${enPost.id}-${enPost.slug}/` : '/en/';
-const ruPath = ruPost && ruPost.translation_status !== 'draft' && !ruPost.deleted ? `/ru/post/${enPost?.id}-${enPost?.slug}/` : enPath;
+const { enPath, ruPath, ruAvailable, alternates } = enPost
+  ? postLanguages(enPost, ruPost)
+  : { enPath: '/en/', ruPath: '/ru/', ruAvailable: false, alternates: {} };
 
 let post: PostRecord | undefined;
 let redirectTarget: string | null = null;
@@ -45,7 +47,7 @@ let noIndex = false;
 if (locale === 'en') {
   post = enPost;
 } else {
-  if (!ruPost || ruPost.deleted || ruPost.translation_status === 'draft') {
+  if (!ruAvailable) {
     redirectTarget = enPath;
     noIndex = true;
   } else {
@@ -119,9 +121,10 @@ const structuredData = current && !noIndex
     canonicalPath={enPath}
     enPath={enPath}
     ruPath={ruPath}
+    alternatePaths={alternates}
     noIndex={noIndex}
   >
-    <section class="redirect-message">
+    <section class="redirect-message" data-translation-fallback={redirectTarget}>
       <p>{UI[locale].translationPending}</p>
       <p>
         <a href={redirectTarget}>{locale === 'ru' ? 'Открыть EN версию' : 'Open EN version'}</a>
@@ -139,6 +142,7 @@ const structuredData = current && !noIndex
     canonicalPath={locale === 'en' ? enPath : ruPath}
     enPath={enPath}
     ruPath={ruPath}
+    alternatePaths={alternates}
     noIndex={noIndex}
     image={image}
     imageAlt={current?.title}
