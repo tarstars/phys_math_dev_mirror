@@ -52,3 +52,39 @@ test('linked media is retained when its anchor has no text', () => {
   const { html } = prepareBody('<a href="https://example.com"><img src="figure.jpg" alt="A diagram"></a>', 'Title', resolvePost);
   assert.match(html, /<img src="figure.jpg" alt="A diagram">/);
 });
+
+// Exercise the policy used by both the post renderer and sitemap.
+const { postLanguages } = await import('../src/lib/post-languages.ts');
+const en = { id: 318, slug: 'english-slug', indexable: true };
+const ru = { ...en, slug: 'different-russian-slug', translation_status: 'reviewed' };
+for (const [state, translation] of [
+  ['missing', undefined], ['draft', { ...ru, translation_status: 'draft' }],
+  ['deleted', { ...ru, deleted: true }]
+]) {
+  test(`${state} RU uses English navigation without advertising a Russian alternate`, () => {
+    const languages = postLanguages(en, translation);
+    assert.equal(languages.ruAvailable, false);
+    assert.equal(languages.ruPath, languages.enPath);
+    assert.deepEqual(languages.alternates, { en: '/en/post/318-english-slug/', 'x-default': '/en/post/318-english-slug/' });
+  });
+}
+for (const status of ['reviewed', 'locked', 'needs_review']) {
+  test(`${status} translation preserves publication policy and bilingual alternates`, () => {
+    const languages = postLanguages(en, { ...ru, translation_status: status });
+    assert.equal(languages.ruAvailable, true);
+    assert.equal(languages.ruPath, '/ru/post/318-english-slug/');
+    assert.equal(languages.alternates.ru, languages.ruPath);
+    assert.equal(languages.alternates.en, languages.enPath);
+  });
+}
+test('published nonindexable translation remains navigable but is not an SEO alternate', () => {
+  const languages = postLanguages(en, { ...ru, indexable: false });
+  assert.equal(languages.ruAvailable, true);
+  assert.equal(languages.ruPath, '/ru/post/318-english-slug/');
+  assert.equal(languages.alternates.ru, undefined);
+});
+test('nonindexable or deleted English source advertises no post alternates', () => {
+  for (const source of [{ ...en, indexable: false }, { ...en, deleted: true }]) {
+    assert.deepEqual(postLanguages(source, ru).alternates, {});
+  }
+});

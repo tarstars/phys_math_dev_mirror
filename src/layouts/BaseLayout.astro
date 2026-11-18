@@ -16,6 +16,7 @@ interface Props {
   canonicalPath: string;
   enPath: string;
   ruPath: string;
+  alternatePaths?: Partial<Record<Locale | 'x-default', string>>;
   noIndex?: boolean;
   image?: string;
   imageAlt?: string;
@@ -29,6 +30,7 @@ const {
   canonicalPath,
   enPath,
   ruPath,
+  alternatePaths = { en: enPath, ru: ruPath, 'x-default': enPath },
   noIndex = false,
   image,
   imageAlt = 'PhysMath Hub · Physics, mathematics and programming',
@@ -37,8 +39,6 @@ const {
 
 const site = import.meta.env.PUBLIC_SITE_URL || 'https://phys-math.dev';
 const canonicalUrl = new URL(canonicalPath, site).toString();
-const enUrl = new URL(enPath, site).toString();
-const ruUrl = new URL(ruPath, site).toString();
 const token = import.meta.env.PUBLIC_CF_ANALYTICS_TOKEN;
 
 const thisLocaleHome = `/${locale}/`;
@@ -58,9 +58,9 @@ const imageUrl = new URL(image || defaultImage.src, site).toString();
     <meta name="description" content={description} />
     <link rel="canonical" href={canonicalUrl} />
 
-    <link rel="alternate" hreflang="en" href={enUrl} />
-    <link rel="alternate" hreflang="ru" href={ruUrl} />
-    <link rel="alternate" hreflang="x-default" href={enUrl} />
+    {Object.entries(alternatePaths).map(([lang, path]) => (
+      <link rel="alternate" hreflang={lang} href={new URL(path, site).toString()} />
+    ))}
 
     <meta property="og:type" content={article ? 'article' : 'website'} />
     <meta property="og:title" content={title} />

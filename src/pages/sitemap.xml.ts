@@ -1,3 +1,4 @@
+import { postLanguages } from '@/lib/post-languages';
 import { getEnPostMap, getLocalePosts, getRuPostMap } from '@/lib/content';
 
 type UrlNode = {
@@ -62,10 +63,11 @@ export function GET() {
     const enLoc = `${site}${enPost.path}`;
     const ruPost = ruMap.get(enPost.id);
 
-    if (ruPost?.indexable) {
+    const languages = postLanguages(enPost, ruPost);
+    if (languages.alternates.ru && ruPost) {
       // The post route builds RU pages with the EN slug, so the sitemap must match it
       // (EN/RU slug drift would otherwise advertise 404 URLs).
-      const ruLoc = `${site}/ru/post/${enPost.id}-${enPost.slug}/`;
+      const ruLoc = `${site}${languages.alternates.ru}`;
       urls.push({
         loc: enLoc,
         lastmod: enPost.edited_at || enPost.updated_at || enPost.date,
